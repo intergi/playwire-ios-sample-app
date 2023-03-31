@@ -71,6 +71,7 @@
                         <segue destination="FgP-rj-rpq" kind="show" identifier="Native" id="qzc-Hb-9xc"/>
                         <segue destination="PMb-bQ-iNC" kind="show" identifier="BannerInline" id="whL-eD-dNg"/>
                         <segue destination="Ac7-Oj-HLN" kind="show" identifier="BannerAnchored" id="43k-42-rAe"/>
+                        <segue destination="hV9-kT-Hpo" kind="show" identifier="BannerLayout" id="5rM-ed-x9w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -428,6 +429,92 @@ OR
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2k-by-IYy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4185" y="-663"/>
+        </scene>
+        <!--Banner Layout-->
+        <scene sceneID="yeR-3i-7mc">
+            <objects>
+                <viewController id="hV9-kT-Hpo" customClass="BannerLayoutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gHe-71-u3u">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siH-X7-Uj2" customClass="PWBannerView" customModule="Playwire">
+                                <rect key="frame" x="45" y="544" width="300" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="FlC-wT-weZ"/>
+                                    <constraint firstAttribute="width" constant="300" id="UxN-Pf-daK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0za-6l-UHk" customClass="PWBannerView" customModule="Playwire">
+                                <rect key="frame" x="35" y="412" width="320" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2ve-z6-3ea"/>
+                                    <constraint firstAttribute="width" constant="320" id="X2x-2Q-MW1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="adUnitName" value="Banner-320x50"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoload" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbH-mD-GIF">
+                                <rect key="frame" x="16" y="492" width="358" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Defined Runtime Attributes in Storyboard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0y-j7-PSc">
+                                <rect key="frame" x="16" y="360" width="358" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1y-t5-snp">
+                                <rect key="frame" x="16" y="518" width="358" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz7-dM-Qre">
+                                <rect key="frame" x="16" y="386" width="358" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PeF-Uy-rfS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dz7-dM-Qre" firstAttribute="leading" secondItem="PeF-Uy-rfS" secondAttribute="leading" constant="16" id="4z3-kK-2Db"/>
+                            <constraint firstItem="t1y-t5-snp" firstAttribute="leading" secondItem="PeF-Uy-rfS" secondAttribute="leading" constant="16" id="512-jG-GJc"/>
+                            <constraint firstItem="pbH-mD-GIF" firstAttribute="centerX" secondItem="siH-X7-Uj2" secondAttribute="centerX" id="5rb-1V-J5t"/>
+                            <constraint firstItem="pbH-mD-GIF" firstAttribute="top" secondItem="0za-6l-UHk" secondAttribute="bottom" constant="30" id="Eat-B5-Z9r"/>
+                            <constraint firstItem="dz7-dM-Qre" firstAttribute="top" secondItem="B0y-j7-PSc" secondAttribute="bottom" constant="8" id="Hq3-aF-sEI"/>
+                            <constraint firstItem="pbH-mD-GIF" firstAttribute="leading" secondItem="PeF-Uy-rfS" secondAttribute="leading" constant="16" id="IMp-jT-iO6"/>
+                            <constraint firstItem="B0y-j7-PSc" firstAttribute="centerX" secondItem="gHe-71-u3u" secondAttribute="centerXWithinMargins" id="JGa-KT-Apy"/>
+                            <constraint firstItem="siH-X7-Uj2" firstAttribute="top" secondItem="t1y-t5-snp" secondAttribute="bottom" constant="8" id="Q1G-n0-EkH"/>
+                            <constraint firstItem="dz7-dM-Qre" firstAttribute="centerX" secondItem="PeF-Uy-rfS" secondAttribute="centerX" id="SDQ-B0-HwV"/>
+                            <constraint firstItem="0za-6l-UHk" firstAttribute="centerX" secondItem="PeF-Uy-rfS" secondAttribute="centerX" id="T1i-pa-Db0"/>
+                            <constraint firstItem="t1y-t5-snp" firstAttribute="top" secondItem="pbH-mD-GIF" secondAttribute="bottom" constant="8" id="abj-rH-xfG"/>
+                            <constraint firstItem="t1y-t5-snp" firstAttribute="centerX" secondItem="gHe-71-u3u" secondAttribute="centerX" id="dCi-48-9Hp"/>
+                            <constraint firstItem="0za-6l-UHk" firstAttribute="top" secondItem="dz7-dM-Qre" secondAttribute="bottom" constant="8" id="fXv-K2-51A"/>
+                            <constraint firstItem="PeF-Uy-rfS" firstAttribute="bottom" secondItem="siH-X7-Uj2" secondAttribute="bottom" constant="16" id="gia-Ic-suv"/>
+                            <constraint firstItem="siH-X7-Uj2" firstAttribute="centerX" secondItem="PeF-Uy-rfS" secondAttribute="centerX" id="lNS-BG-nKP"/>
+                            <constraint firstItem="B0y-j7-PSc" firstAttribute="leading" secondItem="PeF-Uy-rfS" secondAttribute="leading" constant="16" id="zp0-FV-UH8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Banner Layout" id="WvN-gd-CP2"/>
+                    <connections>
+                        <outlet property="codeSetupBanner" destination="siH-X7-Uj2" id="NHY-VF-pzE"/>
+                        <outlet property="codeSetupBannerStatusLabel" destination="t1y-t5-snp" id="sLB-pi-wt3"/>
+                        <outlet property="userDefinedAttributesBanner" destination="0za-6l-UHk" id="1Iz-La-BkV"/>
+                        <outlet property="userDefinedAttributesBannerStatusLabel" destination="dz7-dM-Qre" id="BOV-LW-MBt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aS4-jW-12j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4960" y="-663.27014218009481"/>
         </scene>
     </scenes>
     <resources>

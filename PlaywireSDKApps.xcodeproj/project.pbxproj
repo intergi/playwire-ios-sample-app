@@ -73,9 +73,13 @@
 		21B70850296793D00073CBFD /* NativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7084F296793D00073CBFD /* NativeAdViewController.m */; };
 		21B70853296795EB0073CBFD /* CustomNativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B70852296795EB0073CBFD /* CustomNativeAdView.m */; };
 		21B70855296799010073CBFD /* CustomNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B70854296799010073CBFD /* CustomNativeAdView.xib */; };
-		31739C17AC23BD4375656344 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		21CE83E929A3A6F900063AB7 /* BannerLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE83E829A3A6F900063AB7 /* BannerLayoutViewController.swift */; };
+		21CE83EA29A3A6F900063AB7 /* BannerLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE83E829A3A6F900063AB7 /* BannerLayoutViewController.swift */; };
+		21F3D42B29A4212400BFD297 /* BannerLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F3D42A29A4212400BFD297 /* BannerLayoutViewController.m */; };
+		21F3D42C29A4212400BFD297 /* BannerLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F3D42A29A4212400BFD297 /* BannerLayoutViewController.m */; };
+		31739C17AC23BD4375656344 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		37119F1689A4EFD7D87C110C /* Pods_PlaywireSDKAppsObjC_COPPA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143509713290CBEA0336AF80 /* Pods_PlaywireSDKAppsObjC_COPPA.framework */; };
-		8DE6774C91176B9429EFEE34 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		8DE6774C91176B9429EFEE34 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		BAA3625CBF99434B4B08086C /* Pods_PlaywireSDKAppsSwift_COPPA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94882EF8C093922EF59FEA16 /* Pods_PlaywireSDKAppsSwift_COPPA.framework */; };
 		E8B00A6360C4A1546ED3D8A7 /* Pods_PlaywireSDKAppsObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1973288122DDDFE73F52F8C9 /* Pods_PlaywireSDKAppsObjC.framework */; };
 		FFEDB82DA5ED90B1CBA1ABB6 /* Pods_PlaywireSDKAppsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F393C1D3B10000CEF54466F0 /* Pods_PlaywireSDKAppsSwift.framework */; };
@@ -138,6 +142,9 @@
 		21B70851296795EB0073CBFD /* CustomNativeAdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomNativeAdView.h; sourceTree = "<group>"; };
 		21B70852296795EB0073CBFD /* CustomNativeAdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNativeAdView.m; sourceTree = "<group>"; };
 		21B70854296799010073CBFD /* CustomNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNativeAdView.xib; sourceTree = "<group>"; };
+		21CE83E829A3A6F900063AB7 /* BannerLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerLayoutViewController.swift; sourceTree = "<group>"; };
+		21F3D42929A4212400BFD297 /* BannerLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerLayoutViewController.h; sourceTree = "<group>"; };
+		21F3D42A29A4212400BFD297 /* BannerLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerLayoutViewController.m; sourceTree = "<group>"; };
 		427B8999AF9B19FF1308564F /* Pods-PlaywireSDKAppsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaywireSDKAppsSwift.release.xcconfig"; path = "Target Support Files/Pods-PlaywireSDKAppsSwift/Pods-PlaywireSDKAppsSwift.release.xcconfig"; sourceTree = "<group>"; };
 		435BA5FB26C5C1D0CFDB63E4 /* Pods-PlaywireSDKAppsSwift_COPPA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaywireSDKAppsSwift_COPPA.release.xcconfig"; path = "Target Support Files/Pods-PlaywireSDKAppsSwift_COPPA/Pods-PlaywireSDKAppsSwift_COPPA.release.xcconfig"; sourceTree = "<group>"; };
 		7E8C9822B493339740BF9D25 /* Pods-PlaywireSDKAppsObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaywireSDKAppsObjC.debug.xcconfig"; path = "Target Support Files/Pods-PlaywireSDKAppsObjC/Pods-PlaywireSDKAppsObjC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31739C17AC23BD4375656344 /* BuildFile in Frameworks */,
+				31739C17AC23BD4375656344 /* (null) in Frameworks */,
 				FFEDB82DA5ED90B1CBA1ABB6 /* Pods_PlaywireSDKAppsSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DE6774C91176B9429EFEE34 /* BuildFile in Frameworks */,
+				8DE6774C91176B9429EFEE34 /* (null) in Frameworks */,
 				E8B00A6360C4A1546ED3D8A7 /* Pods_PlaywireSDKAppsObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +364,7 @@
 				212DA4622952023500B2FB4A /* BannerViewController.swift */,
 				21A88250296D81B0007D4A8C /* InlineBannerViewController.swift */,
 				21A88252296D84ED007D4A8C /* AnchoredBannerViewController.swift */,
+				21CE83E829A3A6F900063AB7 /* BannerLayoutViewController.swift */,
 			);
 			path = banner;
 			sourceTree = "<group>";
@@ -418,6 +426,8 @@
 				21A88255296D8859007D4A8C /* InlineBannerViewController.m */,
 				21A88257296D8868007D4A8C /* AnchoredBannerViewController.h */,
 				21A88258296D8868007D4A8C /* AnchoredBannerViewController.m */,
+				21F3D42929A4212400BFD297 /* BannerLayoutViewController.h */,
+				21F3D42A29A4212400BFD297 /* BannerLayoutViewController.m */,
 			);
 			path = banner;
 			sourceTree = "<group>";
@@ -860,6 +870,7 @@
 			files = (
 				21815EAC2970AFC20007E427 /* AnchoredBannerViewController.m in Sources */,
 				21815EAD2970AFC20007E427 /* NativeAdViewController.m in Sources */,
+				21F3D42C29A4212400BFD297 /* BannerLayoutViewController.m in Sources */,
 				21815EAE2970AFC20007E427 /* AppDelegate.m in Sources */,
 				21815EAF2970AFC20007E427 /* AdTypesViewController.m in Sources */,
 				21815EB02970AFC20007E427 /* RewardedViewController.m in Sources */,
@@ -878,6 +889,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CE83EA29A3A6F900063AB7 /* BannerLayoutViewController.swift in Sources */,
 				21815ECA2970AFE40007E427 /* InterstitialViewController.swift in Sources */,
 				21815ECB2970AFE40007E427 /* NativeAdViewController.swift in Sources */,
 				21815ECC2970AFE40007E427 /* RewardedInterstitialViewController.swift in Sources */,
@@ -897,6 +909,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CE83E929A3A6F900063AB7 /* BannerLayoutViewController.swift in Sources */,
 				21B707DF296640070073CBFD /* InterstitialViewController.swift in Sources */,
 				21B707E0296640070073CBFD /* NativeAdViewController.swift in Sources */,
 				21B707E1296640070073CBFD /* RewardedInterstitialViewController.swift in Sources */,
@@ -918,6 +931,7 @@
 			files = (
 				21A88259296D8868007D4A8C /* AnchoredBannerViewController.m in Sources */,
 				21B70850296793D00073CBFD /* NativeAdViewController.m in Sources */,
+				21F3D42B29A4212400BFD297 /* BannerLayoutViewController.m in Sources */,
 				21B7081729673AF60073CBFD /* AppDelegate.m in Sources */,
 				21B7083129673F8F0073CBFD /* AdTypesViewController.m in Sources */,
 				21B7084029676B210073CBFD /* RewardedViewController.m in Sources */,
