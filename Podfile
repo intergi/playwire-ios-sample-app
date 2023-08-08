@@ -11,13 +11,13 @@ platform :ios, '11.0'
 target 'PlaywireSDKAppsSwift' do
   use_frameworks!
 
-  pod 'Playwire', '8.0.0'
+  pod 'Playwire', '8.1.0'
 end
 
 target 'PlaywireSDKAppsObjC' do
   use_frameworks!
 
-  pod 'Playwire', '8.0.0'
+  pod 'Playwire', '8.1.0'
 end
 
 #####################################
@@ -27,11 +27,11 @@ end
 target 'PlaywireSDKAppsSwift_COPPA' do
   use_frameworks!
 
-  pod 'Playwire/Coppa', '8.0.0'
+  pod 'Playwire/Coppa', '8.1.0'
 end
 
 target 'PlaywireSDKAppsObjC_COPPA' do
   use_frameworks!
 
-  pod 'Playwire/Coppa', '8.0.0'
+  pod 'Playwire/Coppa', '8.1.0'
 end
