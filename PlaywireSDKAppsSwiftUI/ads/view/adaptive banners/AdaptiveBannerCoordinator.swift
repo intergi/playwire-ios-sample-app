@@ -15,6 +15,7 @@ protocol AdaptiveBannerType {
 class AdaptiveBannerCoordinator: NSObject, PWViewAdDelegate, BannerViewControllerWidthDelegate {
     
     private var banner: AdaptiveBannerType
+    var bannerView: PWBannerViewInline!
 
     init(_ banner: AdaptiveBannerType) {
         self.banner = banner

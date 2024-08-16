@@ -29,7 +29,7 @@
 }
 
 - (void)loadRewarded {
-    self.rewarded = [[PWRewarded alloc] initWithAdUnitName:self.adUnitName delegate:self];
+    self.rewarded = [[PWRewarded alloc] initWithAdUnitName:self.adUnitName viewController: self delegate:self];
     
     // Use `[[PWLoadParams new] withTargeting:]` to pass your custom targets to ad request.
     // PWLoadParams *params = [[PWLoadParams new] withTargeting:@{
@@ -49,7 +49,7 @@
         return;
     }
     
-    [self.rewarded showFromViewController:self];
+    [self.rewarded show];
 }
 
 #pragma mark - PWFullScreenAdDelegate -

@@ -21,12 +21,12 @@ struct AnchoredBannerView: View {
 
 struct AnchoredBannerContainer: UIViewControllerRepresentable, AdaptiveBannerType {
     
-    private let bannerView: PWBannerViewAnchored
+    let adUnitName: String
     @State var viewWidth: CGFloat = .zero
     @Binding var state: ViewAdState
 
     init(adUnitName: String, state: Binding<ViewAdState>) {
-        self.bannerView = PWBannerViewAnchored(adUnitName: adUnitName)
+        self.adUnitName = adUnitName
         self._state = state
     }
 
@@ -39,6 +39,8 @@ struct AnchoredBannerContainer: UIViewControllerRepresentable, AdaptiveBannerTyp
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         guard viewWidth != .zero && state == .loading else { return }
         
+        let bannerView = PWBannerViewAnchored(adUnitName: adUnitName)
+
         // remove banner which was added in the previous orientation
         uiViewController.view.subviews
             .filter { $0 is PWBannerViewInline }

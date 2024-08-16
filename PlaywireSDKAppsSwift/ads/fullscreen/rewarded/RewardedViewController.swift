@@ -31,7 +31,7 @@ final class RewardedViewController: UIViewController, AdUnitViewControllerType {
     }
     
     private func loadRewarded() {
-        rewarded = PWRewarded(adUnitName: adUnitName, delegate: self)
+        rewarded = PWRewarded(adUnitName: adUnitName, viewController: self, delegate: self)
         
         // Use `PWLoadParams().withTargeting()` to pass your custom targets to ad request.
         // let params = PWLoadParams().withTargeting(
@@ -53,7 +53,7 @@ final class RewardedViewController: UIViewController, AdUnitViewControllerType {
             return
         }
         
-        rewarded?.show(fromViewController: self)
+        rewarded?.show()
     }
 }
 

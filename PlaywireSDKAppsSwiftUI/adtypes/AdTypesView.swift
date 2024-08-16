@@ -38,7 +38,9 @@ struct AdTypesView: View {
             }
         }
         .onLoad {
-            viewModel.inititalizeSDK(publisherId: "playwire", appId: "test")
+            if let viewController = UIApplication.shared.rootViewController() {
+                 viewModel.inititalizeSDK(publisherId: "playwire", appId: "test", viewController: viewController)
+            } 
         }
     }
     
@@ -51,13 +53,37 @@ struct AdTypesView: View {
         case .BannerInline:
             return AnyView(InlineBannerView(adUnitName: adUnitName))
         case .Interstitial:
-            return AnyView(InterstitialView(adUnitName: adUnitName))
+            if let viewController = UIApplication.shared.rootViewController() {
+                return AnyView(InterstitialView(adUnitName: adUnitName, viewController: viewController))
+            } else {
+                return AnyView(
+                    Text("⚠️ No rootViewController").multilineTextAlignment(.center)
+                )
+            }
         case .Rewarded:
-            return AnyView(RewardedView(adUnitName: adUnitName))
+            if let viewController = UIApplication.shared.rootViewController() {
+                return AnyView(RewardedView(adUnitName: adUnitName, viewController: viewController))
+            } else {
+                return AnyView(
+                    Text("⚠️ No rootViewController").multilineTextAlignment(.center)
+                )
+            }
         case .AppOpenAd:
-            return AnyView(AppOpenAdView(adUnitName: adUnitName))
+            if let viewController = UIApplication.shared.rootViewController() {
+                return AnyView(AppOpenAdView(adUnitName: adUnitName, viewController: viewController))
+            } else {
+                return AnyView(
+                    Text("⚠️ No rootViewController").multilineTextAlignment(.center)
+                )
+            }
         case .RewardedInterstitial:
-            return AnyView(RewardedInterstitialView(adUnitName: adUnitName))
+            if let viewController = UIApplication.shared.rootViewController() {
+                return AnyView(RewardedInterstitialView(adUnitName: adUnitName, viewController:viewController))
+            } else {
+                return AnyView(
+                    Text("⚠️ No rootViewController").multilineTextAlignment(.center)
+                )
+            }
         case .Native:
             return AnyView(
                 Text("⚠️ Native ad is not supported.").multilineTextAlignment(.center)

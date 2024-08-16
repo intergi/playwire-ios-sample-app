@@ -21,15 +21,16 @@ struct BannerView: View {
 
 struct BannerContainer: UIViewControllerRepresentable {
     
-    private let bannerView: PWBannerView
+    let adUnitName: String
     @Binding var state: ViewAdState
 
     init(adUnitName: String, state: Binding<ViewAdState>) {
-        self.bannerView = PWBannerView(adUnitName: adUnitName)
         self._state = state
+        self.adUnitName = adUnitName
     }
 
     func makeUIViewController(context: Context) -> some UIViewController {
+        let bannerView = PWBannerView(adUnitName: adUnitName)
         let hostViewController = BannerViewController()
         
         bannerView.delegate = context.coordinator

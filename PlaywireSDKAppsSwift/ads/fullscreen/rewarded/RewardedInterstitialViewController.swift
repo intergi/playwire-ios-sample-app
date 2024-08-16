@@ -26,7 +26,7 @@ final class RewardedInterstitialViewController: UIViewController, AdUnitViewCont
     }
     
     private func loadRewardedInterstitial() {
-        rewardedInterstitial = PWRewardedInterstitial(adUnitName: adUnitName, delegate: self)
+        rewardedInterstitial = PWRewardedInterstitial(adUnitName: adUnitName, viewController: self, delegate: self)
         
         // Use `PWLoadParams().withTargeting()` to pass your custom targets to ad request.
         // let params = PWLoadParams().withTargeting(
@@ -47,7 +47,7 @@ final class RewardedInterstitialViewController: UIViewController, AdUnitViewCont
             // Load rewarded interstitial one more time or notify a user about error
             return
         }
-        rewardedInterstitial?.show(fromViewController: self)
+        rewardedInterstitial?.show()
     }
 }
 

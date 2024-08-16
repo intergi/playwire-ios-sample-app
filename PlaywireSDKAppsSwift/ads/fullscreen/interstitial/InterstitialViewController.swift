@@ -26,7 +26,7 @@ final class InterstitialViewController: UIViewController, AdUnitViewControllerTy
     }
     
     private func loadInterstitial() {
-        interstitial = PWInterstitial(adUnitName: adUnitName, delegate: self)
+        interstitial = PWInterstitial(adUnitName: adUnitName, viewController: self, delegate: self)
         
         // Use `PWLoadParams().withTargeting()` to pass your custom targets to ad request.
         // let params = PWLoadParams().withTargeting(
@@ -47,7 +47,7 @@ final class InterstitialViewController: UIViewController, AdUnitViewControllerTy
             // Load interstitial one more time or notify a user about error
             return
         }
-        interstitial?.show(fromViewController: self)
+        interstitial?.show()
     }
 }
 

@@ -11,17 +11,21 @@ class InterstitialAdCoordinator: ObservableObject {
     
     // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
     private let adUnitName: String
+    private let viewController: UIViewController
     private var interstitial: PWInterstitial?
     
     @Published var state: FullScreenAdState = .none
 
-    init(adUnitName: String) {
+    init(adUnitName: String, viewController: UIViewController) {
         self.adUnitName = adUnitName
+        self.viewController = viewController
     }
     
+    
     func load() {
-        interstitial = PWInterstitial(adUnitName: adUnitName, delegate: self)
         
+        interstitial = PWInterstitial(adUnitName: adUnitName, viewController: viewController, delegate: self)
+
         // Use `PWLoadParams().withTargeting()` to pass your custom targets to ad request.
         // let params = PWLoadParams().withTargeting(
         //  [
@@ -35,12 +39,12 @@ class InterstitialAdCoordinator: ObservableObject {
         state = .loading
     }
 
-    func show(from viewController: UIViewController) {
+    func show() {
         guard interstitial?.isLoaded == true else {
             // Load interstitial one more time or notify a user about error
             return
         }
-        interstitial?.show(fromViewController: viewController)
+        interstitial?.show()
     }
 }
 
