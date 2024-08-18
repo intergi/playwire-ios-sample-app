@@ -8,7 +8,7 @@ import SwiftUI
 import Playwire
 
 struct AdTypesView: View {
-    let viewControllerRepresentable = EmptyViewControllerRepresentable()
+    private let viewControllerRepresentable = EmptyViewControllerRepresentable()
     
     @StateObject var viewModel: AdTypesViewModel = AdTypesViewModel()
     
@@ -57,13 +57,13 @@ struct AdTypesView: View {
         case .BannerInline:
             InlineBannerView(adUnitName: adUnitName)
         case .Interstitial:
-            InterstitialView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController)
+            InterstitialView(adUnitName: adUnitName)
         case .Rewarded:
-            RewardedView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController)
+            RewardedView(adUnitName: adUnitName)
         case .AppOpenAd:
-            AppOpenAdView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController)
+            AppOpenAdView(adUnitName: adUnitName)
         case .RewardedInterstitial:
-            RewardedInterstitialView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController)
+            RewardedInterstitialView(adUnitName: adUnitName)
         case .Native:
             Text("⚠️ Native ad is not supported.").multilineTextAlignment(.center)
             
