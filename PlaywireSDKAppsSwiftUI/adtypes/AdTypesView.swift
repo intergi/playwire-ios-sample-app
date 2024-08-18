@@ -47,28 +47,28 @@ struct AdTypesView: View {
         }
     }
     
-    func destinationView(adUnitName: String, mode: PWAdUnit.PWAdMode) -> AnyView {
+    @ViewBuilder
+    func destinationView(adUnitName: String, mode: PWAdUnit.PWAdMode) -> some View {
         switch mode {
         case .Banner:
-            return AnyView(BannerView(adUnitName: adUnitName))
+            BannerView(adUnitName: adUnitName)
         case .BannerAnchored:
-            return AnyView(AnchoredBannerView(adUnitName: adUnitName))
+            AnchoredBannerView(adUnitName: adUnitName)
         case .BannerInline:
-            return AnyView(InlineBannerView(adUnitName: adUnitName))
+            InlineBannerView(adUnitName: adUnitName)
         case .Interstitial:
-            return AnyView(InterstitialView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController))
+            InterstitialView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController)
         case .Rewarded:
-            return AnyView(RewardedView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController))
+            RewardedView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController)
         case .AppOpenAd:
-            return AnyView(AppOpenAdView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController))
+            AppOpenAdView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController)
         case .RewardedInterstitial:
-            return AnyView(RewardedInterstitialView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController))
+            RewardedInterstitialView(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController)
         case .Native:
-            return AnyView(
-                Text("⚠️ Native ad is not supported.").multilineTextAlignment(.center)
-            )
+            Text("⚠️ Native ad is not supported.").multilineTextAlignment(.center)
+            
         @unknown default:
-            return AnyView(EmptyView())
+            EmptyView()
         }
     }
 }
