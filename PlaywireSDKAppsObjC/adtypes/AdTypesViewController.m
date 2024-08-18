@@ -9,6 +9,7 @@
 #import "AdTypesViewController.h"
 #import <Playwire-Swift.h>
 #import "AdUnitViewControllerType.h"
+// if use firebase you must import the library
 //@import FirebaseCore;
 
 @interface AdUnit: NSObject

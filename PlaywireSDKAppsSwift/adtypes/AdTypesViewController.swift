@@ -8,6 +8,7 @@
 
 import UIKit
 import Playwire
+// if you use firebase you must import the library
 // import FirebaseCore
 
 protocol AdUnitViewControllerType {
