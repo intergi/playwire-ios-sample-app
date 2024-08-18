@@ -16,11 +16,11 @@ struct PlaywireSDKAppsSwiftUIApp: App {
     }
 }
 
-extension UIApplication {
-    func rootViewController() -> UIViewController? {
-        guard let windowScene = connectedScenes.first as? UIWindowScene else {
-            return nil
-        }
-        return windowScene.windows.first?.rootViewController
-    }
-}
+//extension UIApplication {
+//    func rootViewController() -> UIViewController? {
+//        guard let windowScene = connectedScenes.first as? UIWindowScene else {
+//            return nil
+//        }
+//        return windowScene.windows.first?.rootViewController
+//    }
+//}
