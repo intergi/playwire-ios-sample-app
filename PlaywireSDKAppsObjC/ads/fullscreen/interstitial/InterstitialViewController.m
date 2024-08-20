@@ -23,7 +23,7 @@
 }
 
 - (void)loadInterstitial {
-    self.interstitial = [[PWInterstitial alloc] initWithAdUnitName:self.adUnitName delegate:self];
+    self.interstitial = [[PWInterstitial alloc] initWithAdUnitName:self.adUnitName viewController: self delegate:self];
     
     // Use `[[PWLoadParams new] withTargeting:]` to pass your custom targets to ad request.
     // PWLoadParams *params = [[PWLoadParams new] withTargeting:@{
@@ -42,7 +42,7 @@
         return;
     }
     
-    [self.interstitial showFromViewController:self];
+    [self.interstitial show];
 }
 
 #pragma mark - PWFullScreenAdDelegate -

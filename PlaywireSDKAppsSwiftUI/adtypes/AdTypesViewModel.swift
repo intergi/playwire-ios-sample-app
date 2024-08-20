@@ -18,7 +18,7 @@ final class AdTypesViewModel: ObservableObject {
     @Published var adUnits: [AdUnit] = []
     private var interstitialListener: PWListenerToken?
     
-    func inititalizeSDK(publisherId: String, appId: String) {
+    func inititalizeSDK(publisherId: String, appId: String, viewController: UIViewController) {
         
         #if DEBUG
             // Start `PWNotifier` to log SDK events to console.
@@ -57,7 +57,7 @@ final class AdTypesViewModel: ObservableObject {
             PlaywireSDK.shared.test = true
         #endif
         
-        PlaywireSDK.shared.initialize(publisherId: publisherId, appId: appId, viewController: UIViewController()) {
+        PlaywireSDK.shared.initialize(publisherId: publisherId, appId: appId, viewController: viewController) {
             let units = PlaywireSDK.shared.config?.adUnits.map { AdUnit(name: $0.name, mode: $0.mode) } ?? []
             self.adUnits = units.sorted(by: { $0.name < $1.name })
         }

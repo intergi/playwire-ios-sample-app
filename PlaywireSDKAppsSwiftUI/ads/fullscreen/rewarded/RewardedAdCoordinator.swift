@@ -11,16 +11,18 @@ class RewardedAdCoordinator: ObservableObject {
     
     // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
     private let adUnitName: String
+    private let viewController: UIViewController
     private var rewarded: PWRewarded?
     
     @Published var state: FullScreenAdState = .none
 
-    init(adUnitName: String) {
+    init(adUnitName: String, viewController: UIViewController) {
         self.adUnitName = adUnitName
+        self.viewController = viewController
     }
     
     func load() {
-        rewarded = PWRewarded(adUnitName: adUnitName, delegate: self)
+        rewarded = PWRewarded(adUnitName: adUnitName, viewController: viewController, delegate: self)
         
         // Use `PWLoadParams().withTargeting()` to pass your custom targets to ad request.
         // let params = PWLoadParams().withTargeting(
@@ -35,12 +37,12 @@ class RewardedAdCoordinator: ObservableObject {
         state = .loading
     }
 
-    func show(from viewController: UIViewController) {
+    func show() {
         guard rewarded?.isLoaded == true else {
             // Load rewarded one more time or notify a user about error
             return
         }
-        rewarded?.show(fromViewController: viewController)
+        rewarded?.show()
     }
 }
 

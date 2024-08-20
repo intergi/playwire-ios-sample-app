@@ -11,21 +11,22 @@ class AppOpenAdCoordinator: ObservableObject {
     
     // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
     private let adUnitName: String
+    private let viewController: UIViewController
     private var appOpenAd: PWAppOpenAd?
-    private weak var topViewController: UIViewController?
     
     @Published var state: FullScreenAdState = .none
 
-    init(adUnitName: String, topViewController: UIViewController? = nil) {
+    init(adUnitName: String, viewController: UIViewController) {
         self.adUnitName = adUnitName
-        self.topViewController = topViewController
-        
+        self.viewController = viewController
         subscribeToAppStateNotifications()
+        
     }
     
     func load() {
-        appOpenAd = PWAppOpenAd(adUnitName: adUnitName, delegate: self)
         
+        appOpenAd = PWAppOpenAd(adUnitName: adUnitName, viewController: viewController, delegate: self)
+
         // Ads rendered more than four hours after request time will no longer be valid and may not earn revenue.
         // Enable the property below to start loading new ad automatically if more than a certain number of hours have passed since your ad loaded.
         // It equals to `false` by default.
@@ -47,12 +48,12 @@ class AppOpenAdCoordinator: ObservableObject {
         state = .loading
     }
 
-    func show(from viewController: UIViewController) {
+    func show() {
         guard appOpenAd?.isLoaded == true else {
             // Load app open ad one more time or notify a user about error
             return
         }
-        appOpenAd?.show(fromViewController: viewController)
+        appOpenAd?.show()
     }
     
     private func subscribeToAppStateNotifications() {
@@ -69,8 +70,7 @@ class AppOpenAdCoordinator: ObservableObject {
     
     @objc
     private func handleBecomeActiveState() {
-        guard let vc = topViewController else { return }
-        show(from: vc)
+        show()
     }
 }
 

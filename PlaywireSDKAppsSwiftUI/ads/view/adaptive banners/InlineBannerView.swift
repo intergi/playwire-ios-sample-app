@@ -21,18 +21,20 @@ struct InlineBannerView: View {
 
 struct InlineBannerContainer: UIViewControllerRepresentable, AdaptiveBannerType {
     
-    private let bannerView: PWBannerViewInline
-    @State var viewWidth: CGFloat = .zero
+    let adUnitName: String
+    @State var viewWidth: CGFloat = CGFloat(320)
     @Binding var state: ViewAdState
 
     init(adUnitName: String, state: Binding<ViewAdState>) {
-        self.bannerView = PWBannerViewInline(adUnitName: adUnitName)
+        self.adUnitName = adUnitName
         self._state = state
     }
 
     func makeUIViewController(context: Context) -> some UIViewController {
         let hostViewController = BannerViewController()
-        
+        let bannerView = PWBannerViewInline(adUnitName: adUnitName)
+
+        context.coordinator.bannerView = bannerView
         bannerView.delegate = context.coordinator
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         hostViewController.view.addSubview(bannerView)
@@ -69,7 +71,7 @@ struct InlineBannerContainer: UIViewControllerRepresentable, AdaptiveBannerType 
             .withWidth(viewWidth)
             .withDeviceOrientation(.unknown)
 
-        bannerView.load(params: params)
+        context.coordinator.bannerView.load(params: params)
     }
     
     func makeCoordinator() -> AdaptiveBannerCoordinator {

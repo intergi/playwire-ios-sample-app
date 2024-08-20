@@ -61,7 +61,7 @@ final class AppOpenAdViewController: UIViewController, AdUnitViewControllerType 
     
     private func loadAppOpenAd() {
         
-        appOpenAd = PWAppOpenAd(adUnitName: adUnitName, delegate: self)
+        appOpenAd = PWAppOpenAd(adUnitName: adUnitName, viewController: self, delegate: self)
         
         // Ads rendered more than four hours after request time will no longer be valid and may not earn revenue.
         // Enable the property below to start loading new ad automatically if more than a certain number of hours have passed since your ad loaded.
@@ -90,7 +90,7 @@ final class AppOpenAdViewController: UIViewController, AdUnitViewControllerType 
             // Load app open ad one more time or notify a user about error
             return
         }
-        appOpenAd?.show(fromViewController: self)
+        appOpenAd?.show()
     }
     
     @IBAction func showAction(_ sender: UIButton) {

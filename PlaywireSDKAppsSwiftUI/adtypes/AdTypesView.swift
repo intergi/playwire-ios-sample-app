@@ -8,6 +8,8 @@ import SwiftUI
 import Playwire
 
 struct AdTypesView: View {
+    private let viewControllerRepresentable = EmptyViewControllerRepresentable()
+    
     @StateObject var viewModel: AdTypesViewModel = AdTypesViewModel()
     
     var body: some View {
@@ -37,33 +39,36 @@ struct AdTypesView: View {
                 .navigationTitle(title)
             }
         }
+        .background {
+             viewControllerRepresentable.frame(width: .zero, height: .zero)
+        }
         .onLoad {
-            viewModel.inititalizeSDK(publisherId: "playwire", appId: "test")
+             viewModel.inititalizeSDK(publisherId: "playwire", appId: "test", viewController: viewControllerRepresentable.viewController)
         }
     }
     
-    func destinationView(adUnitName: String, mode: PWAdUnit.PWAdMode) -> AnyView {
+    @ViewBuilder
+    func destinationView(adUnitName: String, mode: PWAdUnit.PWAdMode) -> some View {
         switch mode {
         case .Banner:
-            return AnyView(BannerView(adUnitName: adUnitName))
+            BannerView(adUnitName: adUnitName)
         case .BannerAnchored:
-            return AnyView(AnchoredBannerView(adUnitName: adUnitName))
+            AnchoredBannerView(adUnitName: adUnitName)
         case .BannerInline:
-            return AnyView(InlineBannerView(adUnitName: adUnitName))
+            InlineBannerView(adUnitName: adUnitName)
         case .Interstitial:
-            return AnyView(InterstitialView(adUnitName: adUnitName))
+            InterstitialView(adUnitName: adUnitName)
         case .Rewarded:
-            return AnyView(RewardedView(adUnitName: adUnitName))
+            RewardedView(adUnitName: adUnitName)
         case .AppOpenAd:
-            return AnyView(AppOpenAdView(adUnitName: adUnitName))
+            AppOpenAdView(adUnitName: adUnitName)
         case .RewardedInterstitial:
-            return AnyView(RewardedInterstitialView(adUnitName: adUnitName))
+            RewardedInterstitialView(adUnitName: adUnitName)
         case .Native:
-            return AnyView(
-                Text("⚠️ Native ad is not supported.").multilineTextAlignment(.center)
-            )
+            Text("⚠️ Native ad is not supported.").multilineTextAlignment(.center)
+            
         @unknown default:
-            return AnyView(EmptyView())
+            EmptyView()
         }
     }
 }

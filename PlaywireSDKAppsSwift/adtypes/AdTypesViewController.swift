@@ -8,7 +8,8 @@
 
 import UIKit
 import Playwire
-import FirebaseCore
+// if you use firebase you must import the library
+// import FirebaseCore
 
 protocol AdUnitViewControllerType {
     var adUnitName: String! { get set }

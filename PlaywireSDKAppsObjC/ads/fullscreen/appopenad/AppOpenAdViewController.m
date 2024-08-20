@@ -49,7 +49,7 @@
 }
 
 - (void)loadAppOpenAd {
-    self.appOpenAd = [[PWAppOpenAd alloc] initWithAdUnitName:self.adUnitName delegate:self];
+    self.appOpenAd = [[PWAppOpenAd alloc] initWithAdUnitName:self.adUnitName viewController: self delegate:self];
     
     // Ads rendered more than four hours after request time will no longer be valid and may not earn revenue.
     // Enable the proprety below to start loading new ad automatically if more than a certain number of hours have passed since your ad loaded.
@@ -75,7 +75,7 @@
         return;
     }
     
-    [self.appOpenAd showFromViewController:self];
+    [self.appOpenAd show];
 }
 
 - (IBAction)showAction:(UIButton *)sender {

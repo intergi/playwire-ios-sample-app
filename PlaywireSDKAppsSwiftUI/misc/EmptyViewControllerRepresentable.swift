@@ -1,12 +1,12 @@
 //
-//  AdViewControllerRepresentable.swift
+//  EmptyViewControllerRepresentable.swift
 //  PlaywireSDKAppsSwiftUI
 //
 //
 
 import SwiftUI
 
-struct AdViewControllerRepresentable: UIViewControllerRepresentable {
+struct EmptyViewControllerRepresentable: UIViewControllerRepresentable {
     let viewController = UIViewController()
 
     func makeUIViewController(context: Context) -> some UIViewController {
