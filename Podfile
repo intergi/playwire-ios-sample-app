@@ -5,7 +5,7 @@ source 'https://github.com/intergi/playwire-ios-podspec'
 platform :ios, '16.0'
 use_frameworks!
 
-playwire_version = '10.1.2'
+playwire_version = '10.7.0'
 firebase_version = '10.28.0'
 
 
