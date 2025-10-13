@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AdUnitViewControllerType.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RewardedViewController : UIViewController
+@interface RewardedViewController: UIViewController
+
 // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
-@property (strong, nonatomic) NSString *adUnitName;
+@property (strong, nonatomic, readonly) NSString *adUnitName;
+
+- (instancetype)initWithAdUnitName:(NSString *)adUnitName;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,22 +10,52 @@
 #import <Playwire-Swift.h>
 
 @interface RewardedViewController () <PWFullScreenAdDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-@property (weak, nonatomic) IBOutlet UIButton *getRewardButton;
+@property (strong, nonatomic) UILabel *statusLabel;
+@property (strong, nonatomic, readwrite) NSString *adUnitName;
 @property (strong, nonatomic) PWRewarded *rewarded;
 @end
 
 @implementation RewardedViewController
 
+- (instancetype)initWithAdUnitName:(NSString *)adUnitName {
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        _adUnitName = adUnitName;
+    }
+    return self;
+}
+
+- (instancetype)init {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Use initWithAdUnitName: instead"
+                                 userInfo:nil];
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Use initWithAdUnitName: instead"
+                                 userInfo:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.getRewardButton setEnabled:NO];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    // Create status label
+    self.statusLabel = [[UILabel alloc] init];
+    self.statusLabel.numberOfLines = 2;
+    self.statusLabel.textColor = [UIColor blackColor];
+    self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.statusLabel];
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [self.statusLabel.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor],
+        [self.statusLabel.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor],
+        [self.statusLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor]
+    ]];
+    
     [self loadRewarded];
-}
-
-- (IBAction)getRewardAction:(UIButton *)sender {
-    [self showRewarded];
 }
 
 - (void)loadRewarded {
@@ -56,7 +86,7 @@
 
 - (void)fullScreenAdDidLoad:(PWFullScreenAd * _Nonnull)ad {
     self.statusLabel.text = [NSString stringWithFormat: @"✅ The rewarded \"%@\" is loaded.", self.adUnitName];
-    [self.getRewardButton setEnabled:YES];
+    [self.rewarded show];
 }
 
 - (void)fullScreenAdDidFailToLoad:(PWFullScreenAd * _Nonnull)ad {
@@ -73,8 +103,6 @@
 - (void)fullScreenAdWillDismissFullScreenContent:(PWFullScreenAd * _Nonnull)ad {}
 
 - (void)fullScreenAdDidDismissFullScreenContent:(PWFullScreenAd * _Nonnull)ad {
-    self.rewarded = NULL;
-    [self.getRewardButton setEnabled:NO];
 }
 
 - (void)fullScreenAdDidRecordClick:(PWFullScreenAd * _Nonnull)ad {}

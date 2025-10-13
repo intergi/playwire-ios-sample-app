@@ -10,18 +10,65 @@
 #import <Playwire-Swift.h>
 
 @interface AppOpenAdViewController () <PWFullScreenAdDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-@property (weak, nonatomic) IBOutlet UIButton *showAppOpenAdButton;
+@property (strong, nonatomic) UILabel *statusLabel;
+@property (strong, nonatomic) UIButton *showAppOpenAdButton;
 @property (strong, nonatomic) PWAppOpenAd *appOpenAd;
 @end
 
 @implementation AppOpenAdViewController
 
+- (instancetype)initWithAdUnitName:(NSString *)adUnitName {
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        _adUnitName = adUnitName;
+    }
+    return self;
+}
+
+- (instancetype)init {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Use initWithAdUnitName: instead"
+                                 userInfo:nil];
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Use initWithAdUnitName: instead"
+                                 userInfo:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    // Create status label
+    self.statusLabel = [[UILabel alloc] init];
+    self.statusLabel.textColor = [UIColor blackColor];
+    [self.view addSubview:self.statusLabel];
+    
+    // Create show button
+    self.showAppOpenAdButton = [[UIButton alloc] init];
+    [self.showAppOpenAdButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.showAppOpenAdButton setTitle:@"Show" forState:UIControlStateNormal];
+    self.showAppOpenAdButton.enabled = NO;
+    [self.view addSubview:self.showAppOpenAdButton];
+    
+    // Setup constraints
+    self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.showAppOpenAdButton.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [self.statusLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [self.statusLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
+        
+        [self.showAppOpenAdButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [self.showAppOpenAdButton.topAnchor constraintEqualToAnchor:self.statusLabel.bottomAnchor constant:20]
+    ]];
+    
     [self subscribeToAppStateNotificaions];
     [self.showAppOpenAdButton setEnabled:NO];
+    [self.showAppOpenAdButton addTarget:self action:@selector(showAction:) forControlEvents:UIControlEventTouchUpInside];
     
     [self loadAppOpenAd];
 }
@@ -95,18 +142,13 @@
 
 - (void)fullScreenAdDidFailToPresentFullScreenContent:(PWFullScreenAd * _Nonnull)ad {
     self.statusLabel.text = [NSString stringWithFormat: @"❌ Failed to show the app open ad \"%@\".", self.adUnitName];
-    self.appOpenAd = NULL;
 }
 
 - (void)fullScreenAdWillPresentFullScreenContent:(PWFullScreenAd * _Nonnull)ad {}
 
 - (void)fullScreenAdWillDismissFullScreenContent:(PWFullScreenAd * _Nonnull)ad {}
 
-- (void)fullScreenAdDidDismissFullScreenContent:(PWFullScreenAd * _Nonnull)ad {
-    self.appOpenAd = NULL;
-    
-    // Load app open ad content to be ready for the next presentation
-    [self loadAppOpenAd];
+- (void)fullScreenAdDidDismissFullScreenContent:(PWFullScreenAd * _Nonnull)ad {    
 }
 
 - (void)fullScreenAdDidRecordClick:(PWFullScreenAd * _Nonnull)ad {}

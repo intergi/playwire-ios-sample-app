@@ -20,11 +20,20 @@
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     
-    UINavigationController* navVC = [[UINavigationController alloc] initWithNibName:NULL bundle:NULL];
-    self.window.rootViewController = navVC;
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    if (!windowScene) return;
     
-    UIViewController* adTypesVC = [[AdTypesViewController alloc] initWithNibName:NULL bundle:NULL];
-    [navVC pushViewController:adTypesVC animated:NO];
+    self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    self.window.windowScene = windowScene;
+    
+    UINavigationController* navVC = [[UINavigationController alloc] initWithNibName:nil bundle:nil];
+    navVC.view.backgroundColor = [UIColor whiteColor];
+    
+    AdTypesViewController* adTypesVC = [[AdTypesViewController alloc] initWithNibName:nil bundle:nil];
+    [navVC addChildViewController:adTypesVC];
+    
+    self.window.rootViewController = navVC;
+    [self.window makeKeyAndVisible];
 }
 
 

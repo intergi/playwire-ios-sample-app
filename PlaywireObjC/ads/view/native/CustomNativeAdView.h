@@ -12,9 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CustomNativeAdView : UIView
-@property (weak, nonatomic) IBOutlet UIButton *actionButton;
 
-- (void)configure:(PWNativeViewContent *)adContent;
+@property (strong, nonatomic, readonly) UIButton *button;
+
+- (instancetype)initWithAdContent:(PWNativeViewContent *)adContent;
+
 @end
 
 NS_ASSUME_NONNULL_END

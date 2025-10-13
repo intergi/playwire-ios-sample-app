@@ -10,14 +10,50 @@
 #import <Playwire-Swift.h>
 
 @interface RewardedInterstitialViewController () <PWFullScreenAdDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) UILabel *statusLabel;
+@property (strong, nonatomic, readwrite) NSString *adUnitName;
 @property (strong, nonatomic) PWRewardedInterstitial *rewardedInterstitial;
 @end
 
 @implementation RewardedInterstitialViewController
 
+- (instancetype)initWithAdUnitName:(NSString *)adUnitName {
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        _adUnitName = adUnitName;
+    }
+    return self;
+}
+
+- (instancetype)init {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Use initWithAdUnitName: instead"
+                                 userInfo:nil];
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Use initWithAdUnitName: instead"
+                                 userInfo:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    // Create status label
+    self.statusLabel = [[UILabel alloc] init];
+    self.statusLabel.textColor = [UIColor blackColor];
+    self.statusLabel.numberOfLines = 2;
+    self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.statusLabel];
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [self.statusLabel.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [self.statusLabel.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [self.statusLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor]
+    ]];
     
     [self loadRewardedInterstitial];
 }

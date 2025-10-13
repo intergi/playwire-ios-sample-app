@@ -8,19 +8,24 @@
 
 #import "AdTypesViewController.h"
 #import <Playwire-Swift.h>
-#import "AdUnitViewControllerType.h"
+#import "../ads/view/banner/BannerViewController.h"
+#import "../ads/fullscreen/interstitial/InterstitialViewController.h"
+#import "../ads/fullscreen/rewarded/RewardedViewController.h"
+#import "../ads/fullscreen/appopenad/AppOpenAdViewController.h"
+#import "../ads/fullscreen/rewarded/RewardedInterstitialViewController.h"
+#import "../ads/view/native/NativeAdViewController.h"
 
 @interface AdUnit: NSObject
 @property (nonatomic, copy) NSString *mode;
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *alias;
 @end
 
 @implementation AdUnit
 @end
 
-@interface AdTypesViewController() <UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface AdTypesViewController()
 @property (strong, nonatomic) NSArray<AdUnit *> *adUnits;
+@property (strong, nonatomic) NSString *cellId;
 @end
 
 @implementation AdTypesViewController
@@ -28,9 +33,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.cellId = @"BasicCell";
+    self.adUnits = @[];
+    
     self.title = @"Playwire Demo";
-
-    [self configureTableView];
+    self.navigationController.navigationItem.title = @"Playwire Demo";
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:self.cellId];
+    
+    [self setupTableView];
 
     __weak typeof(self) wself = self;
     
@@ -40,14 +52,11 @@
                                             appId:@"25"
                                    viewController:self
                                 completionHandler:^() {
-        [wself configureAdUnits];
-        
-        wself.tableView.backgroundView = NULL;
-        [wself.tableView reloadData];
+        [wself setupAdUnits];
     }];
 }
 
-- (void)configureAdUnits {
+- (void)setupAdUnits {
     NSMutableArray<AdUnit *> *adUnits = [[NSMutableArray alloc] init];
     [PlaywireSDK.shared.adUnitsDictionary
      enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key,
@@ -55,40 +64,38 @@
                                          BOOL * _Nonnull stop) {
         for (NSString *value in values) {
             AdUnit *adUnit = [AdUnit new];
-            adUnit.name = value;
+            adUnit.alias = value;
             adUnit.mode = key;
             [adUnits addObject:adUnit];
         }
     }];
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey: @"name" ascending: YES];
-    self.adUnits = [adUnits sortedArrayUsingDescriptors: @[sortDescriptor]];
+    // Sort by mode first, then by name
+    self.adUnits = [adUnits sortedArrayUsingComparator:^NSComparisonResult(AdUnit *first, AdUnit *second) {
+        if ([first.mode isEqualToString:second.mode]) {
+            return [first.alias compare:second.alias];
+        }
+        return [first.mode compare:second.mode];
+    }];
+    
+    self.tableView.backgroundView = nil;
+    [self.tableView reloadData];
 }
 
-- (void)configureTableView {
+- (void)setupTableView {
     UILabel *statusLabel = [UILabel new];
     statusLabel.textAlignment = NSTextAlignmentCenter;
     statusLabel.text = @"⏳ SDK initialization..";
     self.tableView.backgroundView = statusLabel;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"BannerLayout"]) return;
-    
-    AdUnit *adUnit = (AdUnit *)sender;
-    id<AdUnitViewControllerType> destination = [segue destinationViewController];
-    destination.adUnitName = adUnit.name;
-}
-
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AdTypeCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellId forIndexPath:indexPath];
     AdUnit *adUnit = self.adUnits[indexPath.row];
     
-    UIListContentConfiguration *config = [UIListContentConfiguration subtitleCellConfiguration];
-    config.text = adUnit.name;
-    config.secondaryText = adUnit.mode;
+    cell.textLabel.text = adUnit.alias;
+    cell.detailTextLabel.text = adUnit.mode;
     
-    cell.contentConfiguration = config;
     return cell;
 }
 
@@ -97,17 +104,37 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     AdUnit *adUnit = [self.adUnits objectAtIndex:indexPath.row];
+    [self presentViewControllerForAdUnit:adUnit];
+}
+
+- (void)presentViewControllerForAdUnit:(AdUnit *)adUnit {
+    UIViewController *viewController = nil;
     
-    // Show predefined view controller with banners that created in the storyboard
-    if ([adUnit.name isEqualToString:@"Banner-320x50"]) {
-        [self performSegueWithIdentifier:@"BannerLayout" sender:adUnit];
+    if ([adUnit.mode isEqualToString:@"Banner"]) {
+        viewController = [[BannerViewController alloc] initWithAdUnitName:adUnit.alias bannerType:PWAdUnit.PWAdMode_Banner];
+    } else if ([adUnit.mode isEqualToString:@"BannerAnchored"]) {
+        viewController = [[BannerViewController alloc] initWithAdUnitName:adUnit.alias bannerType:PWAdUnit.PWAdMode_BannerAnchored];
+    } else if ([adUnit.mode isEqualToString:@"BannerInline"]) {
+        viewController = [[BannerViewController alloc] initWithAdUnitName:adUnit.alias bannerType:PWAdUnit.PWAdMode_BannerInline];
+    } else if ([adUnit.mode isEqualToString:@"Interstitial"]) {
+        viewController = [[InterstitialViewController alloc] initWithAdUnitName:adUnit.alias];
+    } else if ([adUnit.mode isEqualToString:@"Rewarded"]) {
+        viewController = [[RewardedViewController alloc] initWithAdUnitName:adUnit.alias];
+    } else if ([adUnit.mode isEqualToString:@"AppOpenAd"]) {
+        viewController = [[AppOpenAdViewController alloc] initWithAdUnitName:adUnit.alias];
+    } else if ([adUnit.mode isEqualToString:@"RewardedInterstitial"]) {
+        viewController = [[RewardedInterstitialViewController alloc] initWithAdUnitName:adUnit.alias];
+    } else if ([adUnit.mode isEqualToString:@"Native"]) {
+        viewController = [[NativeAdViewController alloc] initWithAdUnitName:adUnit.alias];
+    } else {
+        NSLog(@"Unknown ad unit mode: %@", adUnit.mode);
         return;
     }
     
-    [self performSegueWithIdentifier:adUnit.mode sender:adUnit];
+    if (viewController) {
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 @end

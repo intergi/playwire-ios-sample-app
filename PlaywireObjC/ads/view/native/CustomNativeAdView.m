@@ -9,88 +9,133 @@
 #import "CustomNativeAdView.h"
 
 @interface CustomNativeAdView ()
-@property (weak, nonatomic) IBOutlet UILabel *headlineLabel;
-@property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *iconView;
-@property (weak, nonatomic) IBOutlet UILabel *starLabel;
-@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *storeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *advertiserLabel;
-@property (weak, nonatomic) IBOutlet UIView *mediaViewHolder;
-@property (strong, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) UILabel *headlineLabel;
+@property (strong, nonatomic) UILabel *bodyLabel;
+@property (strong, nonatomic) UIImageView *iconView;
+@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UILabel *starLabel;
+@property (strong, nonatomic) UILabel *priceLabel;
+@property (strong, nonatomic) UILabel *storeLabel;
+@property (strong, nonatomic) UILabel *advertiserLabel;
+@property (strong, nonatomic, readwrite) UIButton *button;
+@property (strong, nonatomic) PWNativeViewContent *adContent;
 @end
 
 @implementation CustomNativeAdView
 
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    self = [super initWithCoder:coder];
+- (instancetype)initWithAdContent:(PWNativeViewContent *)adContent {
+    self = [super initWithFrame:CGRectZero];
     if (self) {
-        [self setupView];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
+        _adContent = adContent;
         [self setupView];
     }
     return self;
 }
 
 - (instancetype)init {
-    self = [self initWithFrame:CGRectZero];
-    return self;
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Use initWithAdContent: instead"
+                                 userInfo:nil];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Use initWithAdContent: instead"
+                                 userInfo:nil];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Use initWithAdContent: instead"
+                                 userInfo:nil];
 }
 
 - (void)setupView {
-    [[NSBundle mainBundle] loadNibNamed:@"CustomNativeAdView" owner:self options:nil];
+    // Create UI elements
+    self.headlineLabel = [[UILabel alloc] init];
+    self.headlineLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
+    self.headlineLabel.adjustsFontSizeToFitWidth = YES;
     
-    self.contentView.translatesAutoresizingMaskIntoConstraints = false;
-    [self addSubview: self.contentView];
-    self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.contentView.bounds.size.width, self.contentView.bounds.size.height);
+    self.bodyLabel = [[UILabel alloc] init];
+    self.bodyLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
+    
+    self.iconView = [[UIImageView alloc] init];
+    self.imageView = [[UIImageView alloc] init];
+    
+    self.advertiserLabel = [[UILabel alloc] init];
+    self.advertiserLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle3];
+    
+    self.button = [[UIButton alloc] init];
+    [self.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.button setTitle:@"Click" forState:UIControlStateNormal];
+    
+    // Add subviews
+    [self addSubview:self.iconView];
+    [self addSubview:self.headlineLabel];
+    [self addSubview:self.advertiserLabel];
+    [self addSubview:self.imageView];
+    [self addSubview:self.bodyLabel];
+    [self addSubview:self.button];
+    
+    // Setup constraints
+    self.iconView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.headlineLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.advertiserLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.bodyLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.button.translatesAutoresizingMaskIntoConstraints = NO;
+    
     [NSLayoutConstraint activateConstraints:@[
-        [self.contentView.leftAnchor constraintEqualToAnchor:self.leftAnchor],
-        [self.contentView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
-        [self.contentView.topAnchor constraintEqualToAnchor:self.topAnchor],
-        [self.contentView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor]
+        [self.iconView.widthAnchor constraintEqualToConstant:30],
+        [self.iconView.heightAnchor constraintEqualToConstant:30],
+        [self.iconView.topAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.topAnchor constant:10],
+        [self.iconView.leadingAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.leadingAnchor constant:10],
+        
+        [self.headlineLabel.topAnchor constraintEqualToAnchor:self.iconView.topAnchor],
+        [self.headlineLabel.leadingAnchor constraintEqualToAnchor:self.iconView.trailingAnchor constant:10],
+        [self.headlineLabel.trailingAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.trailingAnchor constant:-10],
+        
+        [self.advertiserLabel.bottomAnchor constraintEqualToAnchor:self.iconView.bottomAnchor],
+        [self.advertiserLabel.leadingAnchor constraintEqualToAnchor:self.iconView.trailingAnchor constant:10],
+        [self.advertiserLabel.widthAnchor constraintEqualToConstant:50],
+        
+        [self.imageView.topAnchor constraintEqualToAnchor:self.advertiserLabel.topAnchor],
+        [self.imageView.leadingAnchor constraintEqualToAnchor:self.advertiserLabel.trailingAnchor],
+        [self.imageView.widthAnchor constraintEqualToConstant:20],
+        [self.imageView.heightAnchor constraintEqualToConstant:20],
+        
+        [self.bodyLabel.topAnchor constraintEqualToAnchor:self.iconView.bottomAnchor constant:20],
+        [self.bodyLabel.leadingAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.leadingAnchor],
+        [self.bodyLabel.trailingAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.trailingAnchor],
+        
+        [self.button.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
+        [self.button.widthAnchor constraintEqualToConstant:200],
+        [self.button.heightAnchor constraintEqualToConstant:50]
     ]];
-}
-
-- (void)configure:(PWNativeViewContent *)adContent {
-    // Configure views with ad content
-    self.iconView.image = adContent.image;
-    self.headlineLabel.text = adContent.headline;
-    self.actionButton.titleLabel.text = adContent.callToAction;
-    self.bodyLabel.text = adContent.body;
     
-    if (adContent.starRating) {
-        self.starLabel.text = [NSString stringWithFormat:@"%@ ⭐️", [adContent.starRating stringValue]];
-    }
-    // Hide view in case ad content doesn't contain required information
-    [self.starLabel setHidden:adContent.starRating == NULL];
-
-    self.priceLabel.text = adContent.price;
-    [self.priceLabel setHidden:adContent.price == NULL];
+    // Configure with ad content
+    self.iconView.image = self.adContent.icon;
+    self.headlineLabel.text = self.adContent.headline;
+    self.advertiserLabel.text = self.adContent.advertiser;
+    self.imageView.image = self.adContent.image;
+    self.bodyLabel.text = self.adContent.body;
     
-    self.advertiserLabel.text = adContent.advertiser;
-    [self.advertiserLabel setHidden:adContent.advertiser == NULL];
-    
-    self.storeLabel.text = adContent.store;
-    [self.storeLabel setHidden:adContent.store == NULL];
-    
-
-    UIView* mediaView = adContent.mediaView;
+    UIView *mediaView = self.adContent.mediaView;
     if (mediaView) {
-        mediaView.translatesAutoresizingMaskIntoConstraints = false;
-        [self.mediaViewHolder addSubview:mediaView];
+        mediaView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:mediaView];
+        
         [NSLayoutConstraint activateConstraints:@[
-            [mediaView.topAnchor constraintEqualToAnchor: self.mediaViewHolder.topAnchor],
-            [mediaView.bottomAnchor constraintEqualToAnchor: self.mediaViewHolder.bottomAnchor],
-            [mediaView.leadingAnchor constraintEqualToAnchor: self.mediaViewHolder.leadingAnchor],
-            [mediaView.trailingAnchor constraintEqualToAnchor: self.mediaViewHolder.trailingAnchor],
+            [mediaView.topAnchor constraintEqualToAnchor:self.bodyLabel.bottomAnchor constant:10],
+            [mediaView.leadingAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.leadingAnchor],
+            [mediaView.trailingAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.trailingAnchor],
+            [mediaView.heightAnchor constraintEqualToConstant:200],
+            
+            [self.button.topAnchor constraintEqualToAnchor:mediaView.bottomAnchor constant:10]
         ]];
     }
+    
+    [self.button setTitle:self.adContent.callToAction forState:UIControlStateNormal];
 }
 
 
