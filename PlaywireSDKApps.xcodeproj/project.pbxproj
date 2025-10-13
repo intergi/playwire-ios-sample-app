@@ -3,291 +3,166 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		028C2A68E2D4529F89DA55E9 /* Pods_Coppa_PlaywireSDKAppsObjC_COPPA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C33C71C46CA44C68964BD /* Pods_Coppa_PlaywireSDKAppsObjC_COPPA.framework */; };
-		21815EAC2970AFC20007E427 /* AnchoredBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A88258296D8868007D4A8C /* AnchoredBannerViewController.m */; };
-		21815EAD2970AFC20007E427 /* NativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7084F296793D00073CBFD /* NativeAdViewController.m */; };
-		21815EAE2970AFC20007E427 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7081629673AF60073CBFD /* AppDelegate.m */; };
-		21815EAF2970AFC20007E427 /* AdTypesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7083029673F8F0073CBFD /* AdTypesViewController.m */; };
-		21815EB02970AFC20007E427 /* RewardedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7083F29676B210073CBFD /* RewardedViewController.m */; };
-		21815EB12970AFC20007E427 /* AppOpenAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B70846296775D40073CBFD /* AppOpenAdViewController.m */; };
-		21815EB22970AFC20007E427 /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7083A296758FE0073CBFD /* InterstitialViewController.m */; };
-		21815EB32970AFC20007E427 /* CustomNativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B70852296795EB0073CBFD /* CustomNativeAdView.m */; };
-		21815EB42970AFC20007E427 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7084B29678B870073CBFD /* BannerViewController.m */; };
-		21815EB52970AFC20007E427 /* RewardedInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7084229676B3B0073CBFD /* RewardedInterstitialViewController.m */; };
-		21815EB62970AFC20007E427 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7082729673AFC0073CBFD /* main.m */; };
-		21815EB72970AFC20007E427 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7081929673AF60073CBFD /* SceneDelegate.m */; };
-		21815EB82970AFC20007E427 /* InlineBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A88255296D8859007D4A8C /* InlineBannerViewController.m */; };
-		21815EBC2970AFC20007E427 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B7082329673AFC0073CBFD /* LaunchScreen.storyboard */; };
-		21815EBD2970AFC20007E427 /* CustomNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B70854296799010073CBFD /* CustomNativeAdView.xib */; };
-		21815EBE2970AFC20007E427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21B7082129673AFC0073CBFD /* Assets.xcassets */; };
-		21815EBF2970AFC20007E427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B7081E29673AF60073CBFD /* Main.storyboard */; };
-		21815ECA2970AFE40007E427 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA4532951F17300B2FB4A /* InterstitialViewController.swift */; };
-		21815ECB2970AFE40007E427 /* NativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B707D52966117F0073CBFD /* NativeAdViewController.swift */; };
-		21815ECC2970AFE40007E427 /* RewardedInterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA4572951F43600B2FB4A /* RewardedInterstitialViewController.swift */; };
-		21815ECD2970AFE40007E427 /* CustomNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B707D8296617F90073CBFD /* CustomNativeAdView.swift */; };
-		21815ECE2970AFE40007E427 /* RewardedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA4552951F34B00B2FB4A /* RewardedViewController.swift */; };
-		21815ECF2970AFE40007E427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA43C2951EFF400B2FB4A /* AppDelegate.swift */; };
-		21815ED02970AFE40007E427 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA43E2951EFF400B2FB4A /* SceneDelegate.swift */; };
-		21815ED12970AFE40007E427 /* InlineBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A88250296D81B0007D4A8C /* InlineBannerViewController.swift */; };
-		21815ED22970AFE40007E427 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA4622952023500B2FB4A /* BannerViewController.swift */; };
-		21815ED32970AFE40007E427 /* AdTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B707D32965AC490073CBFD /* AdTypesViewController.swift */; };
-		21815ED42970AFE40007E427 /* AnchoredBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A88252296D84ED007D4A8C /* AnchoredBannerViewController.swift */; };
-		21815ED52970AFE40007E427 /* AppOpenAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA46429521E1B00B2FB4A /* AppOpenAdViewController.swift */; };
-		21815ED92970AFE40007E427 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212DA4472951EFFC00B2FB4A /* LaunchScreen.storyboard */; };
-		21815EDA2970AFE40007E427 /* CustomNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B707DA296618630073CBFD /* CustomNativeAdView.xib */; };
-		21815EDB2970AFE40007E427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212DA4452951EFFC00B2FB4A /* Assets.xcassets */; };
-		21815EDC2970AFE40007E427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212DA4422951EFF400B2FB4A /* Main.storyboard */; };
-		21A88251296D81B0007D4A8C /* InlineBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A88250296D81B0007D4A8C /* InlineBannerViewController.swift */; };
-		21A88253296D84ED007D4A8C /* AnchoredBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A88252296D84ED007D4A8C /* AnchoredBannerViewController.swift */; };
-		21A88256296D8859007D4A8C /* InlineBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A88255296D8859007D4A8C /* InlineBannerViewController.m */; };
-		21A88259296D8868007D4A8C /* AnchoredBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A88258296D8868007D4A8C /* AnchoredBannerViewController.m */; };
-		21B707DF296640070073CBFD /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA4532951F17300B2FB4A /* InterstitialViewController.swift */; };
-		21B707E0296640070073CBFD /* NativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B707D52966117F0073CBFD /* NativeAdViewController.swift */; };
-		21B707E1296640070073CBFD /* RewardedInterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA4572951F43600B2FB4A /* RewardedInterstitialViewController.swift */; };
-		21B707E2296640070073CBFD /* CustomNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B707D8296617F90073CBFD /* CustomNativeAdView.swift */; };
-		21B707E3296640070073CBFD /* RewardedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA4552951F34B00B2FB4A /* RewardedViewController.swift */; };
-		21B707E4296640070073CBFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA43C2951EFF400B2FB4A /* AppDelegate.swift */; };
-		21B707E5296640070073CBFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA43E2951EFF400B2FB4A /* SceneDelegate.swift */; };
-		21B707E6296640070073CBFD /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA4622952023500B2FB4A /* BannerViewController.swift */; };
-		21B707E7296640070073CBFD /* AdTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B707D32965AC490073CBFD /* AdTypesViewController.swift */; };
-		21B707E8296640070073CBFD /* AppOpenAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212DA46429521E1B00B2FB4A /* AppOpenAdViewController.swift */; };
-		21B707EC296640070073CBFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212DA4472951EFFC00B2FB4A /* LaunchScreen.storyboard */; };
-		21B707ED296640070073CBFD /* CustomNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B707DA296618630073CBFD /* CustomNativeAdView.xib */; };
-		21B707EE296640070073CBFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212DA4452951EFFC00B2FB4A /* Assets.xcassets */; };
-		21B707EF296640070073CBFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212DA4422951EFF400B2FB4A /* Main.storyboard */; };
-		21B7081729673AF60073CBFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7081629673AF60073CBFD /* AppDelegate.m */; };
-		21B7081A29673AF60073CBFD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7081929673AF60073CBFD /* SceneDelegate.m */; };
-		21B7082029673AF60073CBFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B7081E29673AF60073CBFD /* Main.storyboard */; };
-		21B7082229673AFC0073CBFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21B7082129673AFC0073CBFD /* Assets.xcassets */; };
-		21B7082529673AFC0073CBFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B7082329673AFC0073CBFD /* LaunchScreen.storyboard */; };
-		21B7082829673AFC0073CBFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7082729673AFC0073CBFD /* main.m */; };
-		21B7083129673F8F0073CBFD /* AdTypesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7083029673F8F0073CBFD /* AdTypesViewController.m */; };
-		21B7083B296758FE0073CBFD /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7083A296758FE0073CBFD /* InterstitialViewController.m */; };
-		21B7084029676B210073CBFD /* RewardedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7083F29676B210073CBFD /* RewardedViewController.m */; };
-		21B7084329676B3B0073CBFD /* RewardedInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7084229676B3B0073CBFD /* RewardedInterstitialViewController.m */; };
-		21B70847296775D40073CBFD /* AppOpenAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B70846296775D40073CBFD /* AppOpenAdViewController.m */; };
-		21B7084C29678B870073CBFD /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7084B29678B870073CBFD /* BannerViewController.m */; };
-		21B70850296793D00073CBFD /* NativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B7084F296793D00073CBFD /* NativeAdViewController.m */; };
-		21B70853296795EB0073CBFD /* CustomNativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B70852296795EB0073CBFD /* CustomNativeAdView.m */; };
-		21B70855296799010073CBFD /* CustomNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B70854296799010073CBFD /* CustomNativeAdView.xib */; };
-		21CE83E929A3A6F900063AB7 /* BannerLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE83E829A3A6F900063AB7 /* BannerLayoutViewController.swift */; };
-		21CE83EA29A3A6F900063AB7 /* BannerLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE83E829A3A6F900063AB7 /* BannerLayoutViewController.swift */; };
-		21F3D42B29A4212400BFD297 /* BannerLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F3D42A29A4212400BFD297 /* BannerLayoutViewController.m */; };
-		21F3D42C29A4212400BFD297 /* BannerLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F3D42A29A4212400BFD297 /* BannerLayoutViewController.m */; };
-		21F486312A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486302A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUIApp.swift */; };
-		21F486352A65454C00E4CBC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F486342A65454C00E4CBC0 /* Assets.xcassets */; };
-		21F486382A65454C00E4CBC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F486372A65454C00E4CBC0 /* Preview Assets.xcassets */; };
-		21F4865B2A6574D500E4CBC0 /* AdTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4863D2A6574D400E4CBC0 /* AdTypesView.swift */; };
-		21F4865C2A6574D500E4CBC0 /* AdTypesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4863E2A6574D400E4CBC0 /* AdTypesViewModel.swift */; };
-		21F4865D2A6574D500E4CBC0 /* BannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486412A6574D400E4CBC0 /* BannerCoordinator.swift */; };
-		21F4865E2A6574D500E4CBC0 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486422A6574D400E4CBC0 /* BannerView.swift */; };
-		21F4865F2A6574D500E4CBC0 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486432A6574D400E4CBC0 /* BannerViewController.swift */; };
-		21F486602A6574D500E4CBC0 /* InlineBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486452A6574D400E4CBC0 /* InlineBannerView.swift */; };
-		21F486612A6574D500E4CBC0 /* AdaptiveBannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486462A6574D400E4CBC0 /* AdaptiveBannerCoordinator.swift */; };
-		21F486622A6574D500E4CBC0 /* ViewAdState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486472A6574D400E4CBC0 /* ViewAdState.swift */; };
-		21F486632A6574D500E4CBC0 /* InterstitialAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864A2A6574D400E4CBC0 /* InterstitialAdCoordinator.swift */; };
-		21F486642A6574D500E4CBC0 /* InterstitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864B2A6574D400E4CBC0 /* InterstitialView.swift */; };
-		21F486652A6574D500E4CBC0 /* RewardedInterstitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864D2A6574D400E4CBC0 /* RewardedInterstitialView.swift */; };
-		21F486662A6574D500E4CBC0 /* RewardedInterstitialAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864E2A6574D400E4CBC0 /* RewardedInterstitialAdCoordinator.swift */; };
-		21F486672A6574D500E4CBC0 /* EmptyViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864F2A6574D400E4CBC0 /* EmptyViewControllerRepresentable.swift */; };
-		21F486682A6574D500E4CBC0 /* AppOpenAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486512A6574D400E4CBC0 /* AppOpenAdView.swift */; };
-		21F486692A6574D500E4CBC0 /* AppOpenAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486522A6574D400E4CBC0 /* AppOpenAdCoordinator.swift */; };
-		21F4866A2A6574D500E4CBC0 /* RewardedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486542A6574D400E4CBC0 /* RewardedView.swift */; };
-		21F4866B2A6574D500E4CBC0 /* RewardedAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486552A6574D500E4CBC0 /* RewardedAdCoordinator.swift */; };
-		21F4866C2A6574D500E4CBC0 /* FullScreenAdState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486562A6574D500E4CBC0 /* FullScreenAdState.swift */; };
-		21F4866D2A6574D500E4CBC0 /* PWAdMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486582A6574D500E4CBC0 /* PWAdMode.swift */; };
-		21F4866E2A6574D500E4CBC0 /* onLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4865A2A6574D500E4CBC0 /* onLoad.swift */; };
-		21F486712A65769400E4CBC0 /* AppOpenAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486522A6574D400E4CBC0 /* AppOpenAdCoordinator.swift */; };
-		21F486722A65769400E4CBC0 /* RewardedInterstitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864D2A6574D400E4CBC0 /* RewardedInterstitialView.swift */; };
-		21F486732A65769400E4CBC0 /* onLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4865A2A6574D500E4CBC0 /* onLoad.swift */; };
-		21F486742A65769400E4CBC0 /* AppOpenAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486512A6574D400E4CBC0 /* AppOpenAdView.swift */; };
-		21F486752A65769400E4CBC0 /* ViewAdState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486472A6574D400E4CBC0 /* ViewAdState.swift */; };
-		21F486762A65769400E4CBC0 /* InlineBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486452A6574D400E4CBC0 /* InlineBannerView.swift */; };
-		21F486772A65769400E4CBC0 /* BannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486412A6574D400E4CBC0 /* BannerCoordinator.swift */; };
-		21F486782A65769400E4CBC0 /* InterstitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864B2A6574D400E4CBC0 /* InterstitialView.swift */; };
-		21F486792A65769400E4CBC0 /* RewardedAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486552A6574D500E4CBC0 /* RewardedAdCoordinator.swift */; };
-		21F4867A2A65769400E4CBC0 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486422A6574D400E4CBC0 /* BannerView.swift */; };
-		21F4867B2A65769400E4CBC0 /* RewardedInterstitialAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864E2A6574D400E4CBC0 /* RewardedInterstitialAdCoordinator.swift */; };
-		21F4867C2A65769400E4CBC0 /* PlaywireSDKAppsSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486302A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUIApp.swift */; };
-		21F4867D2A65769400E4CBC0 /* InterstitialAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864A2A6574D400E4CBC0 /* InterstitialAdCoordinator.swift */; };
-		21F4867E2A65769400E4CBC0 /* AdTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4863D2A6574D400E4CBC0 /* AdTypesView.swift */; };
-		21F4867F2A65769400E4CBC0 /* EmptyViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4864F2A6574D400E4CBC0 /* EmptyViewControllerRepresentable.swift */; };
-		21F486802A65769400E4CBC0 /* RewardedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486542A6574D400E4CBC0 /* RewardedView.swift */; };
-		21F486812A65769400E4CBC0 /* AdTypesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4863E2A6574D400E4CBC0 /* AdTypesViewModel.swift */; };
-		21F486822A65769400E4CBC0 /* AdaptiveBannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486462A6574D400E4CBC0 /* AdaptiveBannerCoordinator.swift */; };
-		21F486832A65769400E4CBC0 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486432A6574D400E4CBC0 /* BannerViewController.swift */; };
-		21F486842A65769400E4CBC0 /* FullScreenAdState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486562A6574D500E4CBC0 /* FullScreenAdState.swift */; };
-		21F486852A65769400E4CBC0 /* PWAdMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486582A6574D500E4CBC0 /* PWAdMode.swift */; };
-		21F486882A65769400E4CBC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F486372A65454C00E4CBC0 /* Preview Assets.xcassets */; };
-		21F486892A65769400E4CBC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F486342A65454C00E4CBC0 /* Assets.xcassets */; };
-		21F486962A66B8D900E4CBC0 /* AnchoredBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486952A66B8D900E4CBC0 /* AnchoredBannerView.swift */; };
-		21F486972A66BA1200E4CBC0 /* AnchoredBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F486952A66B8D900E4CBC0 /* AnchoredBannerView.swift */; };
-		3B6E4207F4A6EEBA0084356E /* Pods_Coppa_PlaywireSDKAppsSwiftUI_COPPA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCFEAA44410F85A7534641E0 /* Pods_Coppa_PlaywireSDKAppsSwiftUI_COPPA.framework */; };
-		4130CF9BDA5618A3EE42B1BD /* Pods_Total_PlaywireSDKAppsObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1138252FF23EF8261D5E81D /* Pods_Total_PlaywireSDKAppsObjC.framework */; };
-		9CD688A5C50828E69F3733E6 /* Pods_Total_PlaywireSDKAppsSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DBD10843BE737C743857A1 /* Pods_Total_PlaywireSDKAppsSwiftUI.framework */; };
-		BE4A9A3F2C6BAFFC00AC219F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4A9A3D2C6BADC700AC219F /* StoreKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		D3210E6388A3FE884192C644 /* Pods_Coppa_PlaywireSDKAppsSwift_COPPA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22B038551BDB055B1759DEB /* Pods_Coppa_PlaywireSDKAppsSwift_COPPA.framework */; };
-		FEC90FECD5E11FC5FA773722 /* Pods_Total_PlaywireSDKAppsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BE785C38336D7D5B7B468D /* Pods_Total_PlaywireSDKAppsSwift.framework */; };
+		5A9A5D4B0DB9C52CAB8FAD54 /* Pods_Playwire_PlaywireObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548372CA82296F892C8D1C05 /* Pods_Playwire_PlaywireObjC.framework */; };
+		7C6F87390C74FC1EC2E531D0 /* Pods_Playwire_PlaywireSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E745C642D54C5D865D0B8917 /* Pods_Playwire_PlaywireSwiftUI.framework */; };
+		E6CDB2C7381AADDA652654B7 /* Pods_Playwire_PlaywireSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8E57A4DD25D484E04C7553 /* Pods_Playwire_PlaywireSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05DCFEDE4969AB1C10E97ABE /* Pods-Total-PlaywireSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSwift.debug.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSwift/Pods-Total-PlaywireSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		0952AFF0B11E055A91E6BBE0 /* Pods-Total-PlaywireSDKAppsSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSDKAppsSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSDKAppsSwiftUI/Pods-Total-PlaywireSDKAppsSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
-		212DA43C2951EFF400B2FB4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		212DA43E2951EFF400B2FB4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		212DA4432951EFF400B2FB4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		212DA4452951EFFC00B2FB4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		212DA4482951EFFC00B2FB4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		212DA44A2951EFFC00B2FB4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		212DA4532951F17300B2FB4A /* InterstitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
-		212DA4552951F34B00B2FB4A /* RewardedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedViewController.swift; sourceTree = "<group>"; };
-		212DA4572951F43600B2FB4A /* RewardedInterstitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedInterstitialViewController.swift; sourceTree = "<group>"; };
-		212DA4622952023500B2FB4A /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
-		212DA46429521E1B00B2FB4A /* AppOpenAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOpenAdViewController.swift; sourceTree = "<group>"; };
-		21815EC52970AFC20007E427 /* PlaywireSDKAppsObjC_COPPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSDKAppsObjC_COPPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21815EE22970AFE40007E427 /* PlaywireSDKAppsSwift_COPPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSDKAppsSwift_COPPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21815EE82970B1D60007E427 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21815EEA2970B1E40007E427 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21A76B222A82C9F900F7FB38 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21A88250296D81B0007D4A8C /* InlineBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineBannerViewController.swift; sourceTree = "<group>"; };
-		21A88252296D84ED007D4A8C /* AnchoredBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchoredBannerViewController.swift; sourceTree = "<group>"; };
-		21A88254296D8859007D4A8C /* InlineBannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InlineBannerViewController.h; sourceTree = "<group>"; };
-		21A88255296D8859007D4A8C /* InlineBannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InlineBannerViewController.m; sourceTree = "<group>"; };
-		21A88257296D8868007D4A8C /* AnchoredBannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnchoredBannerViewController.h; sourceTree = "<group>"; };
-		21A88258296D8868007D4A8C /* AnchoredBannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnchoredBannerViewController.m; sourceTree = "<group>"; };
-		21B707D32965AC490073CBFD /* AdTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypesViewController.swift; sourceTree = "<group>"; };
-		21B707D52966117F0073CBFD /* NativeAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdViewController.swift; sourceTree = "<group>"; };
-		21B707D8296617F90073CBFD /* CustomNativeAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNativeAdView.swift; sourceTree = "<group>"; };
-		21B707DA296618630073CBFD /* CustomNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNativeAdView.xib; sourceTree = "<group>"; };
-		21B707F5296640070073CBFD /* PlaywireSDKAppsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSDKAppsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21B7081329673AF60073CBFD /* PlaywireSDKAppsObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSDKAppsObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21B7081529673AF60073CBFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		21B7081629673AF60073CBFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		21B7081829673AF60073CBFD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		21B7081929673AF60073CBFD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		21B7081F29673AF60073CBFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		21B7082129673AFC0073CBFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		21B7082429673AFC0073CBFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		21B7082629673AFC0073CBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21B7082729673AFC0073CBFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		21B7082F29673F8F0073CBFD /* AdTypesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdTypesViewController.h; sourceTree = "<group>"; };
-		21B7083029673F8F0073CBFD /* AdTypesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdTypesViewController.m; sourceTree = "<group>"; };
-		21B70839296758FE0073CBFD /* InterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
-		21B7083A296758FE0073CBFD /* InterstitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
-		21B7083C296761C40073CBFD /* AdUnitViewControllerType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdUnitViewControllerType.h; sourceTree = "<group>"; };
-		21B7083E29676B210073CBFD /* RewardedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardedViewController.h; sourceTree = "<group>"; };
-		21B7083F29676B210073CBFD /* RewardedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RewardedViewController.m; sourceTree = "<group>"; };
-		21B7084129676B3B0073CBFD /* RewardedInterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardedInterstitialViewController.h; sourceTree = "<group>"; };
-		21B7084229676B3B0073CBFD /* RewardedInterstitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RewardedInterstitialViewController.m; sourceTree = "<group>"; };
-		21B70845296775D40073CBFD /* AppOpenAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppOpenAdViewController.h; sourceTree = "<group>"; };
-		21B70846296775D40073CBFD /* AppOpenAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppOpenAdViewController.m; sourceTree = "<group>"; };
-		21B7084A29678B870073CBFD /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
-		21B7084B29678B870073CBFD /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
-		21B7084E296793D00073CBFD /* NativeAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeAdViewController.h; sourceTree = "<group>"; };
-		21B7084F296793D00073CBFD /* NativeAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeAdViewController.m; sourceTree = "<group>"; };
-		21B70851296795EB0073CBFD /* CustomNativeAdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomNativeAdView.h; sourceTree = "<group>"; };
-		21B70852296795EB0073CBFD /* CustomNativeAdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNativeAdView.m; sourceTree = "<group>"; };
-		21B70854296799010073CBFD /* CustomNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNativeAdView.xib; sourceTree = "<group>"; };
-		21CE83E829A3A6F900063AB7 /* BannerLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerLayoutViewController.swift; sourceTree = "<group>"; };
-		21F3D42929A4212400BFD297 /* BannerLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerLayoutViewController.h; sourceTree = "<group>"; };
-		21F3D42A29A4212400BFD297 /* BannerLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerLayoutViewController.m; sourceTree = "<group>"; };
-		21F4862E2A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSDKAppsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21F486302A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaywireSDKAppsSwiftUIApp.swift; sourceTree = "<group>"; };
-		21F486342A65454C00E4CBC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		21F486372A65454C00E4CBC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		21F4863D2A6574D400E4CBC0 /* AdTypesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdTypesView.swift; sourceTree = "<group>"; };
-		21F4863E2A6574D400E4CBC0 /* AdTypesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdTypesViewModel.swift; sourceTree = "<group>"; };
-		21F486412A6574D400E4CBC0 /* BannerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCoordinator.swift; sourceTree = "<group>"; };
-		21F486422A6574D400E4CBC0 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
-		21F486432A6574D400E4CBC0 /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
-		21F486452A6574D400E4CBC0 /* InlineBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineBannerView.swift; sourceTree = "<group>"; };
-		21F486462A6574D400E4CBC0 /* AdaptiveBannerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveBannerCoordinator.swift; sourceTree = "<group>"; };
-		21F486472A6574D400E4CBC0 /* ViewAdState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAdState.swift; sourceTree = "<group>"; };
-		21F4864A2A6574D400E4CBC0 /* InterstitialAdCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAdCoordinator.swift; sourceTree = "<group>"; };
-		21F4864B2A6574D400E4CBC0 /* InterstitialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialView.swift; sourceTree = "<group>"; };
-		21F4864D2A6574D400E4CBC0 /* RewardedInterstitialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedInterstitialView.swift; sourceTree = "<group>"; };
-		21F4864E2A6574D400E4CBC0 /* RewardedInterstitialAdCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedInterstitialAdCoordinator.swift; sourceTree = "<group>"; };
-		21F4864F2A6574D400E4CBC0 /* EmptyViewControllerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewControllerRepresentable.swift; sourceTree = "<group>"; };
-		21F486512A6574D400E4CBC0 /* AppOpenAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOpenAdView.swift; sourceTree = "<group>"; };
-		21F486522A6574D400E4CBC0 /* AppOpenAdCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOpenAdCoordinator.swift; sourceTree = "<group>"; };
-		21F486542A6574D400E4CBC0 /* RewardedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedView.swift; sourceTree = "<group>"; };
-		21F486552A6574D500E4CBC0 /* RewardedAdCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAdCoordinator.swift; sourceTree = "<group>"; };
-		21F486562A6574D500E4CBC0 /* FullScreenAdState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenAdState.swift; sourceTree = "<group>"; };
-		21F486582A6574D500E4CBC0 /* PWAdMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWAdMode.swift; sourceTree = "<group>"; };
-		21F4865A2A6574D500E4CBC0 /* onLoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onLoad.swift; sourceTree = "<group>"; };
-		21F4868D2A65769400E4CBC0 /* PlaywireSDKAppsSwiftUI_COPPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSDKAppsSwiftUI_COPPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21F4868E2A65775300E4CBC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		21F486952A66B8D900E4CBC0 /* AnchoredBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchoredBannerView.swift; sourceTree = "<group>"; };
+		0D19A4744B47E68BF71C1818 /* Pods-Coppa-PlaywireSwift_Coppa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSwift_Coppa.release.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSwift_Coppa/Pods-Coppa-PlaywireSwift_Coppa.release.xcconfig"; sourceTree = "<group>"; };
+		0F9D1EAAB2BB02703C03ABFA /* Pods_Coppa_PlaywireSwiftUI_Coppa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coppa_PlaywireSwiftUI_Coppa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		278C4F17B5DB0F32415308F3 /* Pods-Coppa-PlaywireSwiftUI_Coppa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSwiftUI_Coppa.debug.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSwiftUI_Coppa/Pods-Coppa-PlaywireSwiftUI_Coppa.debug.xcconfig"; sourceTree = "<group>"; };
+		2A73C866CC3EC7B4EAF00E13 /* Pods-Total-PlaywireObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireObjC.debug.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireObjC/Pods-Total-PlaywireObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		3A1EF080FCCA20CBA8D8222E /* Pods-Playwire-PlaywireSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwift.debug.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		52FA3D2C39AE9FD1EB22934F /* Pods_Coppa_PlaywireSwift_Coppa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coppa_PlaywireSwift_Coppa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5312F6A4E654673B0C24DE94 /* Pods-Playwire-PlaywireSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwift.release.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift.release.xcconfig"; sourceTree = "<group>"; };
 		533C93756BE00F1BB3B70390 /* Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA.debug.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA.debug.xcconfig"; sourceTree = "<group>"; };
+		548372CA82296F892C8D1C05 /* Pods_Playwire_PlaywireObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playwire_PlaywireObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54EC8E2FD24DA0DA63C9165C /* Pods_Coppa_PlaywireObjC_Coppa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coppa_PlaywireObjC_Coppa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5F44A2575500570BA7E88E /* Pods-Coppa-PlaywireSDKAppsSwift_COPPA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSDKAppsSwift_COPPA.release.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSDKAppsSwift_COPPA/Pods-Coppa-PlaywireSDKAppsSwift_COPPA.release.xcconfig"; sourceTree = "<group>"; };
 		5C6C33C71C46CA44C68964BD /* Pods_Coppa_PlaywireSDKAppsObjC_COPPA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coppa_PlaywireSDKAppsObjC_COPPA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		610E542D2E955BE900FD6653 /* PlaywireObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		610E544B2E955C0200FD6653 /* PlaywireSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		610E54872E955C1F00FD6653 /* PlaywireSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		641BB2AB03BF93DC95E82E61 /* Pods-Playwire-PlaywireObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireObjC.release.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC.release.xcconfig"; sourceTree = "<group>"; };
+		65CDCB2AB17138C6A90F530B /* Pods-Coppa-PlaywireSwiftUI_Coppa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSwiftUI_Coppa.release.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSwiftUI_Coppa/Pods-Coppa-PlaywireSwiftUI_Coppa.release.xcconfig"; sourceTree = "<group>"; };
+		66121F51BF60158568760ED2 /* Pods-Total-PlaywireSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSwiftUI/Pods-Total-PlaywireSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		6E8E57A4DD25D484E04C7553 /* Pods_Playwire_PlaywireSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playwire_PlaywireSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		702E8E3E88783CFF07ADF4F3 /* Pods-Total-PlaywireSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSwiftUI/Pods-Total-PlaywireSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		73CCB2E3FEEF93FBEF581F0F /* Pods-Playwire-PlaywireSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		74BE785C38336D7D5B7B468D /* Pods_Total_PlaywireSDKAppsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Total_PlaywireSDKAppsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A87318E3A62571721A3D4C /* Pods-Coppa-PlaywireObjC_Coppa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireObjC_Coppa.debug.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireObjC_Coppa/Pods-Coppa-PlaywireObjC_Coppa.debug.xcconfig"; sourceTree = "<group>"; };
+		7B6E2B607C4FB699467DBBF7 /* Pods-Total-PlaywireSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSwift.release.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSwift/Pods-Total-PlaywireSwift.release.xcconfig"; sourceTree = "<group>"; };
 		7E0DD5672C918926C8288AF5 /* Pods-Coppa-PlaywireSDKAppsObjC_COPPA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSDKAppsObjC_COPPA.debug.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSDKAppsObjC_COPPA/Pods-Coppa-PlaywireSDKAppsObjC_COPPA.debug.xcconfig"; sourceTree = "<group>"; };
+		7ED5EB2B49A33EDA36E33F7D /* Pods-Total-PlaywireObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireObjC.release.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireObjC/Pods-Total-PlaywireObjC.release.xcconfig"; sourceTree = "<group>"; };
 		8FE09A1C1B1BDD3A5F02C8F9 /* Pods-Coppa-PlaywireSDKAppsObjC_COPPA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSDKAppsObjC_COPPA.release.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSDKAppsObjC_COPPA/Pods-Coppa-PlaywireSDKAppsObjC_COPPA.release.xcconfig"; sourceTree = "<group>"; };
 		9B0F44D8652865AFA4A8C566 /* Pods-Total-PlaywireSDKAppsSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSDKAppsSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSDKAppsSwiftUI/Pods-Total-PlaywireSDKAppsSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		ADB24CA55C496ABBFF695EB3 /* Pods-Coppa-PlaywireObjC_Coppa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireObjC_Coppa.release.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireObjC_Coppa/Pods-Coppa-PlaywireObjC_Coppa.release.xcconfig"; sourceTree = "<group>"; };
 		ADCFB5C3BD20104826D474F9 /* Pods-Total-PlaywireSDKAppsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSDKAppsSwift.release.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSDKAppsSwift/Pods-Total-PlaywireSDKAppsSwift.release.xcconfig"; sourceTree = "<group>"; };
 		B1138252FF23EF8261D5E81D /* Pods_Total_PlaywireSDKAppsObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Total_PlaywireSDKAppsObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14637BB05F8DFD165568CAA /* Pods-Playwire-PlaywireObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireObjC.debug.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		B9A32C2582B023D16FBE0526 /* Pods-Coppa-PlaywireSwift_Coppa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSwift_Coppa.debug.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSwift_Coppa/Pods-Coppa-PlaywireSwift_Coppa.debug.xcconfig"; sourceTree = "<group>"; };
 		BCFEAA44410F85A7534641E0 /* Pods_Coppa_PlaywireSDKAppsSwiftUI_COPPA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coppa_PlaywireSDKAppsSwiftUI_COPPA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4A9A3D2C6BADC700AC219F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C22B038551BDB055B1759DEB /* Pods_Coppa_PlaywireSDKAppsSwift_COPPA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coppa_PlaywireSDKAppsSwift_COPPA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5DBD10843BE737C743857A1 /* Pods_Total_PlaywireSDKAppsSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Total_PlaywireSDKAppsSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81B639098DF875E11F62E72 /* Pods-Total-PlaywireSDKAppsObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSDKAppsObjC.release.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSDKAppsObjC/Pods-Total-PlaywireSDKAppsObjC.release.xcconfig"; sourceTree = "<group>"; };
 		D11F66E20ADBECE8562DBA25 /* Pods-Total-PlaywireSDKAppsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSDKAppsSwift.debug.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSDKAppsSwift/Pods-Total-PlaywireSDKAppsSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		D95B72CFB0104DC436B09E1D /* Pods-Playwire-PlaywireSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		DDC40B91B5474BB5675E3D43 /* Pods-Coppa-PlaywireSDKAppsSwift_COPPA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSDKAppsSwift_COPPA.debug.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSDKAppsSwift_COPPA/Pods-Coppa-PlaywireSDKAppsSwift_COPPA.debug.xcconfig"; sourceTree = "<group>"; };
 		E5E946600009F7F61502DD99 /* Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA.release.xcconfig"; path = "Target Support Files/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA.release.xcconfig"; sourceTree = "<group>"; };
+		E745C642D54C5D865D0B8917 /* Pods_Playwire_PlaywireSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playwire_PlaywireSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0490B7306184FBAAD94648 /* Pods-Total-PlaywireSDKAppsObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total-PlaywireSDKAppsObjC.debug.xcconfig"; path = "Target Support Files/Pods-Total-PlaywireSDKAppsObjC/Pods-Total-PlaywireSDKAppsObjC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		610E54432E955BEA00FD6653 /* Exceptions for "PlaywireObjC" folder in "PlaywireObjC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 610E542C2E955BE900FD6653 /* PlaywireObjC */;
+		};
+		610E54812E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireObjC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Ads/Fullscreen/AppOpen/AppOpenViewController.swift,
+				Ads/Fullscreen/Interstitial/InterstitialViewController.swift,
+				Ads/Fullscreen/Rewarded/RewardedInterstitialViewController.swift,
+				Ads/Fullscreen/Rewarded/RewardedViewController.swift,
+				Ads/view/banner/BannerViewController.swift,
+				Ads/view/native/CustomNativeAdView.swift,
+				Ads/view/native/NativeViewController.swift,
+				AdTypes/AdTypesViewController.swift,
+				AppDelegate.swift,
+				Assets.xcassets,
+				Info.plist,
+				SceneDelegate.swift,
+			);
+			target = 610E542C2E955BE900FD6653 /* PlaywireObjC */;
+		};
+		610E54822E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireSwift" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Ads/Fullscreen/AppOpen/AppOpenViewController.swift,
+				Ads/Fullscreen/Interstitial/InterstitialViewController.swift,
+				Ads/Fullscreen/Rewarded/RewardedInterstitialViewController.swift,
+				Ads/Fullscreen/Rewarded/RewardedViewController.swift,
+				Ads/view/banner/BannerViewController.swift,
+				Ads/view/native/CustomNativeAdView.swift,
+				Ads/view/native/NativeViewController.swift,
+				AdTypes/AdTypesViewController.swift,
+				AppDelegate.swift,
+				Assets.xcassets,
+				SceneDelegate.swift,
+			);
+			target = 610E544A2E955C0200FD6653 /* PlaywireSwift */;
+		};
+		610E561D2E958EC400FD6653 /* Exceptions for "PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 610E54862E955C1F00FD6653 /* PlaywireSwiftUI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		610E542E2E955BE900FD6653 /* PlaywireObjC */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				610E54432E955BEA00FD6653 /* Exceptions for "PlaywireObjC" folder in "PlaywireObjC" target */,
+			);
+			path = PlaywireObjC;
+			sourceTree = "<group>";
+		};
+		610E547A2E955C0D00FD6653 /* PlaywireSwift */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				610E54812E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireObjC" target */,
+				610E54822E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireSwift" target */,
+			);
+			path = PlaywireSwift;
+			sourceTree = "<group>";
+		};
+		610E54882E955C1F00FD6653 /* PlaywireSwiftUI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				610E561D2E958EC400FD6653 /* Exceptions for "PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */,
+			);
+			path = PlaywireSwiftUI;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		21815EB92970AFC20007E427 /* Frameworks */ = {
+		610E542A2E955BE900FD6653 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				028C2A68E2D4529F89DA55E9 /* Pods_Coppa_PlaywireSDKAppsObjC_COPPA.framework in Frameworks */,
+				5A9A5D4B0DB9C52CAB8FAD54 /* Pods_Playwire_PlaywireObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21815ED62970AFE40007E427 /* Frameworks */ = {
+		610E54482E955C0200FD6653 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3210E6388A3FE884192C644 /* Pods_Coppa_PlaywireSDKAppsSwift_COPPA.framework in Frameworks */,
+				E6CDB2C7381AADDA652654B7 /* Pods_Playwire_PlaywireSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21B707E9296640070073CBFD /* Frameworks */ = {
+		610E54842E955C1F00FD6653 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEC90FECD5E11FC5FA773722 /* Pods_Total_PlaywireSDKAppsSwift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21B7081029673AF60073CBFD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4130CF9BDA5618A3EE42B1BD /* Pods_Total_PlaywireSDKAppsObjC.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21F4862B2A65454A00E4CBC0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE4A9A3F2C6BAFFC00AC219F /* StoreKit.framework in Frameworks */,
-				9CD688A5C50828E69F3733E6 /* Pods_Total_PlaywireSDKAppsSwiftUI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21F486862A65769400E4CBC0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B6E4207F4A6EEBA0084356E /* Pods_Coppa_PlaywireSDKAppsSwiftUI_COPPA.framework in Frameworks */,
+				7C6F87390C74FC1EC2E531D0 /* Pods_Playwire_PlaywireSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +172,9 @@
 		212DA4302951EFF300B2FB4A = {
 			isa = PBXGroup;
 			children = (
-				212DA43B2951EFF400B2FB4A /* PlaywireSDKAppsSwift */,
-				21B7081429673AF60073CBFD /* PlaywireSDKAppsObjC */,
-				21815EE42970B1520007E427 /* PlaywireSDKAppsObjC_COPPA */,
-				21815EE52970B1680007E427 /* PlaywireSDKAppsSwift_COPPA */,
-				21F4862F2A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUI */,
-				21F486902A657BC700E4CBC0 /* PlaywireSDKAppsSwiftUI_COPPA */,
+				610E542E2E955BE900FD6653 /* PlaywireObjC */,
+				610E547A2E955C0D00FD6653 /* PlaywireSwift */,
+				610E54882E955C1F00FD6653 /* PlaywireSwiftUI */,
 				212DA43A2951EFF400B2FB4A /* Products */,
 				9F29743D4CB5EDF01F439121 /* Pods */,
 				4432D180024143DCE8AC98B9 /* Frameworks */,
@@ -312,375 +184,11 @@
 		212DA43A2951EFF400B2FB4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21B707F5296640070073CBFD /* PlaywireSDKAppsSwift.app */,
-				21B7081329673AF60073CBFD /* PlaywireSDKAppsObjC.app */,
-				21815EC52970AFC20007E427 /* PlaywireSDKAppsObjC_COPPA.app */,
-				21815EE22970AFE40007E427 /* PlaywireSDKAppsSwift_COPPA.app */,
-				21F4862E2A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUI.app */,
-				21F4868D2A65769400E4CBC0 /* PlaywireSDKAppsSwiftUI_COPPA.app */,
+				610E542D2E955BE900FD6653 /* PlaywireObjC.app */,
+				610E544B2E955C0200FD6653 /* PlaywireSwift.app */,
+				610E54872E955C1F00FD6653 /* PlaywireSwiftUI.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		212DA43B2951EFF400B2FB4A /* PlaywireSDKAppsSwift */ = {
-			isa = PBXGroup;
-			children = (
-				21B707D22965AC2E0073CBFD /* adtypes */,
-				212DA4512951F15000B2FB4A /* ads */,
-				212DA43C2951EFF400B2FB4A /* AppDelegate.swift */,
-				212DA43E2951EFF400B2FB4A /* SceneDelegate.swift */,
-				212DA4422951EFF400B2FB4A /* Main.storyboard */,
-				212DA4452951EFFC00B2FB4A /* Assets.xcassets */,
-				212DA4472951EFFC00B2FB4A /* LaunchScreen.storyboard */,
-				212DA44A2951EFFC00B2FB4A /* Info.plist */,
-			);
-			path = PlaywireSDKAppsSwift;
-			sourceTree = "<group>";
-		};
-		212DA4512951F15000B2FB4A /* ads */ = {
-			isa = PBXGroup;
-			children = (
-				212DA4592951FF8400B2FB4A /* view */,
-				212DA4522951F15C00B2FB4A /* fullscreen */,
-			);
-			path = ads;
-			sourceTree = "<group>";
-		};
-		212DA4522951F15C00B2FB4A /* fullscreen */ = {
-			isa = PBXGroup;
-			children = (
-				21B708322967588C0073CBFD /* interstitial */,
-				21B708332967589C0073CBFD /* rewarded */,
-				21B70835296758C70073CBFD /* appopenad */,
-			);
-			path = fullscreen;
-			sourceTree = "<group>";
-		};
-		212DA4592951FF8400B2FB4A /* view */ = {
-			isa = PBXGroup;
-			children = (
-				21B707D7296617D90073CBFD /* native */,
-				21B70836296758D80073CBFD /* banner */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		21815EE42970B1520007E427 /* PlaywireSDKAppsObjC_COPPA */ = {
-			isa = PBXGroup;
-			children = (
-				21815EEA2970B1E40007E427 /* Info.plist */,
-			);
-			path = PlaywireSDKAppsObjC_COPPA;
-			sourceTree = "<group>";
-		};
-		21815EE52970B1680007E427 /* PlaywireSDKAppsSwift_COPPA */ = {
-			isa = PBXGroup;
-			children = (
-				21815EE82970B1D60007E427 /* Info.plist */,
-			);
-			path = PlaywireSDKAppsSwift_COPPA;
-			sourceTree = "<group>";
-		};
-		21B707D22965AC2E0073CBFD /* adtypes */ = {
-			isa = PBXGroup;
-			children = (
-				21B707D32965AC490073CBFD /* AdTypesViewController.swift */,
-			);
-			path = adtypes;
-			sourceTree = "<group>";
-		};
-		21B707D7296617D90073CBFD /* native */ = {
-			isa = PBXGroup;
-			children = (
-				21B707D52966117F0073CBFD /* NativeAdViewController.swift */,
-				21B707DA296618630073CBFD /* CustomNativeAdView.xib */,
-				21B707D8296617F90073CBFD /* CustomNativeAdView.swift */,
-			);
-			path = native;
-			sourceTree = "<group>";
-		};
-		21B7081429673AF60073CBFD /* PlaywireSDKAppsObjC */ = {
-			isa = PBXGroup;
-			children = (
-				21B7082C29673F560073CBFD /* adtypes */,
-				21B7082E29673F690073CBFD /* ads */,
-				21B7081529673AF60073CBFD /* AppDelegate.h */,
-				21B7081629673AF60073CBFD /* AppDelegate.m */,
-				21B7081829673AF60073CBFD /* SceneDelegate.h */,
-				21B7081929673AF60073CBFD /* SceneDelegate.m */,
-				21B7081E29673AF60073CBFD /* Main.storyboard */,
-				21B7082129673AFC0073CBFD /* Assets.xcassets */,
-				21B7082329673AFC0073CBFD /* LaunchScreen.storyboard */,
-				21B7082629673AFC0073CBFD /* Info.plist */,
-				21B7082729673AFC0073CBFD /* main.m */,
-			);
-			path = PlaywireSDKAppsObjC;
-			sourceTree = "<group>";
-		};
-		21B7082C29673F560073CBFD /* adtypes */ = {
-			isa = PBXGroup;
-			children = (
-				21B7082F29673F8F0073CBFD /* AdTypesViewController.h */,
-				21B7083029673F8F0073CBFD /* AdTypesViewController.m */,
-				21B7083C296761C40073CBFD /* AdUnitViewControllerType.h */,
-			);
-			path = adtypes;
-			sourceTree = "<group>";
-		};
-		21B7082E29673F690073CBFD /* ads */ = {
-			isa = PBXGroup;
-			children = (
-				21B7084829678B6F0073CBFD /* view */,
-				21B70837296758E20073CBFD /* fullscreen */,
-			);
-			path = ads;
-			sourceTree = "<group>";
-		};
-		21B708322967588C0073CBFD /* interstitial */ = {
-			isa = PBXGroup;
-			children = (
-				212DA4532951F17300B2FB4A /* InterstitialViewController.swift */,
-			);
-			path = interstitial;
-			sourceTree = "<group>";
-		};
-		21B708332967589C0073CBFD /* rewarded */ = {
-			isa = PBXGroup;
-			children = (
-				212DA4552951F34B00B2FB4A /* RewardedViewController.swift */,
-				212DA4572951F43600B2FB4A /* RewardedInterstitialViewController.swift */,
-			);
-			path = rewarded;
-			sourceTree = "<group>";
-		};
-		21B70835296758C70073CBFD /* appopenad */ = {
-			isa = PBXGroup;
-			children = (
-				212DA46429521E1B00B2FB4A /* AppOpenAdViewController.swift */,
-			);
-			path = appopenad;
-			sourceTree = "<group>";
-		};
-		21B70836296758D80073CBFD /* banner */ = {
-			isa = PBXGroup;
-			children = (
-				212DA4622952023500B2FB4A /* BannerViewController.swift */,
-				21A88250296D81B0007D4A8C /* InlineBannerViewController.swift */,
-				21A88252296D84ED007D4A8C /* AnchoredBannerViewController.swift */,
-				21CE83E829A3A6F900063AB7 /* BannerLayoutViewController.swift */,
-			);
-			path = banner;
-			sourceTree = "<group>";
-		};
-		21B70837296758E20073CBFD /* fullscreen */ = {
-			isa = PBXGroup;
-			children = (
-				21B70844296775BE0073CBFD /* appopenad */,
-				21B70838296758EB0073CBFD /* interstitial */,
-				21B7083D29676B0E0073CBFD /* rewarded */,
-			);
-			path = fullscreen;
-			sourceTree = "<group>";
-		};
-		21B70838296758EB0073CBFD /* interstitial */ = {
-			isa = PBXGroup;
-			children = (
-				21B70839296758FE0073CBFD /* InterstitialViewController.h */,
-				21B7083A296758FE0073CBFD /* InterstitialViewController.m */,
-			);
-			path = interstitial;
-			sourceTree = "<group>";
-		};
-		21B7083D29676B0E0073CBFD /* rewarded */ = {
-			isa = PBXGroup;
-			children = (
-				21B7083E29676B210073CBFD /* RewardedViewController.h */,
-				21B7083F29676B210073CBFD /* RewardedViewController.m */,
-				21B7084129676B3B0073CBFD /* RewardedInterstitialViewController.h */,
-				21B7084229676B3B0073CBFD /* RewardedInterstitialViewController.m */,
-			);
-			path = rewarded;
-			sourceTree = "<group>";
-		};
-		21B70844296775BE0073CBFD /* appopenad */ = {
-			isa = PBXGroup;
-			children = (
-				21B70845296775D40073CBFD /* AppOpenAdViewController.h */,
-				21B70846296775D40073CBFD /* AppOpenAdViewController.m */,
-			);
-			path = appopenad;
-			sourceTree = "<group>";
-		};
-		21B7084829678B6F0073CBFD /* view */ = {
-			isa = PBXGroup;
-			children = (
-				21B7084929678B750073CBFD /* banner */,
-				21B7084D296791C80073CBFD /* native */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		21B7084929678B750073CBFD /* banner */ = {
-			isa = PBXGroup;
-			children = (
-				21B7084A29678B870073CBFD /* BannerViewController.h */,
-				21B7084B29678B870073CBFD /* BannerViewController.m */,
-				21A88254296D8859007D4A8C /* InlineBannerViewController.h */,
-				21A88255296D8859007D4A8C /* InlineBannerViewController.m */,
-				21A88257296D8868007D4A8C /* AnchoredBannerViewController.h */,
-				21A88258296D8868007D4A8C /* AnchoredBannerViewController.m */,
-				21F3D42929A4212400BFD297 /* BannerLayoutViewController.h */,
-				21F3D42A29A4212400BFD297 /* BannerLayoutViewController.m */,
-			);
-			path = banner;
-			sourceTree = "<group>";
-		};
-		21B7084D296791C80073CBFD /* native */ = {
-			isa = PBXGroup;
-			children = (
-				21B70854296799010073CBFD /* CustomNativeAdView.xib */,
-				21B7084E296793D00073CBFD /* NativeAdViewController.h */,
-				21B7084F296793D00073CBFD /* NativeAdViewController.m */,
-				21B70851296795EB0073CBFD /* CustomNativeAdView.h */,
-				21B70852296795EB0073CBFD /* CustomNativeAdView.m */,
-			);
-			path = native;
-			sourceTree = "<group>";
-		};
-		21F4862F2A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				21F4868E2A65775300E4CBC0 /* Info.plist */,
-				21F4863F2A6574D400E4CBC0 /* ads */,
-				21F4863C2A6574D400E4CBC0 /* adtypes */,
-				21F486572A6574D500E4CBC0 /* misc */,
-				21F486592A6574D500E4CBC0 /* modifiers */,
-				21F486302A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUIApp.swift */,
-				21F486342A65454C00E4CBC0 /* Assets.xcassets */,
-				21F486362A65454C00E4CBC0 /* Preview Content */,
-			);
-			path = PlaywireSDKAppsSwiftUI;
-			sourceTree = "<group>";
-		};
-		21F486362A65454C00E4CBC0 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				21F486372A65454C00E4CBC0 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		21F4863C2A6574D400E4CBC0 /* adtypes */ = {
-			isa = PBXGroup;
-			children = (
-				21F4863D2A6574D400E4CBC0 /* AdTypesView.swift */,
-				21F4863E2A6574D400E4CBC0 /* AdTypesViewModel.swift */,
-			);
-			path = adtypes;
-			sourceTree = "<group>";
-		};
-		21F4863F2A6574D400E4CBC0 /* ads */ = {
-			isa = PBXGroup;
-			children = (
-				21F486402A6574D400E4CBC0 /* view */,
-				21F486482A6574D400E4CBC0 /* fullscreen */,
-			);
-			path = ads;
-			sourceTree = "<group>";
-		};
-		21F486402A6574D400E4CBC0 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				21F486442A6574D400E4CBC0 /* adaptive banners */,
-				21F486412A6574D400E4CBC0 /* BannerCoordinator.swift */,
-				21F486422A6574D400E4CBC0 /* BannerView.swift */,
-				21F486432A6574D400E4CBC0 /* BannerViewController.swift */,
-				21F486472A6574D400E4CBC0 /* ViewAdState.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		21F486442A6574D400E4CBC0 /* adaptive banners */ = {
-			isa = PBXGroup;
-			children = (
-				21F486952A66B8D900E4CBC0 /* AnchoredBannerView.swift */,
-				21F486452A6574D400E4CBC0 /* InlineBannerView.swift */,
-				21F486462A6574D400E4CBC0 /* AdaptiveBannerCoordinator.swift */,
-			);
-			path = "adaptive banners";
-			sourceTree = "<group>";
-		};
-		21F486482A6574D400E4CBC0 /* fullscreen */ = {
-			isa = PBXGroup;
-			children = (
-				21F486492A6574D400E4CBC0 /* interstitial */,
-				21F4864C2A6574D400E4CBC0 /* rewardedinterstitial */,
-				21F486502A6574D400E4CBC0 /* appopenad */,
-				21F486532A6574D400E4CBC0 /* rewarded */,
-				21F486562A6574D500E4CBC0 /* FullScreenAdState.swift */,
-			);
-			path = fullscreen;
-			sourceTree = "<group>";
-		};
-		21F486492A6574D400E4CBC0 /* interstitial */ = {
-			isa = PBXGroup;
-			children = (
-				21F4864A2A6574D400E4CBC0 /* InterstitialAdCoordinator.swift */,
-				21F4864B2A6574D400E4CBC0 /* InterstitialView.swift */,
-			);
-			path = interstitial;
-			sourceTree = "<group>";
-		};
-		21F4864C2A6574D400E4CBC0 /* rewardedinterstitial */ = {
-			isa = PBXGroup;
-			children = (
-				21F4864D2A6574D400E4CBC0 /* RewardedInterstitialView.swift */,
-				21F4864E2A6574D400E4CBC0 /* RewardedInterstitialAdCoordinator.swift */,
-			);
-			path = rewardedinterstitial;
-			sourceTree = "<group>";
-		};
-		21F486502A6574D400E4CBC0 /* appopenad */ = {
-			isa = PBXGroup;
-			children = (
-				21F486512A6574D400E4CBC0 /* AppOpenAdView.swift */,
-				21F486522A6574D400E4CBC0 /* AppOpenAdCoordinator.swift */,
-			);
-			path = appopenad;
-			sourceTree = "<group>";
-		};
-		21F486532A6574D400E4CBC0 /* rewarded */ = {
-			isa = PBXGroup;
-			children = (
-				21F486542A6574D400E4CBC0 /* RewardedView.swift */,
-				21F486552A6574D500E4CBC0 /* RewardedAdCoordinator.swift */,
-			);
-			path = rewarded;
-			sourceTree = "<group>";
-		};
-		21F486572A6574D500E4CBC0 /* misc */ = {
-			isa = PBXGroup;
-			children = (
-				21F4864F2A6574D400E4CBC0 /* EmptyViewControllerRepresentable.swift */,
-				21F486582A6574D500E4CBC0 /* PWAdMode.swift */,
-			);
-			path = misc;
-			sourceTree = "<group>";
-		};
-		21F486592A6574D500E4CBC0 /* modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				21F4865A2A6574D500E4CBC0 /* onLoad.swift */,
-			);
-			path = modifiers;
-			sourceTree = "<group>";
-		};
-		21F486902A657BC700E4CBC0 /* PlaywireSDKAppsSwiftUI_COPPA */ = {
-			isa = PBXGroup;
-			children = (
-				21A76B222A82C9F900F7FB38 /* Info.plist */,
-			);
-			path = PlaywireSDKAppsSwiftUI_COPPA;
 			sourceTree = "<group>";
 		};
 		4432D180024143DCE8AC98B9 /* Frameworks */ = {
@@ -693,6 +201,12 @@
 				B1138252FF23EF8261D5E81D /* Pods_Total_PlaywireSDKAppsObjC.framework */,
 				74BE785C38336D7D5B7B468D /* Pods_Total_PlaywireSDKAppsSwift.framework */,
 				C5DBD10843BE737C743857A1 /* Pods_Total_PlaywireSDKAppsSwiftUI.framework */,
+				54EC8E2FD24DA0DA63C9165C /* Pods_Coppa_PlaywireObjC_Coppa.framework */,
+				0F9D1EAAB2BB02703C03ABFA /* Pods_Coppa_PlaywireSwiftUI_Coppa.framework */,
+				52FA3D2C39AE9FD1EB22934F /* Pods_Coppa_PlaywireSwift_Coppa.framework */,
+				548372CA82296F892C8D1C05 /* Pods_Playwire_PlaywireObjC.framework */,
+				6E8E57A4DD25D484E04C7553 /* Pods_Playwire_PlaywireSwift.framework */,
+				E745C642D54C5D865D0B8917 /* Pods_Playwire_PlaywireSwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -712,6 +226,24 @@
 				ADCFB5C3BD20104826D474F9 /* Pods-Total-PlaywireSDKAppsSwift.release.xcconfig */,
 				0952AFF0B11E055A91E6BBE0 /* Pods-Total-PlaywireSDKAppsSwiftUI.debug.xcconfig */,
 				9B0F44D8652865AFA4A8C566 /* Pods-Total-PlaywireSDKAppsSwiftUI.release.xcconfig */,
+				75A87318E3A62571721A3D4C /* Pods-Coppa-PlaywireObjC_Coppa.debug.xcconfig */,
+				ADB24CA55C496ABBFF695EB3 /* Pods-Coppa-PlaywireObjC_Coppa.release.xcconfig */,
+				278C4F17B5DB0F32415308F3 /* Pods-Coppa-PlaywireSwiftUI_Coppa.debug.xcconfig */,
+				65CDCB2AB17138C6A90F530B /* Pods-Coppa-PlaywireSwiftUI_Coppa.release.xcconfig */,
+				B9A32C2582B023D16FBE0526 /* Pods-Coppa-PlaywireSwift_Coppa.debug.xcconfig */,
+				0D19A4744B47E68BF71C1818 /* Pods-Coppa-PlaywireSwift_Coppa.release.xcconfig */,
+				2A73C866CC3EC7B4EAF00E13 /* Pods-Total-PlaywireObjC.debug.xcconfig */,
+				7ED5EB2B49A33EDA36E33F7D /* Pods-Total-PlaywireObjC.release.xcconfig */,
+				05DCFEDE4969AB1C10E97ABE /* Pods-Total-PlaywireSwift.debug.xcconfig */,
+				7B6E2B607C4FB699467DBBF7 /* Pods-Total-PlaywireSwift.release.xcconfig */,
+				702E8E3E88783CFF07ADF4F3 /* Pods-Total-PlaywireSwiftUI.debug.xcconfig */,
+				66121F51BF60158568760ED2 /* Pods-Total-PlaywireSwiftUI.release.xcconfig */,
+				B14637BB05F8DFD165568CAA /* Pods-Playwire-PlaywireObjC.debug.xcconfig */,
+				641BB2AB03BF93DC95E82E61 /* Pods-Playwire-PlaywireObjC.release.xcconfig */,
+				3A1EF080FCCA20CBA8D8222E /* Pods-Playwire-PlaywireSwift.debug.xcconfig */,
+				5312F6A4E654673B0C24DE94 /* Pods-Playwire-PlaywireSwift.release.xcconfig */,
+				D95B72CFB0104DC436B09E1D /* Pods-Playwire-PlaywireSwiftUI.debug.xcconfig */,
+				73CCB2E3FEEF93FBEF581F0F /* Pods-Playwire-PlaywireSwiftUI.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -719,124 +251,71 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		21815EA92970AFC20007E427 /* PlaywireSDKAppsObjC_COPPA */ = {
+		610E542C2E955BE900FD6653 /* PlaywireObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21815EC22970AFC20007E427 /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsObjC_COPPA" */;
+			buildConfigurationList = 610E54442E955BEA00FD6653 /* Build configuration list for PBXNativeTarget "PlaywireObjC" */;
 			buildPhases = (
-				74965D7DBAFF9B70790B917B /* [CP] Check Pods Manifest.lock */,
-				21815EAB2970AFC20007E427 /* Sources */,
-				21815EB92970AFC20007E427 /* Frameworks */,
-				21815EBB2970AFC20007E427 /* Resources */,
-				2A9E99C148EEEAA9507EC039 /* [CP] Embed Pods Frameworks */,
-				D5CB0E97C95AC231BE010192 /* [CP] Copy Pods Resources */,
+				CB25FFA004DE5E3799360222 /* [CP] Check Pods Manifest.lock */,
+				610E54292E955BE900FD6653 /* Sources */,
+				610E542A2E955BE900FD6653 /* Frameworks */,
+				610E542B2E955BE900FD6653 /* Resources */,
+				0ADBCA9DA227301ABA82AFFA /* [CP] Embed Pods Frameworks */,
+				07A9CE1210E9CB32EF45E14C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PlaywireSDKAppsObjC_COPPA;
-			productName = PlaywireDemoObjC;
-			productReference = 21815EC52970AFC20007E427 /* PlaywireSDKAppsObjC_COPPA.app */;
+			fileSystemSynchronizedGroups = (
+				610E542E2E955BE900FD6653 /* PlaywireObjC */,
+				610E547A2E955C0D00FD6653 /* PlaywireSwift */,
+			);
+			name = PlaywireObjC;
+			productName = PlaywireObjC;
+			productReference = 610E542D2E955BE900FD6653 /* PlaywireObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		21815EC72970AFE40007E427 /* PlaywireSDKAppsSwift_COPPA */ = {
+		610E544A2E955C0200FD6653 /* PlaywireSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21815EDF2970AFE40007E427 /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsSwift_COPPA" */;
+			buildConfigurationList = 610E545D2E955C0300FD6653 /* Build configuration list for PBXNativeTarget "PlaywireSwift" */;
 			buildPhases = (
-				8EC2C423876A5B8809CB4963 /* [CP] Check Pods Manifest.lock */,
-				21815EC92970AFE40007E427 /* Sources */,
-				21815ED62970AFE40007E427 /* Frameworks */,
-				21815ED82970AFE40007E427 /* Resources */,
-				65EF15B4D145531284AE0CA8 /* [CP] Embed Pods Frameworks */,
-				A0AF263EC40367408F2E7521 /* [CP] Copy Pods Resources */,
+				A10CE15242B39A0D2FBFB9C9 /* [CP] Check Pods Manifest.lock */,
+				610E54472E955C0200FD6653 /* Sources */,
+				610E54482E955C0200FD6653 /* Frameworks */,
+				610E54492E955C0200FD6653 /* Resources */,
+				A0CCF84DC5763257B5556DB4 /* [CP] Embed Pods Frameworks */,
+				D5ABC8A44EED93BA8520FFB7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PlaywireSDKAppsSwift_COPPA;
-			productName = PlaywireDemo;
-			productReference = 21815EE22970AFE40007E427 /* PlaywireSDKAppsSwift_COPPA.app */;
+			name = PlaywireSwift;
+			productName = PlaywireSwift;
+			productReference = 610E544B2E955C0200FD6653 /* PlaywireSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		21B707DC296640070073CBFD /* PlaywireSDKAppsSwift */ = {
+		610E54862E955C1F00FD6653 /* PlaywireSwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21B707F2296640070073CBFD /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsSwift" */;
+			buildConfigurationList = 610E548F2E955C2000FD6653 /* Build configuration list for PBXNativeTarget "PlaywireSwiftUI" */;
 			buildPhases = (
-				37194563AD25DE7F5A1B161F /* [CP] Check Pods Manifest.lock */,
-				21B707DE296640070073CBFD /* Sources */,
-				21B707E9296640070073CBFD /* Frameworks */,
-				21B707EB296640070073CBFD /* Resources */,
-				8DAC06517F853253C3AF7D8B /* [CP] Embed Pods Frameworks */,
-				F7CD2E010DE50A93ABAE72AE /* [CP] Copy Pods Resources */,
+				EDBD8ED5106655DE2B64F436 /* [CP] Check Pods Manifest.lock */,
+				610E54832E955C1F00FD6653 /* Sources */,
+				610E54842E955C1F00FD6653 /* Frameworks */,
+				610E54852E955C1F00FD6653 /* Resources */,
+				E06DF1D2443372457AEBD85D /* [CP] Embed Pods Frameworks */,
+				8B1E06353641B301311A9CB7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PlaywireSDKAppsSwift;
-			productName = PlaywireDemo;
-			productReference = 21B707F5296640070073CBFD /* PlaywireSDKAppsSwift.app */;
-			productType = "com.apple.product-type.application";
-		};
-		21B7081229673AF60073CBFD /* PlaywireSDKAppsObjC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 21B7082929673AFC0073CBFD /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsObjC" */;
-			buildPhases = (
-				625DEF9C09FD62271C050AB9 /* [CP] Check Pods Manifest.lock */,
-				21B7080F29673AF60073CBFD /* Sources */,
-				21B7081029673AF60073CBFD /* Frameworks */,
-				21B7081129673AF60073CBFD /* Resources */,
-				B9D0E0971B7FD54E69D50EE5 /* [CP] Embed Pods Frameworks */,
-				CE611E9066BE427905D54E4F /* [CP] Copy Pods Resources */,
+			fileSystemSynchronizedGroups = (
+				610E54882E955C1F00FD6653 /* PlaywireSwiftUI */,
 			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PlaywireSDKAppsObjC;
-			productName = PlaywireDemoObjC;
-			productReference = 21B7081329673AF60073CBFD /* PlaywireSDKAppsObjC.app */;
-			productType = "com.apple.product-type.application";
-		};
-		21F4862D2A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 21F4863B2A65454C00E4CBC0 /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsSwiftUI" */;
-			buildPhases = (
-				79602ACA19CF20F1EB904A92 /* [CP] Check Pods Manifest.lock */,
-				21F4862A2A65454A00E4CBC0 /* Sources */,
-				21F4862B2A65454A00E4CBC0 /* Frameworks */,
-				21F4862C2A65454A00E4CBC0 /* Resources */,
-				B5F2571F8BA3280E57D8C27D /* [CP] Embed Pods Frameworks */,
-				E6AA464DB6629C79CA6FB3EE /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PlaywireSDKAppsSwiftUI;
-			productName = PlaywireSDKAppsSwiftUI;
-			productReference = 21F4862E2A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUI.app */;
-			productType = "com.apple.product-type.application";
-		};
-		21F4866F2A65769400E4CBC0 /* PlaywireSDKAppsSwiftUI_COPPA */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 21F4868A2A65769400E4CBC0 /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsSwiftUI_COPPA" */;
-			buildPhases = (
-				624D6089EB551211A520D98A /* [CP] Check Pods Manifest.lock */,
-				21F486702A65769400E4CBC0 /* Sources */,
-				21F486862A65769400E4CBC0 /* Frameworks */,
-				21F486872A65769400E4CBC0 /* Resources */,
-				4F9DF07D1112DE26DC2FBC3A /* [CP] Embed Pods Frameworks */,
-				22E7D13EC6FEFA8D97875815 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PlaywireSDKAppsSwiftUI_COPPA;
-			productName = PlaywireSDKAppsSwiftUI;
-			productReference = 21F4868D2A65769400E4CBC0 /* PlaywireSDKAppsSwiftUI_COPPA.app */;
+			name = PlaywireSwiftUI;
+			productName = PlaywireSwiftUI;
+			productReference = 610E54872E955C1F00FD6653 /* PlaywireSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -846,19 +325,21 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1400;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					21B7081229673AF60073CBFD = {
-						CreatedOnToolsVersion = 14.0;
+					610E542C2E955BE900FD6653 = {
+						CreatedOnToolsVersion = 26.0.1;
 					};
-					21F4862D2A65454A00E4CBC0 = {
-						CreatedOnToolsVersion = 14.3;
+					610E544A2E955C0200FD6653 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					610E54862E955C1F00FD6653 = {
+						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
 			};
 			buildConfigurationList = 212DA4342951EFF400B2FB4A /* Build configuration list for PBXProject "PlaywireSDKApps" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -866,121 +347,128 @@
 				Base,
 			);
 			mainGroup = 212DA4302951EFF300B2FB4A;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 212DA43A2951EFF400B2FB4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21B707DC296640070073CBFD /* PlaywireSDKAppsSwift */,
-				21B7081229673AF60073CBFD /* PlaywireSDKAppsObjC */,
-				21815EC72970AFE40007E427 /* PlaywireSDKAppsSwift_COPPA */,
-				21815EA92970AFC20007E427 /* PlaywireSDKAppsObjC_COPPA */,
-				21F4862D2A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUI */,
-				21F4866F2A65769400E4CBC0 /* PlaywireSDKAppsSwiftUI_COPPA */,
+				610E542C2E955BE900FD6653 /* PlaywireObjC */,
+				610E544A2E955C0200FD6653 /* PlaywireSwift */,
+				610E54862E955C1F00FD6653 /* PlaywireSwiftUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		21815EBB2970AFC20007E427 /* Resources */ = {
+		610E542B2E955BE900FD6653 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21815EBC2970AFC20007E427 /* LaunchScreen.storyboard in Resources */,
-				21815EBD2970AFC20007E427 /* CustomNativeAdView.xib in Resources */,
-				21815EBE2970AFC20007E427 /* Assets.xcassets in Resources */,
-				21815EBF2970AFC20007E427 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21815ED82970AFE40007E427 /* Resources */ = {
+		610E54492E955C0200FD6653 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21815ED92970AFE40007E427 /* LaunchScreen.storyboard in Resources */,
-				21815EDA2970AFE40007E427 /* CustomNativeAdView.xib in Resources */,
-				21815EDB2970AFE40007E427 /* Assets.xcassets in Resources */,
-				21815EDC2970AFE40007E427 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21B707EB296640070073CBFD /* Resources */ = {
+		610E54852E955C1F00FD6653 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21B707EC296640070073CBFD /* LaunchScreen.storyboard in Resources */,
-				21B707ED296640070073CBFD /* CustomNativeAdView.xib in Resources */,
-				21B707EE296640070073CBFD /* Assets.xcassets in Resources */,
-				21B707EF296640070073CBFD /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21B7081129673AF60073CBFD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21B7082529673AFC0073CBFD /* LaunchScreen.storyboard in Resources */,
-				21B70855296799010073CBFD /* CustomNativeAdView.xib in Resources */,
-				21B7082229673AFC0073CBFD /* Assets.xcassets in Resources */,
-				21B7082029673AF60073CBFD /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21F4862C2A65454A00E4CBC0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21F486382A65454C00E4CBC0 /* Preview Assets.xcassets in Resources */,
-				21F486352A65454C00E4CBC0 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21F486872A65769400E4CBC0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21F486882A65769400E4CBC0 /* Preview Assets.xcassets in Resources */,
-				21F486892A65769400E4CBC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		22E7D13EC6FEFA8D97875815 /* [CP] Copy Pods Resources */ = {
+		07A9CE1210E9CB32EF45E14C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2A9E99C148EEEAA9507EC039 /* [CP] Embed Pods Frameworks */ = {
+		0ADBCA9DA227301ABA82AFFA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsObjC_COPPA/Pods-Coppa-PlaywireSDKAppsObjC_COPPA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsObjC_COPPA/Pods-Coppa-PlaywireSDKAppsObjC_COPPA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsObjC_COPPA/Pods-Coppa-PlaywireSDKAppsObjC_COPPA-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		37194563AD25DE7F5A1B161F /* [CP] Check Pods Manifest.lock */ = {
+		8B1E06353641B301311A9CB7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0CCF84DC5763257B5556DB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A10CE15242B39A0D2FBFB9C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -995,31 +483,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Total-PlaywireSDKAppsSwift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Playwire-PlaywireSwift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4F9DF07D1112DE26DC2FBC3A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		624D6089EB551211A520D98A /* [CP] Check Pods Manifest.lock */ = {
+		CB25FFA004DE5E3799360222 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1034,14 +505,56 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Playwire-PlaywireObjC-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		625DEF9C09FD62271C050AB9 /* [CP] Check Pods Manifest.lock */ = {
+		D5ABC8A44EED93BA8520FFB7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E06DF1D2443372457AEBD85D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDBD8ED5106655DE2B64F436 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1056,417 +569,45 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Total-PlaywireSDKAppsObjC-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Playwire-PlaywireSwiftUI-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		65EF15B4D145531284AE0CA8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwift_COPPA/Pods-Coppa-PlaywireSDKAppsSwift_COPPA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwift_COPPA/Pods-Coppa-PlaywireSDKAppsSwift_COPPA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwift_COPPA/Pods-Coppa-PlaywireSDKAppsSwift_COPPA-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74965D7DBAFF9B70790B917B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Coppa-PlaywireSDKAppsObjC_COPPA-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		79602ACA19CF20F1EB904A92 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Total-PlaywireSDKAppsSwiftUI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DAC06517F853253C3AF7D8B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwift/Pods-Total-PlaywireSDKAppsSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwift/Pods-Total-PlaywireSDKAppsSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwift/Pods-Total-PlaywireSDKAppsSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8EC2C423876A5B8809CB4963 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Coppa-PlaywireSDKAppsSwift_COPPA-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0AF263EC40367408F2E7521 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwift_COPPA/Pods-Coppa-PlaywireSDKAppsSwift_COPPA-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwift_COPPA/Pods-Coppa-PlaywireSDKAppsSwift_COPPA-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsSwift_COPPA/Pods-Coppa-PlaywireSDKAppsSwift_COPPA-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B5F2571F8BA3280E57D8C27D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwiftUI/Pods-Total-PlaywireSDKAppsSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwiftUI/Pods-Total-PlaywireSDKAppsSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwiftUI/Pods-Total-PlaywireSDKAppsSwiftUI-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9D0E0971B7FD54E69D50EE5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsObjC/Pods-Total-PlaywireSDKAppsObjC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsObjC/Pods-Total-PlaywireSDKAppsObjC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsObjC/Pods-Total-PlaywireSDKAppsObjC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE611E9066BE427905D54E4F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsObjC/Pods-Total-PlaywireSDKAppsObjC-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsObjC/Pods-Total-PlaywireSDKAppsObjC-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsObjC/Pods-Total-PlaywireSDKAppsObjC-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D5CB0E97C95AC231BE010192 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsObjC_COPPA/Pods-Coppa-PlaywireSDKAppsObjC_COPPA-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsObjC_COPPA/Pods-Coppa-PlaywireSDKAppsObjC_COPPA-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coppa-PlaywireSDKAppsObjC_COPPA/Pods-Coppa-PlaywireSDKAppsObjC_COPPA-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6AA464DB6629C79CA6FB3EE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwiftUI/Pods-Total-PlaywireSDKAppsSwiftUI-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwiftUI/Pods-Total-PlaywireSDKAppsSwiftUI-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwiftUI/Pods-Total-PlaywireSDKAppsSwiftUI-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F7CD2E010DE50A93ABAE72AE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwift/Pods-Total-PlaywireSDKAppsSwift-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwift/Pods-Total-PlaywireSDKAppsSwift-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Total-PlaywireSDKAppsSwift/Pods-Total-PlaywireSDKAppsSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		21815EAB2970AFC20007E427 /* Sources */ = {
+		610E54292E955BE900FD6653 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21815EAC2970AFC20007E427 /* AnchoredBannerViewController.m in Sources */,
-				21815EAD2970AFC20007E427 /* NativeAdViewController.m in Sources */,
-				21F3D42C29A4212400BFD297 /* BannerLayoutViewController.m in Sources */,
-				21815EAE2970AFC20007E427 /* AppDelegate.m in Sources */,
-				21815EAF2970AFC20007E427 /* AdTypesViewController.m in Sources */,
-				21815EB02970AFC20007E427 /* RewardedViewController.m in Sources */,
-				21815EB12970AFC20007E427 /* AppOpenAdViewController.m in Sources */,
-				21815EB22970AFC20007E427 /* InterstitialViewController.m in Sources */,
-				21815EB32970AFC20007E427 /* CustomNativeAdView.m in Sources */,
-				21815EB42970AFC20007E427 /* BannerViewController.m in Sources */,
-				21815EB52970AFC20007E427 /* RewardedInterstitialViewController.m in Sources */,
-				21815EB62970AFC20007E427 /* main.m in Sources */,
-				21815EB72970AFC20007E427 /* SceneDelegate.m in Sources */,
-				21815EB82970AFC20007E427 /* InlineBannerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21815EC92970AFE40007E427 /* Sources */ = {
+		610E54472E955C0200FD6653 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21CE83EA29A3A6F900063AB7 /* BannerLayoutViewController.swift in Sources */,
-				21815ECA2970AFE40007E427 /* InterstitialViewController.swift in Sources */,
-				21815ECB2970AFE40007E427 /* NativeAdViewController.swift in Sources */,
-				21815ECC2970AFE40007E427 /* RewardedInterstitialViewController.swift in Sources */,
-				21815ECD2970AFE40007E427 /* CustomNativeAdView.swift in Sources */,
-				21815ECE2970AFE40007E427 /* RewardedViewController.swift in Sources */,
-				21815ECF2970AFE40007E427 /* AppDelegate.swift in Sources */,
-				21815ED02970AFE40007E427 /* SceneDelegate.swift in Sources */,
-				21815ED12970AFE40007E427 /* InlineBannerViewController.swift in Sources */,
-				21815ED22970AFE40007E427 /* BannerViewController.swift in Sources */,
-				21815ED32970AFE40007E427 /* AdTypesViewController.swift in Sources */,
-				21815ED42970AFE40007E427 /* AnchoredBannerViewController.swift in Sources */,
-				21815ED52970AFE40007E427 /* AppOpenAdViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21B707DE296640070073CBFD /* Sources */ = {
+		610E54832E955C1F00FD6653 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21CE83E929A3A6F900063AB7 /* BannerLayoutViewController.swift in Sources */,
-				21B707DF296640070073CBFD /* InterstitialViewController.swift in Sources */,
-				21B707E0296640070073CBFD /* NativeAdViewController.swift in Sources */,
-				21B707E1296640070073CBFD /* RewardedInterstitialViewController.swift in Sources */,
-				21B707E2296640070073CBFD /* CustomNativeAdView.swift in Sources */,
-				21B707E3296640070073CBFD /* RewardedViewController.swift in Sources */,
-				21B707E4296640070073CBFD /* AppDelegate.swift in Sources */,
-				21B707E5296640070073CBFD /* SceneDelegate.swift in Sources */,
-				21A88251296D81B0007D4A8C /* InlineBannerViewController.swift in Sources */,
-				21B707E6296640070073CBFD /* BannerViewController.swift in Sources */,
-				21B707E7296640070073CBFD /* AdTypesViewController.swift in Sources */,
-				21A88253296D84ED007D4A8C /* AnchoredBannerViewController.swift in Sources */,
-				21B707E8296640070073CBFD /* AppOpenAdViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21B7080F29673AF60073CBFD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21A88259296D8868007D4A8C /* AnchoredBannerViewController.m in Sources */,
-				21B70850296793D00073CBFD /* NativeAdViewController.m in Sources */,
-				21F3D42B29A4212400BFD297 /* BannerLayoutViewController.m in Sources */,
-				21B7081729673AF60073CBFD /* AppDelegate.m in Sources */,
-				21B7083129673F8F0073CBFD /* AdTypesViewController.m in Sources */,
-				21B7084029676B210073CBFD /* RewardedViewController.m in Sources */,
-				21B70847296775D40073CBFD /* AppOpenAdViewController.m in Sources */,
-				21B7083B296758FE0073CBFD /* InterstitialViewController.m in Sources */,
-				21B70853296795EB0073CBFD /* CustomNativeAdView.m in Sources */,
-				21B7084C29678B870073CBFD /* BannerViewController.m in Sources */,
-				21B7084329676B3B0073CBFD /* RewardedInterstitialViewController.m in Sources */,
-				21B7082829673AFC0073CBFD /* main.m in Sources */,
-				21B7081A29673AF60073CBFD /* SceneDelegate.m in Sources */,
-				21A88256296D8859007D4A8C /* InlineBannerViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21F4862A2A65454A00E4CBC0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21F486692A6574D500E4CBC0 /* AppOpenAdCoordinator.swift in Sources */,
-				21F486652A6574D500E4CBC0 /* RewardedInterstitialView.swift in Sources */,
-				21F4866E2A6574D500E4CBC0 /* onLoad.swift in Sources */,
-				21F486682A6574D500E4CBC0 /* AppOpenAdView.swift in Sources */,
-				21F486622A6574D500E4CBC0 /* ViewAdState.swift in Sources */,
-				21F486602A6574D500E4CBC0 /* InlineBannerView.swift in Sources */,
-				21F4865D2A6574D500E4CBC0 /* BannerCoordinator.swift in Sources */,
-				21F486642A6574D500E4CBC0 /* InterstitialView.swift in Sources */,
-				21F4866B2A6574D500E4CBC0 /* RewardedAdCoordinator.swift in Sources */,
-				21F4865E2A6574D500E4CBC0 /* BannerView.swift in Sources */,
-				21F486662A6574D500E4CBC0 /* RewardedInterstitialAdCoordinator.swift in Sources */,
-				21F486312A65454A00E4CBC0 /* PlaywireSDKAppsSwiftUIApp.swift in Sources */,
-				21F486962A66B8D900E4CBC0 /* AnchoredBannerView.swift in Sources */,
-				21F486632A6574D500E4CBC0 /* InterstitialAdCoordinator.swift in Sources */,
-				21F4865B2A6574D500E4CBC0 /* AdTypesView.swift in Sources */,
-				21F486672A6574D500E4CBC0 /* EmptyViewControllerRepresentable.swift in Sources */,
-				21F4866A2A6574D500E4CBC0 /* RewardedView.swift in Sources */,
-				21F4865C2A6574D500E4CBC0 /* AdTypesViewModel.swift in Sources */,
-				21F486612A6574D500E4CBC0 /* AdaptiveBannerCoordinator.swift in Sources */,
-				21F4865F2A6574D500E4CBC0 /* BannerViewController.swift in Sources */,
-				21F4866C2A6574D500E4CBC0 /* FullScreenAdState.swift in Sources */,
-				21F4866D2A6574D500E4CBC0 /* PWAdMode.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21F486702A65769400E4CBC0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21F486712A65769400E4CBC0 /* AppOpenAdCoordinator.swift in Sources */,
-				21F486722A65769400E4CBC0 /* RewardedInterstitialView.swift in Sources */,
-				21F486732A65769400E4CBC0 /* onLoad.swift in Sources */,
-				21F486742A65769400E4CBC0 /* AppOpenAdView.swift in Sources */,
-				21F486752A65769400E4CBC0 /* ViewAdState.swift in Sources */,
-				21F486762A65769400E4CBC0 /* InlineBannerView.swift in Sources */,
-				21F486772A65769400E4CBC0 /* BannerCoordinator.swift in Sources */,
-				21F486782A65769400E4CBC0 /* InterstitialView.swift in Sources */,
-				21F486792A65769400E4CBC0 /* RewardedAdCoordinator.swift in Sources */,
-				21F4867A2A65769400E4CBC0 /* BannerView.swift in Sources */,
-				21F4867B2A65769400E4CBC0 /* RewardedInterstitialAdCoordinator.swift in Sources */,
-				21F4867C2A65769400E4CBC0 /* PlaywireSDKAppsSwiftUIApp.swift in Sources */,
-				21F486972A66BA1200E4CBC0 /* AnchoredBannerView.swift in Sources */,
-				21F4867D2A65769400E4CBC0 /* InterstitialAdCoordinator.swift in Sources */,
-				21F4867E2A65769400E4CBC0 /* AdTypesView.swift in Sources */,
-				21F4867F2A65769400E4CBC0 /* EmptyViewControllerRepresentable.swift in Sources */,
-				21F486802A65769400E4CBC0 /* RewardedView.swift in Sources */,
-				21F486812A65769400E4CBC0 /* AdTypesViewModel.swift in Sources */,
-				21F486822A65769400E4CBC0 /* AdaptiveBannerCoordinator.swift in Sources */,
-				21F486832A65769400E4CBC0 /* BannerViewController.swift in Sources */,
-				21F486842A65769400E4CBC0 /* FullScreenAdState.swift in Sources */,
-				21F486852A65769400E4CBC0 /* PWAdMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		212DA4422951EFF400B2FB4A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				212DA4432951EFF400B2FB4A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		212DA4472951EFFC00B2FB4A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				212DA4482951EFFC00B2FB4A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		21B7081E29673AF60073CBFD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21B7081F29673AF60073CBFD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		21B7082329673AFC0073CBFD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21B7082429673AFC0073CBFD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		212DA44B2951EFFC00B2FB4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1499,6 +640,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1513,11 +655,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1527,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1559,6 +703,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1567,391 +712,228 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		21815EC32970AFC20007E427 /* Debug */ = {
+		610E54452E955BEA00FD6653 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E0DD5672C918926C8288AF5 /* Pods-Coppa-PlaywireSDKAppsObjC_COPPA.debug.xcconfig */;
+			baseConfigurationReference = B14637BB05F8DFD165568CAA /* Pods-Playwire-PlaywireObjC.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3VZGD69A2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"$(inherited)",
-					"PB_FIELD_32BIT=1",
-					"PB_NO_PACKED_STRUCTS=1",
-					"PB_ENABLE_MALLOC=1",
-					"COPPA_APP=1",
-				);
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsObjC_COPPA/Info.plist;
+				INFOPLIST_FILE = PlaywireObjC/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-objc";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intergi.PlaywireObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		21815EC42970AFC20007E427 /* Release */ = {
+		610E54462E955BEA00FD6653 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FE09A1C1B1BDD3A5F02C8F9 /* Pods-Coppa-PlaywireSDKAppsObjC_COPPA.release.xcconfig */;
+			baseConfigurationReference = 641BB2AB03BF93DC95E82E61 /* Pods-Playwire-PlaywireObjC.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3VZGD69A2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"$(inherited)",
-					"PB_FIELD_32BIT=1",
-					"PB_NO_PACKED_STRUCTS=1",
-					"PB_ENABLE_MALLOC=1",
-					"COPPA_APP=1",
-				);
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsObjC_COPPA/Info.plist;
+				INFOPLIST_FILE = PlaywireObjC/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-objc";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intergi.PlaywireObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		21815EE02970AFE40007E427 /* Debug */ = {
+		610E545E2E955C0300FD6653 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDC40B91B5474BB5675E3D43 /* Pods-Coppa-PlaywireSDKAppsSwift_COPPA.debug.xcconfig */;
+			baseConfigurationReference = 3A1EF080FCCA20CBA8D8222E /* Pods-Playwire-PlaywireSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3VZGD69A2;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsSwift_COPPA/Info.plist;
+				INFOPLIST_FILE = PlaywireSwift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intergi.PlaywireSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG COPPA_APP";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		21815EE12970AFE40007E427 /* Release */ = {
+		610E545F2E955C0300FD6653 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C5F44A2575500570BA7E88E /* Pods-Coppa-PlaywireSDKAppsSwift_COPPA.release.xcconfig */;
+			baseConfigurationReference = 5312F6A4E654673B0C24DE94 /* Pods-Playwire-PlaywireSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3VZGD69A2;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsSwift_COPPA/Info.plist;
+				INFOPLIST_FILE = PlaywireSwift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intergi.PlaywireSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = COPPA_APP;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		21B707F3296640070073CBFD /* Debug */ = {
+		610E54902E955C2000FD6653 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D11F66E20ADBECE8562DBA25 /* Pods-Total-PlaywireSDKAppsSwift.debug.xcconfig */;
+			baseConfigurationReference = D95B72CFB0104DC436B09E1D /* Pods-Playwire-PlaywireSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3VZGD69A2;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsSwift/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		21B707F4296640070073CBFD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADCFB5C3BD20104826D474F9 /* Pods-Total-PlaywireSDKAppsSwift.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3VZGD69A2;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsSwift/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		21B7082A29673AFC0073CBFD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA0490B7306184FBAAD94648 /* Pods-Total-PlaywireSDKAppsObjC.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3VZGD69A2;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsObjC/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-objc";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		21B7082B29673AFC0073CBFD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C81B639098DF875E11F62E72 /* Pods-Total-PlaywireSDKAppsObjC.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3VZGD69A2;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsObjC/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-objc";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		21F486392A65454C00E4CBC0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0952AFF0B11E055A91E6BBE0 /* Pods-Total-PlaywireSDKAppsSwiftUI.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PlaywireSDKAppsSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = U3VZGD69A2;
 				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsSwiftUI/Info.plist;
+				INFOPLIST_FILE = PlaywireSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-swiftui";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intergi.PlaywireSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		21F4863A2A65454C00E4CBC0 /* Release */ = {
+		610E54912E955C2000FD6653 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B0F44D8652865AFA4A8C566 /* Pods-Total-PlaywireSDKAppsSwiftUI.release.xcconfig */;
+			baseConfigurationReference = 73CCB2E3FEEF93FBEF581F0F /* Pods-Playwire-PlaywireSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PlaywireSDKAppsSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = U3VZGD69A2;
 				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsSwiftUI/Info.plist;
+				INFOPLIST_FILE = PlaywireSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-swiftui";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intergi.PlaywireSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		21F4868B2A65769400E4CBC0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 533C93756BE00F1BB3B70390 /* Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PlaywireSDKAppsSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = U3VZGD69A2;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsSwiftUI_COPPA/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-swiftui.coppa";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG COPPA_APP";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		21F4868C2A65769400E4CBC0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5E946600009F7F61502DD99 /* Pods-Coppa-PlaywireSDKAppsSwiftUI_COPPA.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PlaywireSDKAppsSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = U3VZGD69A2;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PlaywireSDKAppsSwiftUI_COPPA/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intergi.demo.playwire-demo-swiftui.coppa";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = COPPA_APP;
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1969,56 +951,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21815EC22970AFC20007E427 /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsObjC_COPPA" */ = {
+		610E54442E955BEA00FD6653 /* Build configuration list for PBXNativeTarget "PlaywireObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21815EC32970AFC20007E427 /* Debug */,
-				21815EC42970AFC20007E427 /* Release */,
+				610E54452E955BEA00FD6653 /* Debug */,
+				610E54462E955BEA00FD6653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21815EDF2970AFE40007E427 /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsSwift_COPPA" */ = {
+		610E545D2E955C0300FD6653 /* Build configuration list for PBXNativeTarget "PlaywireSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21815EE02970AFE40007E427 /* Debug */,
-				21815EE12970AFE40007E427 /* Release */,
+				610E545E2E955C0300FD6653 /* Debug */,
+				610E545F2E955C0300FD6653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21B707F2296640070073CBFD /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsSwift" */ = {
+		610E548F2E955C2000FD6653 /* Build configuration list for PBXNativeTarget "PlaywireSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21B707F3296640070073CBFD /* Debug */,
-				21B707F4296640070073CBFD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		21B7082929673AFC0073CBFD /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsObjC" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				21B7082A29673AFC0073CBFD /* Debug */,
-				21B7082B29673AFC0073CBFD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		21F4863B2A65454C00E4CBC0 /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsSwiftUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				21F486392A65454C00E4CBC0 /* Debug */,
-				21F4863A2A65454C00E4CBC0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		21F4868A2A65769400E4CBC0 /* Build configuration list for PBXNativeTarget "PlaywireSDKAppsSwiftUI_COPPA" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				21F4868B2A65769400E4CBC0 /* Debug */,
-				21F4868C2A65769400E4CBC0 /* Release */,
+				610E54902E955C2000FD6653 /* Debug */,
+				610E54912E955C2000FD6653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
