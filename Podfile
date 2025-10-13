@@ -1,50 +1,20 @@
-source 'https://github.com/CocoaPods/Specs.git'
-# declare to use Playwire repository 
-source 'https://github.com/intergi/playwire-ios-podspec'
-
-platform :ios, '16.0'
+platform :ios, '26.0'
 use_frameworks!
 
-playwire_version = '10.7.0'
-firebase_version = '10.28.0'
+playwire_version = '11.5.1'
 
-
-################################
-########## Total ###############
-################################
-
-abstract_target 'Total' do
-  
+abstract_target 'Playwire' do
   pod 'Playwire', playwire_version
-  pod 'FirebaseAnalytics', firebase_version
+  # OR
+  # Use the COPPA pods for a COPPA integration
+  # pod 'Playwire/Coppa', playwire_version
 
-  target 'PlaywireSDKAppsSwift' do
+  target 'PlaywireObjC' do
   end
 
-  target 'PlaywireSDKAppsObjC' do
+  target 'PlaywireSwift' do
   end
 
-  target 'PlaywireSDKAppsSwiftUI' do
+  target 'PlaywireSwiftUI' do
   end
-
-end
-
-
-#####################################
-############# COPPA #################
-#####################################
-
-abstract_target 'Coppa' do
-  
-  pod 'Playwire/Coppa', playwire_version
-  
-  target 'PlaywireSDKAppsSwift_COPPA' do
-  end
-  
-  target 'PlaywireSDKAppsObjC_COPPA' do
-  end
-  
-  target 'PlaywireSDKAppsSwiftUI_COPPA' do
-  end
-  
 end
