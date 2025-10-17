@@ -15,14 +15,6 @@ final class AppOpenViewController: UIViewController {
         label.textColor = .black
         return label
     }()
-    
-    private let showAppOpenAdButton: UIButton = {
-        let button = UIButton()
-        button.setTitleColor(.black, for: .normal)
-        button.setTitle("Show", for: .normal)
-        button.isEnabled = false
-        return button
-    }()
         
     // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
     let adUnitName: String
@@ -44,55 +36,15 @@ final class AppOpenViewController: UIViewController {
         view.backgroundColor = .white
 
         view.addSubview(statusLabel)
-        view.addSubview(showAppOpenAdButton)
         
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
-        showAppOpenAdButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             statusLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            statusLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            
-            showAppOpenAdButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            showAppOpenAdButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20)
+            statusLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-        
-        subscribeToAppStateNotifications()
-        
-        showAppOpenAdButton.isEnabled = false
-        showAppOpenAdButton.addTarget(self, action: #selector(showAppOpenAd), for: .touchUpInside)
-        
+                
         loadAppOpenAd()
-    }
-    
-    private func subscribeToAppStateNotifications() {
-        // Observe an app state to show the ad when a user open the app.
-        // As alternative you can handle an app state in the `AppDelegate` or `SceneDelegate`.
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(handleResignActiveState),
-            name: UIApplication.willResignActiveNotification,
-            object: nil
-        )
-        
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(handleBecomeActiveState),
-            name: UIApplication.didBecomeActiveNotification,
-            object: nil
-        )
-    }
-    
-    @objc
-    private func handleResignActiveState() {
-        // Check if we need to load app open ad before next presentation
-        if let appOpenAd = appOpenAd, appOpenAd.isLoaded { return }
-        loadAppOpenAd()
-    }
-    
-    @objc
-    private func handleBecomeActiveState() {
-        showAppOpenAd()
     }
     
     private func loadAppOpenAd() {
@@ -127,16 +79,12 @@ final class AppOpenViewController: UIViewController {
         }
         appOpenAd?.show()
     }
-    
-    @IBAction func showAction(_ sender: UIButton) {
-        showAppOpenAd()
-    }
 }
 
 extension AppOpenViewController: PWFullScreenAdDelegate {
     func fullScreenAdDidLoad(_ ad: PWFullScreenAd) {
         statusLabel.text = "✅ The app open ad \"\(adUnitName)\" is loaded."
-        showAppOpenAdButton.isEnabled = true
+        showAppOpenAd()
     }
     
     func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd) {
@@ -160,7 +108,6 @@ extension AppOpenViewController: PWFullScreenAdDelegate {
     
     func fullScreenAdDidRecordImpression(_ ad: PWFullScreenAd) {
         statusLabel.text = "👍 The app open ad \"\(adUnitName)\" was successfully shown."
-        showAppOpenAdButton.isEnabled = false
     }
     
     func fullScreenAdDidRecordClick(_ ad: PWFullScreenAd) {

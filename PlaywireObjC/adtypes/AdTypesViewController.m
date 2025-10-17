@@ -49,7 +49,7 @@
     // Initialize Playwire SDK with `publisherId` and `appId`, when initialization done, you will be able to load ad units.
     // Make sure you run SDK initialization only once.
     [PlaywireSDK.shared initializeWithPublisherId:@"1024407"
-                                            appId:@"25"
+                                            appId:@"702"
                                    viewController:self
                                 completionHandler:^() {
         [wself setupAdUnits];

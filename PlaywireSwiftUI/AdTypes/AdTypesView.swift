@@ -36,7 +36,7 @@ struct AdTypesView: View {
              viewControllerRepresentable.frame(width: .zero, height: .zero)
         }
         .onFirstAppear {
-             viewModel.initializeSDK(publisherId: "1024407", appId: "25", viewController: viewControllerRepresentable.viewController)
+             viewModel.initializeSDK(publisherId: "1024407", appId: "702", viewController: viewControllerRepresentable.viewController)
         }
     }
     

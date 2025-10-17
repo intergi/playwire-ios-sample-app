@@ -21,21 +21,12 @@ struct AppOpenAdView: View {
     
     var body: some View {
         fullScreenAdStatus(state: viewModel.state, adUnitName: adUnitName, mode: .AppOpenAd)
-        .onChange(of: viewModel.state) { _, newValue in
-            guard newValue == .loaded else { return }
-            
-            viewModel.show()
-        }
         .padding(.all)
         .background {
             viewControllerRepresentable.frame(width: .zero, height: .zero)
         }
         .onFirstAppear {
             viewModel.load()
-        }
-        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-            // Observe an app state to show the ad when a user open the app.
-            viewModel.show()
         }
     }
 }

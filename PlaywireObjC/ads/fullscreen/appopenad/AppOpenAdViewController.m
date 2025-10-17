@@ -11,7 +11,6 @@
 
 @interface AppOpenAdViewController () <PWFullScreenAdDelegate>
 @property (strong, nonatomic) UILabel *statusLabel;
-@property (strong, nonatomic) UIButton *showAppOpenAdButton;
 @property (strong, nonatomic) PWAppOpenAd *appOpenAd;
 @end
 
@@ -47,52 +46,15 @@
     self.statusLabel.textColor = [UIColor blackColor];
     [self.view addSubview:self.statusLabel];
     
-    // Create show button
-    self.showAppOpenAdButton = [[UIButton alloc] init];
-    [self.showAppOpenAdButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.showAppOpenAdButton setTitle:@"Show" forState:UIControlStateNormal];
-    self.showAppOpenAdButton.enabled = NO;
-    [self.view addSubview:self.showAppOpenAdButton];
-    
     // Setup constraints
     self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    self.showAppOpenAdButton.translatesAutoresizingMaskIntoConstraints = NO;
     
     [NSLayoutConstraint activateConstraints:@[
         [self.statusLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [self.statusLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
-        
-        [self.showAppOpenAdButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [self.showAppOpenAdButton.topAnchor constraintEqualToAnchor:self.statusLabel.bottomAnchor constant:20]
+        [self.statusLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor]
     ]];
     
-    [self subscribeToAppStateNotificaions];
-    [self.showAppOpenAdButton setEnabled:NO];
-    [self.showAppOpenAdButton addTarget:self action:@selector(showAction:) forControlEvents:UIControlEventTouchUpInside];
-    
     [self loadAppOpenAd];
-}
-
-- (void)subscribeToAppStateNotificaions {
-    // Observe an app state to show the ad when a user open the app.
-    // As alternative you can handle an app state in the `AppDelegate` or `SceneDelegate`.
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleResignActiveState) name:UIApplicationWillResignActiveNotification
-                                               object:NULL];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleBecomeActiveState) name:UIApplicationDidBecomeActiveNotification
-                                               object:NULL];
-}
-
-- (void)handleResignActiveState {
-    // Check if we need to load app open ad before next presentation
-    if (!self.appOpenAd.isLoaded) return;
-    [self loadAppOpenAd];
-}
-
-- (void)handleBecomeActiveState {
-    [self showAppOpenAd];
 }
 
 - (void)loadAppOpenAd {
@@ -133,7 +95,7 @@
 
 - (void)fullScreenAdDidLoad:(PWFullScreenAd * _Nonnull)ad {
     self.statusLabel.text = [NSString stringWithFormat: @"✅ The app open ad \"%@\" is loaded.", self.adUnitName];
-    [self.showAppOpenAdButton setEnabled:YES];
+    [self showAppOpenAd];
 }
 
 - (void)fullScreenAdDidFailToLoad:(PWFullScreenAd * _Nonnull)ad {
@@ -155,7 +117,6 @@
 
 - (void)fullScreenAdDidRecordImpression:(PWFullScreenAd * _Nonnull)ad {
     self.statusLabel.text = [NSString stringWithFormat: @"👍 The app open ad \"%@\" was successfully shown.", self.adUnitName];
-    [self.showAppOpenAdButton setEnabled:NO];
 }
 
 - (void)fullScreenAdDidUserEarn:(PWFullScreenAd * _Nonnull)ad type:(NSString * _Nonnull)type amount:(double)amount {}

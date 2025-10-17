@@ -33,7 +33,7 @@ final class AdTypesViewController: UITableViewController {
         
         // Initialize Playwire SDK with `publisherId` and `appId`, when initialization done, you will be able to load ad units.
         // Make sure you run SDK initialization only once.
-        PlaywireSDK.shared.initialize(publisherId: "1024407", appId: "25", viewController: self) { [weak self] in
+        PlaywireSDK.shared.initialize(publisherId: "1024407", appId: "702", viewController: self) { [weak self] in
             self?.setupAdUnits()
         }
     }

@@ -22,6 +22,7 @@ struct PlaywireSwiftUIApp: App {
                     PlaywireSDK.shared.test = true
                     #endif
                 }
+
         }
     }
 }

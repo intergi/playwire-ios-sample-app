@@ -60,6 +60,7 @@ extension AppOpenAdViewModel: PWFullScreenAdDelegate {
     
     func fullScreenAdDidLoad(_ ad: PWFullScreenAd) {
         state = .loaded
+        show()
     }
     
     func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd) {
