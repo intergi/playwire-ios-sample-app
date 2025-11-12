@@ -1,7 +1,7 @@
 platform :ios, '26.0'
 use_frameworks!
 
-playwire_version = '11.5.1'
+playwire_version = '11.6.0'
 
 abstract_target 'Playwire' do
   pod 'Playwire', playwire_version
