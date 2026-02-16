@@ -1,13 +1,10 @@
 platform :ios, '26.0'
 use_frameworks!
 
-playwire_version = '11.6.0'
+playwire_version = '12.0.0'
 
 abstract_target 'Playwire' do
   pod 'Playwire', playwire_version
-  # OR
-  # Use the COPPA pods for a COPPA integration
-  # pod 'Playwire/Coppa', playwire_version
 
   target 'PlaywireObjC' do
   end
