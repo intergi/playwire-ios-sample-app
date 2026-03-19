@@ -17,13 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-#if DEBUG
-    // Logging
+
     [PWNotifier.shared startConsoleLogger];
-    
-    // Enable test mode for debug builds to avoid `no fill` issues and be able to test your implementation with test ads.
-    [PlaywireSDK.shared setTest:YES];
-#endif
+    [PlaywireSDK.shared setTest:NO];
     
     return YES;
 }
