@@ -16,13 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        #if DEBUG
-        // Logging
+        // Start `PWNotifier` to log SDK events to console.
         PWNotifier.shared.startConsoleLogger()
-        
-        // Enable test mode for debug builds to avoid `no fill` issues and be able to test your implementation with test ads.
-        PlaywireSDK.shared.test = true
-        #endif
+
+        // Set to `true` to test your implementation with GAM test ads on real devices.
+        PlaywireSDK.shared.test = false
         
         return true
     }
