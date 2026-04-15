@@ -14,15 +14,34 @@ final class NativeViewController: UIViewController {
     
     private let statusLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
+        label.textAlignment = .center
         return label
     }()
     
     // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
-    let adUnitName: String
+    private let adUnitName: String
     
-    private var nativeView: PWNativeView!
-    private var nativeAdView: CustomNativeAdView!
+    private lazy var nativeView: PWNativeView = {
+        PWNativeView(
+            adUnitName: adUnitName,
+            controller: self,
+            factory: self,
+            delegate: self
+        )
+    }()
+    
+    private lazy var mainStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [nativeView, statusLabel])
+        stack.axis = .vertical
+        stack.spacing = 12
+        stack.alignment = .fill
+        stack.distribution = .fill
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.isLayoutMarginsRelativeArrangement = true
+        stack.layoutMargins = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+        return stack
+    }()
     
     init(adUnitName: String) {
         self.adUnitName = adUnitName
@@ -37,29 +56,8 @@ final class NativeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-
-        view.addSubview(statusLabel)
-        statusLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            statusLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            statusLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        ])
-        
-        nativeView = PWNativeView(
-            adUnitName: adUnitName,
-            controller: self,
-            factory: self,
-            delegate: self
-        )
-        view.addSubview(nativeView)
-        nativeView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            nativeView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            nativeView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            nativeView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            nativeView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
-        ])
+        view.backgroundColor = .systemBackground
+        setupLayout()
         
         // Use `PWLoadParams().withTargeting()` to pass your custom targets to ad request.
         // let params = PWLoadParams().withTargeting(
@@ -69,9 +67,20 @@ final class NativeViewController: UIViewController {
         //  ]
         // )
         // nativeView.load(params: params)
-        nativeView?.load()
+        nativeView.load()
         
         statusLabel.text = "⏳ The native ad \"\(adUnitName)\" is loading."
+    }
+    
+    private func setupLayout() {
+        view.addSubview(mainStack)
+            
+        NSLayoutConstraint.activate([
+            mainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            mainStack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            mainStack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            mainStack.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
 }
 
@@ -96,24 +105,16 @@ extension NativeViewController: PWViewAdDelegate {
     }
     
     func viewAdDidRecordImpression(_ ad: PWViewAd) {
+        statusLabel.text = "The native ad \"\(adUnitName)\" recorded an impression."
     }
     
     func viewAdDidRecordClick(_ ad: PWViewAd) {
+        statusLabel.text = "The native ad \"\(adUnitName)\" was clicked."
     }
 }
 
 extension NativeViewController: PWNativeViewFactory {
-    func createAdContentView(nativeView: PWNativeView, adContent: PWNativeViewContent) -> UIView {
-        // Creates your custom view which can be configurable with `PWNativeViewContent`.
-        // `CustomNativeAdView` is a `UIView` subclass for our custom native ad layout. See `CustomNativeAdView` class for more
-        // details.
-        
-        nativeAdView = CustomNativeAdView(adContent: adContent)
-        return nativeAdView
-    }
-    
-    func callToActionView(nativeView: PWNativeView, adContentView: UIView) -> UIView? {
-        // Defines action view to handle a user's taps on a native ad view.
-        nativeAdView.button
+    func createAdContentView() -> PWNativeViewContentView {
+        NativeView()
     }
 }

@@ -9,18 +9,18 @@ import SwiftUI
 
 class BannerCoordinator: NSObject, PWViewAdDelegate {
     
-    private let banner: BannerContainer
+    private let state: Binding<ViewAdState>
 
-    init(_ banner: BannerContainer) {
-        self.banner = banner
+    init(state: Binding<ViewAdState>) {
+        self.state = state
     }
         
     func viewAdDidLoad(_ ad: Playwire.PWViewAd) {
-        banner.state = .loaded
+        state.wrappedValue = .loaded
     }
     
     func viewAdDidFailToLoad(_ ad: Playwire.PWViewAd) {
-        banner.state = .failed
+        state.wrappedValue = .failed
     }
     
     func viewAdWillPresentFullScreenContent(_ ad: Playwire.PWViewAd) {

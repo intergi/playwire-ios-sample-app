@@ -13,9 +13,11 @@ struct BannerView: View {
     @State var state: ViewAdState = .loading
     
     var body: some View {
-        viewAdStatus(state: state, adUnitName: adUnitName, mode: .Banner)
-        
-        BannerContainer(adUnitName: adUnitName, state: $state)
+        VStack {
+            viewAdStatus(state: state, adUnitName: adUnitName, mode: .Banner)
+            
+            BannerContainer(adUnitName: adUnitName, state: $state)
+        }
     }
 }
 
@@ -58,6 +60,6 @@ struct BannerContainer: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
     
     func makeCoordinator() -> BannerCoordinator {
-        BannerCoordinator(self)
+        BannerCoordinator(state: $state)
     }
 }

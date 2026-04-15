@@ -8,13 +8,12 @@
 
 #import "NativeAdViewController.h"
 #import <Playwire-Swift.h>
-#import "CustomNativeAdView.h"
+#import "PlaywireObjC-Swift.h"
 
-@interface NativeAdViewController ()<PWViewAdDelegate, PWNativeViewFactory>
+@interface NativeAdViewController () <ObjCNativeContainerViewDelegate>
 @property (strong, nonatomic) UILabel *statusLabel;
-@property (strong, nonatomic) PWNativeView *nativeView;
-@property (strong, nonatomic) CustomNativeAdView *nativeAdView;
-
+@property (strong, nonatomic) ObjCNativeContainerView *nativeContainerView;
+@property (strong, nonatomic) UIStackView *mainStack;
 @end
 
 @implementation NativeAdViewController
@@ -22,7 +21,7 @@
 - (instancetype)initWithAdUnitName:(NSString *)adUnitName {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        _adUnitName = adUnitName;
+        _adUnitName = [adUnitName copy];
     }
     return self;
 }
@@ -42,75 +41,66 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor systemBackgroundColor];
     
-    // Create status label
     self.statusLabel = [[UILabel alloc] init];
-    self.statusLabel.textColor = [UIColor blackColor];
-    [self.view addSubview:self.statusLabel];
-    self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.statusLabel.textColor = [UIColor labelColor];
+    self.statusLabel.textAlignment = NSTextAlignmentCenter;
+    self.statusLabel.numberOfLines = 0;
+    
+    self.nativeContainerView = [[ObjCNativeContainerView alloc] initWithAdUnitName:self.adUnitName
+                                                                         controller:self];
+    self.nativeContainerView.delegate = self;
+    
+    self.mainStack = [[UIStackView alloc] initWithArrangedSubviews:@[
+        self.nativeContainerView,
+        self.statusLabel
+    ]];
+    self.mainStack.axis = UILayoutConstraintAxisVertical;
+    self.mainStack.spacing = 12;
+    self.mainStack.alignment = UIStackViewAlignmentFill;
+    self.mainStack.distribution = UIStackViewDistributionFill;
+    self.mainStack.translatesAutoresizingMaskIntoConstraints = NO;
+    self.mainStack.layoutMarginsRelativeArrangement = YES;
+    self.mainStack.layoutMargins = UIEdgeInsetsMake(12, 12, 12, 12);
+    
+    [self.view addSubview:self.mainStack];
+    
     [NSLayoutConstraint activateConstraints:@[
-        [self.statusLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [self.statusLabel.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor]
+        [self.mainStack.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
+        [self.mainStack.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor],
+        [self.mainStack.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor],
+        [self.mainStack.bottomAnchor constraintLessThanOrEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor]
     ]];
     
-    self.nativeView = [[PWNativeView alloc] initWithAdUnitName:self.adUnitName
-                                                    controller:self
-                                                       factory:self
-                                                      delegate:self];
-    [self.view addSubview:self.nativeView];
-    self.nativeView.translatesAutoresizingMaskIntoConstraints = NO;
-    [NSLayoutConstraint activateConstraints:@[
-        [self.nativeView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
-        [self.nativeView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor],
-        [self.nativeView.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor],
-        [self.nativeView.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor]
-    ]];
-    
-    // Use `[[PWLoadParams new] withTargeting:]` to pass your custom targets to ad request.
-    //    PWLoadParams* params = [[PWLoadParams new] withTargeting:@{@"age": @"18-32", @"page": @"travel"}];
-    //    [self.nativeView loadWithParams:params];
-    
-    [self.nativeView load];
-
-    self.statusLabel.text = [NSString stringWithFormat: @"⏳ The native ad \"%@\" is loading.", self.adUnitName];
+    [self.nativeContainerView loadAd];
 }
 
+#pragma mark - ObjCNativeContainerViewDelegate
 
-
-#pragma mark - PWViewAdDelegate -
-
-- (void)viewAdDidLoad:(PWViewAd * _Nonnull)ad {
-    if (!self.nativeView.isLoaded) return;
-    
-    self.statusLabel.text = [NSString stringWithFormat: @"✅ The native ad \"%@\" is loaded.", self.adUnitName];
+- (void)nativeContainerViewDidStartLoading:(ObjCNativeContainerView *)containerView
+                                adUnitName:(NSString *)adUnitName {
+    self.statusLabel.text = [NSString stringWithFormat:@"The native ad \"%@\" is loading.", adUnitName];
 }
 
-- (void)viewAdDidFailToLoad:(PWViewAd * _Nonnull)ad {
-    self.statusLabel.text = [NSString stringWithFormat: @"❌ Failed to load the native ad \"%@\".", self.adUnitName];
+- (void)nativeContainerViewDidLoad:(ObjCNativeContainerView *)containerView
+                        adUnitName:(NSString *)adUnitName {
+    self.statusLabel.text = [NSString stringWithFormat:@"The native ad \"%@\" is loaded.", adUnitName];
 }
 
-- (void)viewAdDidRecordClick:(PWViewAd * _Nonnull)ad {}
-- (void)viewAdDidRecordImpression:(PWViewAd * _Nonnull)ad {}
-- (void)viewAdWillPresentFullScreenContent:(PWViewAd * _Nonnull)ad {}
-- (void)viewAdWillDismissFullScreenContent:(PWViewAd * _Nonnull)ad {}
-- (void)viewAdDidDismissFullScreenContent:(PWViewAd * _Nonnull)ad {}
-
-#pragma mark - PWNativeViewFactory -
-
-- (UIView * _Nonnull)createAdContentViewWithNativeView:(PWNativeView * _Nonnull)nativeView
-                                             adContent:(PWNativeViewContent * _Nonnull)adContent {
-    // Creates your custom view which can be configurable with `PWNativeViewContent`.
-    // `CustomNativeAdView` is a `UIView` subclass for our custom native ad layout. See `CustomNativeAdView` class for more
-    // details.
-    
-    self.nativeAdView = [[CustomNativeAdView alloc] initWithAdContent:adContent];
-    return self.nativeAdView;
+- (void)nativeContainerViewDidFailToLoad:(ObjCNativeContainerView *)containerView
+                              adUnitName:(NSString *)adUnitName {
+    self.statusLabel.text = [NSString stringWithFormat:@"Failed to load the native ad \"%@\".", adUnitName];
 }
 
-- (UIView * _Nullable)callToActionViewWithNativeView:(PWNativeView * _Nonnull)nativeView
-                                       adContentView:(UIView * _Nonnull)adContentView {
-    // Defines action view to handle a user's taps on a native ad view.
-    return self.nativeAdView.button;
+- (void)nativeContainerViewDidRecordImpression:(ObjCNativeContainerView *)containerView
+                                    adUnitName:(NSString *)adUnitName {
+    self.statusLabel.text = [NSString stringWithFormat:@"The native ad \"%@\" recorded an impression.", adUnitName];
 }
+
+- (void)nativeContainerViewDidRecordClick:(ObjCNativeContainerView *)containerView
+                               adUnitName:(NSString *)adUnitName {
+    self.statusLabel.text = [NSString stringWithFormat:@"The native ad \"%@\" was clicked.", adUnitName];
+}
+
 @end

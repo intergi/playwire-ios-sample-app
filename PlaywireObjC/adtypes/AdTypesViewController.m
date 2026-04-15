@@ -46,13 +46,17 @@
 
     __weak typeof(self) wself = self;
     
-    // Initialize Playwire SDK with `publisherId` and `appId`, when initialization done, you will be able to load ad units.
+    // Start Playwire SDK with `publisherId` and `appId`.
     // Make sure you run SDK initialization only once.
-    [PlaywireSDK.shared initializeWithPublisherId:@"1024407"
-                                            appId:@"702"
-                                   viewController:self
-                                completionHandler:^() {
-        [wself setupAdUnits];
+    [PlaywireSDK.shared startWithPublisherId:@"1024407"
+                                       appId:@"702"
+                              viewController:self
+                                  completion:^(BOOL success, NSError * _Nullable error) {
+        if (success) {
+            [wself setupAdUnits];
+        } else {
+            [wself showInitializationError:error];
+        }
     }];
 }
 
@@ -85,7 +89,17 @@
 - (void)setupTableView {
     UILabel *statusLabel = [UILabel new];
     statusLabel.textAlignment = NSTextAlignmentCenter;
-    statusLabel.text = @"⏳ SDK initialization..";
+    statusLabel.numberOfLines = 0;
+    statusLabel.text = @"⏳ SDK start..";
+    self.tableView.backgroundView = statusLabel;
+}
+
+- (void)showInitializationError:(NSError * _Nullable)error {
+    UILabel *statusLabel = [UILabel new];
+    statusLabel.textAlignment = NSTextAlignmentCenter;
+    statusLabel.numberOfLines = 0;
+    statusLabel.text = [NSString stringWithFormat:@"SDK failed to start.\n%@",
+                        error.localizedDescription ?: @"Unknown error"];
     self.tableView.backgroundView = statusLabel;
 }
 
@@ -113,10 +127,6 @@
     
     if ([adUnit.mode isEqualToString:@"Banner"]) {
         viewController = [[BannerViewController alloc] initWithAdUnitName:adUnit.alias bannerType:PWAdUnit.PWAdMode_Banner];
-    } else if ([adUnit.mode isEqualToString:@"BannerAnchored"]) {
-        viewController = [[BannerViewController alloc] initWithAdUnitName:adUnit.alias bannerType:PWAdUnit.PWAdMode_BannerAnchored];
-    } else if ([adUnit.mode isEqualToString:@"BannerInline"]) {
-        viewController = [[BannerViewController alloc] initWithAdUnitName:adUnit.alias bannerType:PWAdUnit.PWAdMode_BannerInline];
     } else if ([adUnit.mode isEqualToString:@"Interstitial"]) {
         viewController = [[InterstitialViewController alloc] initWithAdUnitName:adUnit.alias];
     } else if ([adUnit.mode isEqualToString:@"Rewarded"]) {

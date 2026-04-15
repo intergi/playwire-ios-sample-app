@@ -13,7 +13,8 @@
 @property (strong, nonatomic) UILabel *statusLabel;
 @property (strong, nonatomic, readwrite) NSString *adUnitName;
 @property (strong, nonatomic) NSString *bannerType;
-@property (strong, nonatomic) PWBannerViewBase *bannerViewBase;
+@property (strong, nonatomic) PWBannerView *bannerView;
+@property (assign, nonatomic) BOOL bannerAdded;
 @end
 
 @implementation BannerViewController
@@ -23,6 +24,7 @@
     if (self) {
         _adUnitName = adUnitName;
         _bannerType = bannerType;
+        _bannerAdded = NO;
     }
     return self;
 }
@@ -47,35 +49,24 @@
     // Create status label
     self.statusLabel = [[UILabel alloc] init];
     self.statusLabel.textColor = [UIColor blackColor];
-    
-    // Create banner view based on type
-    if ([self.bannerType isEqualToString:PWAdUnit.PWAdMode_Banner]) {
-        self.bannerViewBase = [[PWBannerView alloc] initWithAdUnitName:self.adUnitName delegate:self];
-    } else if ([self.bannerType isEqualToString:PWAdUnit.PWAdMode_BannerAnchored]) {
-        self.bannerViewBase = [[PWBannerViewAnchored alloc] initWithAdUnitName:self.adUnitName delegate:self];
-    } else if ([self.bannerType isEqualToString:PWAdUnit.PWAdMode_BannerInline]) {
-        self.bannerViewBase = [[PWBannerViewInline alloc] initWithAdUnitName:self.adUnitName delegate:self];
-    }
-    
-    if (self.bannerViewBase) {
-        self.bannerViewBase.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.view addSubview:self.bannerViewBase];
+    self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.statusLabel];
         
-        [NSLayoutConstraint activateConstraints:@[
-            [self.bannerViewBase.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-            [self.bannerViewBase.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor],
-        ]];
+        
+    [NSLayoutConstraint activateConstraints:@[
+        [self.statusLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [self.statusLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor]
+    ]];
         
         // Use `[[PWLoadParams new] withTargeting:]` to pass your custom targets to ad request.
         //     PWLoadParams *params = [[PWLoadParams new] withTargeting:@{
         //       @"age": @"18-32",
         //       @"page": @"travel"
         //     }];
-        //     [self.bannerViewBase loadWithParams:params];
+        //     [self.bannerView loadWithParams:params];
         
-        [self.bannerViewBase load];
-    }
-    
+    self.bannerView = [[PWBannerView alloc] initWithAdUnitName:self.adUnitName delegate:self];
+    [self.bannerView load];
     self.statusLabel.text = [NSString stringWithFormat: @"⏳ The banner \"%@\" is loading.", self.adUnitName];
 }
 
@@ -83,10 +74,10 @@
     // Refresh will start only if the ad unit contains `refresh` object.
     // See logs from `PWNotifier` to track status of refresh.
     
-    [self.bannerViewBase refresh];
+    [self.bannerView refresh];
     
     NSArray *adUnits = [[[PlaywireSDK shared] config] adUnits];
-    PWBannerRefresh *refresh;
+    PWBannerRefresh *refresh = nil;
     for(PWAdUnit *adUnit in adUnits) {
         if([adUnit.name isEqualToString:self.adUnitName]) {
             refresh = adUnit.refresh;
@@ -105,9 +96,23 @@
 #pragma mark - PWViewAdDelegate -
 
 - (void)viewAdDidLoad:(PWViewAd * _Nonnull)ad {
-    if (!self.bannerViewBase.isLoaded) return;
+    if (![ad isKindOfClass:[PWBannerView class]]) {
+        return;
+    }
     
     self.statusLabel.text = [NSString stringWithFormat: @"✅ The banner \"%@\" is loaded.", self.adUnitName];
+    if (self.bannerAdded) {
+            return;
+    }
+        
+    self.bannerAdded = YES;
+    self.bannerView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.bannerView];
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [self.bannerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [self.bannerView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor]
+    ]];
 }
 
 - (void)viewAdDidFailToLoad:(PWViewAd * _Nonnull)ad {
