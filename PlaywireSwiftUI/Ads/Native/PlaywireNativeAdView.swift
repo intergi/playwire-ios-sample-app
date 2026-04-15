@@ -13,11 +13,11 @@ struct PlaywireNativeAdView: View {
     // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
     private let adUnitName: String
     private let viewControllerRepresentable = EmptyViewControllerRepresentable()
-    private var viewModel: NativeAdViewModel
+    @State private var viewModel: NativeAdViewModel
     
     init(adUnitName: String) {
         self.adUnitName = adUnitName
-        self.viewModel = NativeAdViewModel(adUnitName: adUnitName, viewController: viewControllerRepresentable.viewController)
+        self._viewModel = State(initialValue: NativeAdViewModel())
     }
     
     var body: some View {
@@ -34,6 +34,11 @@ struct PlaywireNativeAdView: View {
         }
         .background {
             viewControllerRepresentable.frame(width: .zero, height: .zero)
+        }
+        .onAppear {
+            if viewModel.state == .none {
+                viewModel.state = .loading
+            }
         }
     }
 }

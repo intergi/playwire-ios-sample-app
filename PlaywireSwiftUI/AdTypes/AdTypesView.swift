@@ -9,7 +9,7 @@ import Playwire
 
 struct AdTypesView: View {
     private let viewControllerRepresentable = EmptyViewControllerRepresentable()
-    private var viewModel = AdTypesViewModel()
+    @State private var viewModel = AdTypesViewModel()
     
     var body: some View {
         let title = "Playwire Demo"
@@ -45,10 +45,6 @@ struct AdTypesView: View {
         switch mode {
         case .Banner:
             BannerView(adUnitName: adUnitName)
-        case .BannerAnchored:
-            AnchoredBannerView(adUnitName: adUnitName)
-        case .BannerInline:
-            InlineBannerView(adUnitName: adUnitName)
         case .Interstitial:
             InterstitialView(adUnitName: adUnitName)
         case .Rewarded:

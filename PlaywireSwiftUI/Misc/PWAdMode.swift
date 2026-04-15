@@ -11,7 +11,7 @@ extension PWAdUnit.PWAdMode {
         switch self {
         case .AppOpenAd:
             "AppOpen"
-        case .Banner, .BannerInline, .BannerAnchored:
+        case .Banner:
             "Banner"
         case .Interstitial:
             "Interstitial"
