@@ -51,26 +51,25 @@
     self.statusLabel.textColor = [UIColor blackColor];
     self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.statusLabel];
-        
-        
+
     [NSLayoutConstraint activateConstraints:@[
         [self.statusLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
         [self.statusLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor]
     ]];
-        
-        // Use `[[PWLoadParams new] withTargeting:]` to pass your custom targets to ad request.
-        //     PWLoadParams *params = [[PWLoadParams new] withTargeting:@{
-        //       @"age": @"18-32",
-        //       @"page": @"travel"
-        //     }];
-        //     [self.bannerView loadWithParams:params];
-        
+
+    // Use `[[PWLoadParams new] withTargeting:]` to pass your custom targets to ad request.
+    //     PWLoadParams *params = [[PWLoadParams new] withTargeting:@{
+    //       @"age": @"18-32",
+    //       @"page": @"travel"
+    //     }];
+    //     [self.bannerView loadWithParams:params];
+
     self.bannerView = [[PWBannerView alloc] initWithAdUnitName:self.adUnitName delegate:self];
     [self.bannerView load];
     self.statusLabel.text = [NSString stringWithFormat: @"⏳ The banner \"%@\" is loading.", self.adUnitName];
 }
 
--(IBAction)refreshAction:(UIButton *)sender {
+- (IBAction)refreshAction:(UIButton *)sender {
     // Refresh will start only if the ad unit contains `refresh` object.
     // See logs from `PWNotifier` to track status of refresh.
     
@@ -102,9 +101,9 @@
     
     self.statusLabel.text = [NSString stringWithFormat: @"✅ The banner \"%@\" is loaded.", self.adUnitName];
     if (self.bannerAdded) {
-            return;
+        return;
     }
-        
+
     self.bannerAdded = YES;
     self.bannerView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.bannerView];
