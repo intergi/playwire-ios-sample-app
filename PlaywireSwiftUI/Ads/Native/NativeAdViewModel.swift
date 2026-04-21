@@ -9,33 +9,14 @@ import SwiftUI
 import Playwire
 import Observation
 
-@Observable class NativeAdViewModel: PWNativeViewFactory {
-    
-    // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
-    private let adUnitName: String
-    private let viewController: UIViewController
+@Observable class NativeAdViewModel: NSObject, PWNativeViewFactory, PWViewAdDelegate {
     
     // Tracks the current state of the native ad
     var state: NativeAdState = .none
     
-    // Loading and nativeView management handled via NativeAdViewSwiftUI
-    // This ViewModel is responsible only for state and delegate callbacks
-    
-    init(adUnitName: String, viewController: UIViewController) {
-        self.adUnitName = adUnitName
-        self.viewController = viewController
-    }
-    
-    func createAdContentView(nativeView: PWNativeView, adContent: PWNativeViewContent) -> UIView {
-        CustomNativeAdView(adContent: adContent)
-    }
-
-    func callToActionView(nativeView: PWNativeView, adContentView: UIView) -> UIView? {
-        (adContentView as? CustomNativeAdView)?.button
-    }
-}
-
-extension NativeAdViewModel: PWViewAdDelegate {
+    func createAdContentView() -> PWNativeViewContentView {
+           NativeView()
+       }
     
     func viewAdDidLoad(_ ad: Playwire.PWViewAd) {
         state = .loaded

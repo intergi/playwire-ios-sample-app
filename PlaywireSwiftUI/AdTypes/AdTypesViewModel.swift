@@ -19,9 +19,20 @@ import Playwire
     var adUnits: [AdUnit] = []
     
     func initializeSDK(publisherId: String, appId: String, viewController: UIViewController) {
-        PlaywireSDK.shared.initialize(publisherId: publisherId, appId: appId, viewController: viewController) {
-            let units = PlaywireSDK.shared.config?.adUnits.map { AdUnit(name: $0.name, mode: $0.mode) } ?? []
-            self.adUnits = units.sorted(by: { $0.name < $1.name })
+        PlaywireSDK.shared.start(
+            publisherId: publisherId,
+            appId: appId,
+            viewController: viewController
+        ) { success, error in
+            if success {
+                let units = PlaywireSDK.shared.config?.adUnits.map {
+                    AdUnit(name: $0.name, mode: $0.mode)
+                } ?? []
+                self.adUnits = units.sorted(by: { $0.name < $1.name })
+            } else {
+                self.adUnits = []
+                print("SDK start failed: \(error?.localizedDescription ?? "Unknown error")")
+            }
         }
     }
 }

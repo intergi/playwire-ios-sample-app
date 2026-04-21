@@ -20,7 +20,8 @@ final class BannerViewController: UIViewController {
     let adUnitName: String
     private let bannerType: String
 
-    private var bannerViewBase: PWBannerViewBase!
+    private var bannerView: PWBannerView?
+    private var bannerAdded = false
     
     init(adUnitName: String, bannerType: String) {
         self.adUnitName = adUnitName
@@ -36,23 +37,12 @@ final class BannerViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-
-        bannerViewBase = if bannerType == PWAdUnit.PWAdMode_Banner {
-            PWBannerView(adUnitName: adUnitName, delegate: self)
-        } else if bannerType == PWAdUnit.PWAdMode_BannerAnchored {
-            PWBannerViewAnchored(adUnitName: adUnitName, delegate: self)
-        } else if bannerType == PWAdUnit.PWAdMode_BannerInline {
-            PWBannerViewInline(adUnitName: adUnitName, delegate: self)
-        } else {
-            nil
-        }
-        
-        bannerViewBase.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bannerViewBase)
+        view.addSubview(statusLabel)
+        statusLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            bannerViewBase.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bannerViewBase.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            statusLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            statusLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
         // Use `PWLoadParams().withTargeting()` to pass your custom targets to ad request.
@@ -64,7 +54,8 @@ final class BannerViewController: UIViewController {
         // )
         // bannerView.load(params: params)
         
-        bannerViewBase.load()
+        bannerView = PWBannerView(adUnitName: adUnitName, delegate: self)
+        bannerView?.load()
         statusLabel.text = "⏳ The banner \"\(adUnitName)\" is loading."
     }
     
@@ -72,7 +63,7 @@ final class BannerViewController: UIViewController {
         // Refresh will start only if the ad unit contains `refresh` object.
         // See logs from `PWNotifier` to track status of refresh.
         
-        bannerViewBase.refresh()
+        bannerView?.refresh()
 
         let adUnits = PlaywireSDK.shared.config?.adUnits
         let refresh = adUnits?.first { $0.name == adUnitName }?.refresh
@@ -85,11 +76,21 @@ final class BannerViewController: UIViewController {
 }
 
 // MARK: - PWViewAdDelegate -
-extension BannerViewController: PWViewAdDelegate {
+extension BannerViewController: PWViewAdDelegate{
     func viewAdDidLoad(_ ad: PWViewAd) {
-        guard bannerViewBase.isLoaded else { return }
+        guard let bannerView = ad as? PWBannerView else { return }
         
         statusLabel.text = "✅ The banner \"\(adUnitName)\" is loaded."
+        guard !bannerAdded else { return }
+        bannerAdded = true
+                
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+                
+        NSLayoutConstraint.activate([
+            bannerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bannerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
     
     func viewAdDidFailToLoad(_ ad: PWViewAd) {
