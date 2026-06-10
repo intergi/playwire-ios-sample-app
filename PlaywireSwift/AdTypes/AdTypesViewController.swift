@@ -120,10 +120,6 @@ final class AdTypesViewController: UITableViewController {
             let appOpenVC = AppOpenViewController(adUnitName: adUnit.alias)
             navigationController?.pushViewController(appOpenVC, animated: true)
             
-        case "RewardedInterstitial":
-            let rewardedInterstitialVC = RewardedInterstitialViewController(adUnitName: adUnit.alias)
-            navigationController?.pushViewController(rewardedInterstitialVC, animated: true)
-            
         case "Native":
             let nativeVC = NativeViewController(adUnitName: adUnit.alias)
             navigationController?.pushViewController(nativeVC, animated: true)

@@ -17,8 +17,6 @@ extension PWAdUnit.PWAdMode {
             "Interstitial"
         case .Rewarded:
             "Rewarded"
-        case .RewardedInterstitial:
-            "Rewarded Interstitial"
         case .Native:
             "Native"
         @unknown default:
