@@ -51,8 +51,6 @@ struct AdTypesView: View {
             RewardedView(adUnitName: adUnitName)
         case .AppOpenAd:
             AppOpenAdView(adUnitName: adUnitName)
-        case .RewardedInterstitial:
-            RewardedInterstitialView(adUnitName: adUnitName)
         case .Native:
             PlaywireNativeAdView(adUnitName: adUnitName)
             

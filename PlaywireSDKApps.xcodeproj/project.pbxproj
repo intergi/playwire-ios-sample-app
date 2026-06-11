@@ -74,7 +74,6 @@
 			membershipExceptions = (
 				Ads/Fullscreen/AppOpen/AppOpenViewController.swift,
 				Ads/Fullscreen/Interstitial/InterstitialViewController.swift,
-				Ads/Fullscreen/Rewarded/RewardedInterstitialViewController.swift,
 				Ads/Fullscreen/Rewarded/RewardedViewController.swift,
 				Ads/view/banner/BannerViewController.swift,
 				Ads/view/native/NativeView.swift,
@@ -92,7 +91,6 @@
 			membershipExceptions = (
 				Ads/Fullscreen/AppOpen/AppOpenViewController.swift,
 				Ads/Fullscreen/Interstitial/InterstitialViewController.swift,
-				Ads/Fullscreen/Rewarded/RewardedInterstitialViewController.swift,
 				Ads/Fullscreen/Rewarded/RewardedViewController.swift,
 				Ads/view/banner/BannerViewController.swift,
 				Ads/view/native/NativeView.swift,

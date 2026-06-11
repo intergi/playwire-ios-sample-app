@@ -12,7 +12,6 @@
 #import "../ads/fullscreen/interstitial/InterstitialViewController.h"
 #import "../ads/fullscreen/rewarded/RewardedViewController.h"
 #import "../ads/fullscreen/appopenad/AppOpenAdViewController.h"
-#import "../ads/fullscreen/rewarded/RewardedInterstitialViewController.h"
 #import "../ads/view/native/NativeAdViewController.h"
 
 @interface AdUnit: NSObject
@@ -133,8 +132,6 @@
         viewController = [[RewardedViewController alloc] initWithAdUnitName:adUnit.alias];
     } else if ([adUnit.mode isEqualToString:@"AppOpenAd"]) {
         viewController = [[AppOpenAdViewController alloc] initWithAdUnitName:adUnit.alias];
-    } else if ([adUnit.mode isEqualToString:@"RewardedInterstitial"]) {
-        viewController = [[RewardedInterstitialViewController alloc] initWithAdUnitName:adUnit.alias];
     } else if ([adUnit.mode isEqualToString:@"Native"]) {
         viewController = [[NativeAdViewController alloc] initWithAdUnitName:adUnit.alias];
     } else {
