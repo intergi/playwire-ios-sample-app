@@ -7,7 +7,7 @@
 //
 
 #import "NativeAdViewController.h"
-#import <Playwire-Swift.h>
+#import <Playwire/Playwire-Swift.h>
 #import "PlaywireObjC-Swift.h"
 
 @interface NativeAdViewController () <NativeContainerViewDelegate>

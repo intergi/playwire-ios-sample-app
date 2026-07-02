@@ -7,7 +7,7 @@
 //
 
 #import "AdTypesViewController.h"
-#import <Playwire-Swift.h>
+#import <Playwire/Playwire-Swift.h>
 #import "../ads/view/banner/BannerViewController.h"
 #import "../ads/fullscreen/interstitial/InterstitialViewController.h"
 #import "../ads/fullscreen/rewarded/RewardedViewController.h"
@@ -125,7 +125,12 @@
     UIViewController *viewController = nil;
     
     if ([adUnit.mode isEqualToString:@"Banner"]) {
-        viewController = [[BannerViewController alloc] initWithAdUnitName:adUnit.alias bannerType:PWAdUnit.PWAdMode_Banner];
+        if ([adUnit.alias isEqualToString:@"floating-banner"]) {
+            // TODO: add floating banner example
+            NSLog(@"Example not available");
+        } else {
+            viewController = [[BannerViewController alloc] initWithAdUnitName:adUnit.alias];
+        }
     } else if ([adUnit.mode isEqualToString:@"Interstitial"]) {
         viewController = [[InterstitialViewController alloc] initWithAdUnitName:adUnit.alias];
     } else if ([adUnit.mode isEqualToString:@"Rewarded"]) {

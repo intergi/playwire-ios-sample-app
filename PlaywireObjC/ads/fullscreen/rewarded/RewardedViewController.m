@@ -7,7 +7,7 @@
 //
 
 #import "RewardedViewController.h"
-#import <Playwire-Swift.h>
+#import <Playwire/Playwire-Swift.h>
 
 @interface RewardedViewController () <PWFullScreenAdDelegate>
 @property (strong, nonatomic) UILabel *statusLabel;
@@ -84,12 +84,12 @@
 
 #pragma mark - PWFullScreenAdDelegate -
 
-- (void)fullScreenAdDidLoad:(PWFullScreenAd * _Nonnull)ad {
+- (void)fullScreenAdDidLoad:(PWFullScreenAd * _Nonnull)ad  error:(PWAdError * _Nonnull)error{
     self.statusLabel.text = [NSString stringWithFormat: @"✅ The rewarded \"%@\" is loaded.", self.adUnitName];
     [self.rewarded show];
 }
 
-- (void)fullScreenAdDidFailToLoad:(PWFullScreenAd * _Nonnull)ad {
+- (void)fullScreenAdDidFailToLoad:(PWFullScreenAd * _Nonnull)ad  error:(PWAdError * _Nonnull)error{
     self.statusLabel.text = [NSString stringWithFormat: @"❌ Failed to load the rewarded \"%@\".", self.adUnitName];
 }
 

@@ -7,23 +7,21 @@
 //
 
 #import "BannerViewController.h"
-#import <Playwire-Swift.h>
+#import <Playwire/Playwire-Swift.h>
 
 @interface BannerViewController () <PWViewAdDelegate>
 @property (strong, nonatomic) UILabel *statusLabel;
 @property (strong, nonatomic, readwrite) NSString *adUnitName;
-@property (strong, nonatomic) NSString *bannerType;
 @property (strong, nonatomic) PWBannerView *bannerView;
 @property (assign, nonatomic) BOOL bannerAdded;
 @end
 
 @implementation BannerViewController
 
-- (instancetype)initWithAdUnitName:(NSString *)adUnitName bannerType:(NSString *)bannerType {
+- (instancetype)initWithAdUnitName:(NSString *)adUnitName {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         _adUnitName = adUnitName;
-        _bannerType = bannerType;
         _bannerAdded = NO;
     }
     return self;
@@ -71,25 +69,7 @@
 
 - (IBAction)refreshAction:(UIButton *)sender {
     // Refresh will start only if the ad unit contains `refresh` object.
-    // See logs from `PWNotifier` to track status of refresh.
-    
     [self.bannerView refresh];
-    
-    NSArray *adUnits = [[[PlaywireSDK shared] config] adUnits];
-    PWBannerRefresh *refresh = nil;
-    for(PWAdUnit *adUnit in adUnits) {
-        if([adUnit.name isEqualToString:self.adUnitName]) {
-            refresh = adUnit.refresh;
-            break;
-        }
-    }
-    
-    if (!refresh) {
-        self.statusLabel.text = [NSString stringWithFormat:@"⚠️ The banner \"%@\" can't be refreshed manually.\nSee logs to get more details.", self.adUnitName];
-        return;
-    }
-    
-    self.statusLabel.text = [NSString stringWithFormat:@"🔄 The banner \"%@\" is refreshing.", self.adUnitName];
 }
 
 #pragma mark - PWViewAdDelegate -
@@ -114,7 +94,7 @@
     ]];
 }
 
-- (void)viewAdDidFailToLoad:(PWViewAd * _Nonnull)ad {
+- (void)viewAdDidFailToLoad:(PWViewAd * _Nonnull)ad error:(PWAdError * _Nonnull)error{
     self.statusLabel.text = [NSString stringWithFormat: @"❌ Failed to load the banner \"%@\".", self.adUnitName];
 }
 

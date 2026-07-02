@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
 @property (strong, nonatomic, readonly) NSString *adUnitName;
 
-- (instancetype)initWithAdUnitName:(NSString *)adUnitName bannerType:(NSString *)bannerType;
+- (instancetype)initWithAdUnitName:(NSString *)adUnitName;
 
 @end
 
