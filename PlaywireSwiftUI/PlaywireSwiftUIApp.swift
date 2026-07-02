@@ -16,7 +16,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        PWNotifier.shared.startConsoleLogger()
+        PlaywireSDK.shared.logLevel = .info
         PlaywireSDK.shared.test = false
         return true
     }

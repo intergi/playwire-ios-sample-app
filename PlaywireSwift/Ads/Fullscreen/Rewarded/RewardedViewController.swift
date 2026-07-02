@@ -73,8 +73,8 @@ extension RewardedViewController: PWFullScreenAdDelegate {
         rewarded?.show()
     }
     
-    func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd) {
-        statusLabel.text = "❌ Failed to load the rewarded \"\(adUnitName)\"."
+    func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd, error: PWAdError) {
+        statusLabel.text = "❌ Failed to load the rewarded ad: \"\(error)\"."
     }
     
     func fullScreenAdWillPresentFullScreenContent(_ ad: PWFullScreenAd) {
@@ -89,8 +89,8 @@ extension RewardedViewController: PWFullScreenAdDelegate {
         rewarded = nil
     }
     
-    func fullScreenAdDidFailToPresentFullScreenContent(_ ad: PWFullScreenAd) {
-        statusLabel.text = "❌ Failed to show the rewarded \"\(adUnitName)\"."
+    func fullScreenAdDidFailToPresentFullScreenContent(_ ad: PWFullScreenAd, error: PWAdError) {
+        statusLabel.text = "❌ Failed to show the rewarded ad: \"\(error)\"."
     }
     
     func fullScreenAdDidRecordImpression(_ ad: PWFullScreenAd) {

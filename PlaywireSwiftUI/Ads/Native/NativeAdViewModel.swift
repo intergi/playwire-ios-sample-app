@@ -22,7 +22,7 @@ import Observation
         state = .loaded
     }
 
-    func viewAdDidFailToLoad(_ ad: Playwire.PWViewAd) {
+    func viewAdDidFailToLoad(_ ad: Playwire.PWViewAd, error: PWAdError) {
         state = .failed
     }
 

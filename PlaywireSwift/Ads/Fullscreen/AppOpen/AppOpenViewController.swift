@@ -87,8 +87,8 @@ extension AppOpenViewController: PWFullScreenAdDelegate {
         showAppOpenAd()
     }
     
-    func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd) {
-        statusLabel.text = "❌ Failed to load the app open ad \"\(adUnitName)\"."
+    func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd, error: PWAdError) {
+        statusLabel.text = "❌ Failed to load the app open ad: \"\(error)\"."
     }
     
     func fullScreenAdWillPresentFullScreenContent(_ ad: PWFullScreenAd) {
@@ -102,8 +102,8 @@ extension AppOpenViewController: PWFullScreenAdDelegate {
     func fullScreenAdDidDismissFullScreenContent(_ ad: PWFullScreenAd) {
     }
     
-    func fullScreenAdDidFailToPresentFullScreenContent(_ ad: PWFullScreenAd) {
-        statusLabel.text = "❌ Failed to show the app open ad \"\(adUnitName)\"."
+    func fullScreenAdDidFailToPresentFullScreenContent(_ ad: PWFullScreenAd, error: PWAdError) {
+        statusLabel.text = "❌ Failed to show the app open ad: \"\(error)\"."
     }
     
     func fullScreenAdDidRecordImpression(_ ad: PWFullScreenAd) {

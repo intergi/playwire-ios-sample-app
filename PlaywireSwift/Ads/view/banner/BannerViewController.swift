@@ -18,14 +18,12 @@ final class BannerViewController: UIViewController {
     
     // The ad unit name, e.g. 'banner-320x50', 'interstitial-home', 'rewarded-coins', etc.
     let adUnitName: String
-    private let bannerType: String
 
     private var bannerView: PWBannerView?
     private var bannerAdded = false
     
-    init(adUnitName: String, bannerType: String) {
+    init(adUnitName: String) {
         self.adUnitName = adUnitName
-        self.bannerType = bannerType
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -61,17 +59,7 @@ final class BannerViewController: UIViewController {
     
     @IBAction func refreshAction(_ sender: UIButton) {
         // Refresh will start only if the ad unit contains `refresh` object.
-        // See logs from `PWNotifier` to track status of refresh.
-        
         bannerView?.refresh()
-
-        let adUnits = PlaywireSDK.shared.config?.adUnits
-        let refresh = adUnits?.first { $0.name == adUnitName }?.refresh
-        guard refresh != nil else {
-            statusLabel.text = "⚠️ The banner \"\(adUnitName)\" can't be refreshed manually.\nSee logs to get more details."
-            return
-        }
-        statusLabel.text = "🔄 The banner \"\(adUnitName)\" is refreshing."
     }
 }
 
@@ -93,8 +81,8 @@ extension BannerViewController: PWViewAdDelegate{
         ])
     }
     
-    func viewAdDidFailToLoad(_ ad: PWViewAd) {
-        statusLabel.text = "❌ Failed to load the banner \"\(adUnitName)\"."
+    func viewAdDidFailToLoad(_ ad: PWViewAd, error: PWAdError) {
+        statusLabel.text = "❌ Failed to load the banner: \"\(error)\"."
     }
     
     func viewAdWillPresentFullScreenContent(_ ad: PWViewAd) {

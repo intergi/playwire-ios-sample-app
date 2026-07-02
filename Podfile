@@ -1,7 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '26.0'
 use_frameworks!
 
-playwire_version = '12.1.1'
+playwire_version = '13.0.0-alpha.3'
 
 abstract_target 'Playwire' do
   pod 'Playwire', playwire_version

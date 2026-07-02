@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import <Playwire-Swift.h>
+#import <Playwire/Playwire-Swift.h>
 
 @interface AppDelegate ()
 
@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    [PWNotifier.shared startConsoleLogger];
+    [PlaywireSDK.shared setLogLevel:LogLevelInfo];
     [PlaywireSDK.shared setTest:NO];
     
     return YES;

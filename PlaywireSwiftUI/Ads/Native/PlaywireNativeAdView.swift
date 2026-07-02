@@ -22,7 +22,7 @@ struct PlaywireNativeAdView: View {
     
     var body: some View {
         Group {
-            nativeAdStatus(state: viewModel.state, adUnitName: adUnitName, mode: .Native)
+            nativeAdStatus(state: viewModel.state, adUnitName: adUnitName)
             
             NativeAdViewSwiftUI(
                 adUnitName: adUnitName,

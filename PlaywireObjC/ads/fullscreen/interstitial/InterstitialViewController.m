@@ -7,7 +7,7 @@
 //
 
 #import "InterstitialViewController.h"
-#import <Playwire-Swift.h>
+#import <Playwire/Playwire-Swift.h>
 
 @interface InterstitialViewController () <PWFullScreenAdDelegate>
 @property (strong, nonatomic) UILabel *statusLabel;
@@ -83,12 +83,12 @@
 
 #pragma mark - PWFullScreenAdDelegate -
 
-- (void)fullScreenAdDidLoad:(PWFullScreenAd * _Nonnull)ad {
+- (void)fullScreenAdDidLoad:(PWFullScreenAd * _Nonnull)ad error:(PWAdError * _Nonnull)error {
     self.statusLabel.text = [NSString stringWithFormat: @"✅ The interstitial \"%@\" is loaded.", self.adUnitName];
     [self showInterstitial];
 }
 
-- (void)fullScreenAdDidFailToLoad:(PWFullScreenAd * _Nonnull)ad {
+- (void)fullScreenAdDidFailToLoad:(PWFullScreenAd * _Nonnull)ad error:(PWAdError * _Nonnull)error{
     self.statusLabel.text = [NSString stringWithFormat: @"❌ Failed to load the interstitial \"%@\".", self.adUnitName];
 }
 

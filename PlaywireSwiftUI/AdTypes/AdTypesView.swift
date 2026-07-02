@@ -25,7 +25,7 @@ struct AdTypesView: View {
                     NavigationLink(destination: destination) {
                         VStack(alignment: .leading) {
                             Text(item.name).font(.body)
-                            Text(item.mode.rawValue).font(.caption)
+                            Text(item.mode).font(.caption)
                         }
                     }
                 }
@@ -41,20 +41,25 @@ struct AdTypesView: View {
     }
     
     @ViewBuilder
-    func destinationView(adUnitName: String, mode: PWAdUnit.PWAdMode) -> some View {
+    func destinationView(adUnitName: String, mode: String) -> some View {
         switch mode {
-        case .Banner:
-            BannerView(adUnitName: adUnitName)
-        case .Interstitial:
-            InterstitialView(adUnitName: adUnitName)
-        case .Rewarded:
-            RewardedView(adUnitName: adUnitName)
-        case .AppOpenAd:
-            AppOpenAdView(adUnitName: adUnitName)
-        case .Native:
-            PlaywireNativeAdView(adUnitName: adUnitName)
+        case "Banner":
+            if adUnitName == "floating-banner" {
+                // TODO: add floating banner example
+                EmptyView()
+            } else {
+                BannerView(adUnitName: adUnitName)
+            }
             
-        @unknown default:
+        case "Interstitial":
+            InterstitialView(adUnitName: adUnitName)
+        case "Rewarded":
+            RewardedView(adUnitName: adUnitName)
+        case "AppOpenAd":
+            AppOpenAdView(adUnitName: adUnitName)
+        case "Native":
+            PlaywireNativeAdView(adUnitName: adUnitName)
+        default:
             EmptyView()
         }
     }

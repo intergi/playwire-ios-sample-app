@@ -7,7 +7,7 @@
 //
 
 #import "AppOpenAdViewController.h"
-#import <Playwire-Swift.h>
+#import <Playwire/Playwire-Swift.h>
 
 @interface AppOpenAdViewController () <PWFullScreenAdDelegate>
 @property (strong, nonatomic) UILabel *statusLabel;
@@ -98,11 +98,11 @@
     [self showAppOpenAd];
 }
 
-- (void)fullScreenAdDidFailToLoad:(PWFullScreenAd * _Nonnull)ad {
+- (void)fullScreenAdDidFailToLoad:(PWFullScreenAd * _Nonnull)ad error:(PWAdError * _Nonnull)error {
     self.statusLabel.text = [NSString stringWithFormat: @"❌ Failed to load the app open ad \"%@\".", self.adUnitName];
 }
 
-- (void)fullScreenAdDidFailToPresentFullScreenContent:(PWFullScreenAd * _Nonnull)ad {
+- (void)fullScreenAdDidFailToPresentFullScreenContent:(PWFullScreenAd * _Nonnull)ad error:(PWAdError * _Nonnull)error {
     self.statusLabel.text = [NSString stringWithFormat: @"❌ Failed to show the app open ad \"%@\".", self.adUnitName];
 }
 

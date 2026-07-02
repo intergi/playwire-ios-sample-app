@@ -13,7 +13,7 @@ import Playwire
         var id: String { name }
         
         let name: String
-        let mode: PWAdUnit.PWAdMode
+        let mode: String
     }
 
     var adUnits: [AdUnit] = []
@@ -25,9 +25,13 @@ import Playwire
             viewController: viewController
         ) { success, error in
             if success {
-                let units = PlaywireSDK.shared.config?.adUnits.map {
-                    AdUnit(name: $0.name, mode: $0.mode)
-                } ?? []
+                var units: [AdUnit] = []
+                PlaywireSDK.shared.adUnitsDictionary.forEach { (key, values) in
+                    for value in values {
+                        let adUnit = AdUnit(name: value, mode: key)
+                        units.append(adUnit)
+                    }
+                }
                 self.adUnits = units.sorted(by: { $0.name < $1.name })
             } else {
                 self.adUnits = []

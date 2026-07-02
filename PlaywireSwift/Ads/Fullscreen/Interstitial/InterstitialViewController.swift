@@ -78,8 +78,8 @@ extension InterstitialViewController: PWFullScreenAdDelegate {
         showInterstitial()
     }
     
-    func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd) {
-        statusLabel.text = "❌ Failed to load the interstitial \"\(adUnitName)\"."
+    func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd, error: PWAdError) {
+        statusLabel.text = "❌ Failed to load the interstitial ad: \"\(error)\"."
     }
     
     func fullScreenAdWillPresentFullScreenContent(_ ad: PWFullScreenAd) {
@@ -92,8 +92,8 @@ extension InterstitialViewController: PWFullScreenAdDelegate {
     func fullScreenAdDidDismissFullScreenContent(_ ad: PWFullScreenAd) {
     }
     
-    func fullScreenAdDidFailToPresentFullScreenContent(_ ad: PWFullScreenAd) {
-        statusLabel.text = "❌ Failed to show the interstitial \"\(adUnitName)\"."
+    func fullScreenAdDidFailToPresentFullScreenContent(_ ad: PWFullScreenAd, error: PWAdError) {
+        statusLabel.text = "❌ Failed to show the interstitial ad:\"\(error)\"."
     }
     
     func fullScreenAdDidRecordImpression(_ ad: PWFullScreenAd) {

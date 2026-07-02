@@ -54,7 +54,7 @@ extension InterstitialAdViewModel: PWFullScreenAdDelegate {
         state = .loaded
     }
     
-    func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd) {
+    func fullScreenAdDidFailToLoad(_ ad: PWFullScreenAd, error: PWAdError) {
         state = .failed
     }
     
@@ -67,7 +67,7 @@ extension InterstitialAdViewModel: PWFullScreenAdDelegate {
     func fullScreenAdDidDismissFullScreenContent(_ ad: PWFullScreenAd) {
     }
     
-    func fullScreenAdDidFailToPresentFullScreenContent(_ ad: PWFullScreenAd) {
+    func fullScreenAdDidFailToPresentFullScreenContent(_ ad: PWFullScreenAd, error: PWAdError) {
         state = .failedToPresent
     }
     

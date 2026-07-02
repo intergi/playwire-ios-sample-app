@@ -18,20 +18,20 @@ enum FullScreenAdState: Equatable {
     case earnedReward(String, Int)
 }
 
-func fullScreenAdStatus(state: FullScreenAdState, adUnitName: String, mode: PWAdUnit.PWAdMode) -> some View {
+func fullScreenAdStatus(state: FullScreenAdState, adUnitName: String) -> some View {
     let title = switch state {
     case .none:
         ""
     case .loading:
-        "⏳ The \(mode.statusTitle) \"\(adUnitName)\" is loading."
+        "⏳ The \"\(adUnitName)\" is loading."
     case .loaded:
-        "✅ The \(mode.statusTitle) \"\(adUnitName)\" is loaded."
+        "✅ The \"\(adUnitName)\" is loaded."
     case .failed:
-        "❌ Failed to load the \(mode.statusTitle) \"\(adUnitName)\"."
+        "❌ Failed to load the \"\(adUnitName)\"."
     case .failedToPresent:
-        "❌ Failed to present the \(mode.statusTitle) \"\(adUnitName)\"."
+        "❌ Failed to present the \"\(adUnitName)\"."
     case .presented:
-        "👍 The \(mode.statusTitle) \"\(adUnitName)\" was successfully presented."
+        "👍 The \"\(adUnitName)\" was successfully presented."
     case .earnedReward(let type, let amount):
         "🎉 The reward was earned.\n Type: \(type)  \n Amount: \(amount)."
     }

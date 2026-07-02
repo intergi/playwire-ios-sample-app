@@ -20,7 +20,7 @@ struct AppOpenAdView: View {
     }
     
     var body: some View {
-        fullScreenAdStatus(state: viewModel.state, adUnitName: adUnitName, mode: .AppOpenAd)
+        fullScreenAdStatus(state: viewModel.state, adUnitName: adUnitName)
         .padding(.all)
         .background {
             viewControllerRepresentable.frame(width: .zero, height: .zero)

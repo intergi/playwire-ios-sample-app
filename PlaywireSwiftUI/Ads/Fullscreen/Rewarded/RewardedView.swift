@@ -20,7 +20,7 @@ struct RewardedView: View {
     }
     
     var body: some View {
-        fullScreenAdStatus(state: viewModel.state, adUnitName: adUnitName, mode: .Rewarded)
+        fullScreenAdStatus(state: viewModel.state, adUnitName: adUnitName)
         .onChange(of: viewModel.state) { _, newValue in
             guard newValue == .loaded else { return }
             
