@@ -14,7 +14,7 @@ struct BannerView: View {
     
     var body: some View {
         VStack {
-            viewAdStatus(state: state, adUnitName: adUnitName, mode: .Banner)
+            viewAdStatus(state: state, adUnitName: adUnitName)
             
             BannerContainer(adUnitName: adUnitName, state: $state)
         }

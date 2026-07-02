@@ -19,7 +19,7 @@ class BannerCoordinator: NSObject, PWViewAdDelegate {
         state.wrappedValue = .loaded
     }
     
-    func viewAdDidFailToLoad(_ ad: Playwire.PWViewAd) {
+    func viewAdDidFailToLoad(_ ad: Playwire.PWViewAd, error: PWAdError) {
         state.wrappedValue = .failed
     }
     

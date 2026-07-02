@@ -11,16 +11,16 @@ enum ViewAdState: Equatable {
     case none, loading, loaded, failed
 }
 
-func viewAdStatus(state: ViewAdState, adUnitName: String, mode: PWAdUnit.PWAdMode) -> some View {
+func viewAdStatus(state: ViewAdState, adUnitName: String) -> some View {
     let title = switch state {
     case .none:
         ""
     case .loading:
-        "⏳ The \(mode.statusTitle) \"\(adUnitName)\" is loading."
+        "⏳ The \"\(adUnitName)\" is loading."
     case .loaded:
-        "✅ The \(mode.statusTitle) \"\(adUnitName)\" is loaded."
+        "✅ The \"\(adUnitName)\" is loaded."
     case .failed:
-        "❌ Failed to load the \(mode.statusTitle) \"\(adUnitName)\"."
+        "❌ Failed to load the \"\(adUnitName)\"."
     }
     
     return Text(title)
