@@ -105,8 +105,13 @@ final class AdTypesViewController: UITableViewController {
     private func presentViewController(for adUnit: AdUnit) {
         switch adUnit.mode {
         case "Banner":
-            let bannerVC = BannerViewController(adUnitName: adUnit.alias)
-            navigationController?.pushViewController(bannerVC, animated: true)
+            if adUnit.alias == "floating-banner" {
+                // TODO: add floating banner example
+                print("Example not available")
+            } else {
+                let bannerVC = BannerViewController(adUnitName: adUnit.alias)
+                navigationController?.pushViewController(bannerVC, animated: true)
+            }
             
         case "Interstitial":
             let interstitialVC = InterstitialViewController(adUnitName: adUnit.alias)
