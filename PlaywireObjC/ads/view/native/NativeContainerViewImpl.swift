@@ -57,8 +57,8 @@ extension NativeContainerViewImpl: PWViewAdDelegate {
         guard nativeView.isLoaded else { return }
         onLoad()
     }
-
-    func viewAdDidFailToLoad(_ ad: PWViewAd) {
+    
+    func viewAdDidFailToLoad(_ ad: Playwire.PWViewAd, error: Playwire.PWAdError) {
         onFailToLoad()
     }
 

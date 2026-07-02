@@ -91,8 +91,8 @@ extension NativeViewController: PWViewAdDelegate {
         statusLabel.text = "✅ The native ad \"\(adUnitName)\" is loaded."
     }
     
-    func viewAdDidFailToLoad(_ ad: PWViewAd) {
-        statusLabel.text = "❌ Failed to load the native ad \"\(adUnitName)\"."
+    func viewAdDidFailToLoad(_ ad: PWViewAd, error: PWAdError) {
+        statusLabel.text = "❌ Failed to load the native ad: \"\(error)\"."
     }
     
     func viewAdWillPresentFullScreenContent(_ ad: PWViewAd) {

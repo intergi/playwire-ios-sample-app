@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // Start `PWNotifier` to log SDK events to console.
-        PWNotifier.shared.startConsoleLogger()
+        // log SDK events to console.
+        PlaywireSDK.shared.logLevel = .info
 
         // Set to `true` to test your implementation with GAM test ads on real devices.
         PlaywireSDK.shared.test = false

@@ -105,7 +105,7 @@ final class AdTypesViewController: UITableViewController {
     private func presentViewController(for adUnit: AdUnit) {
         switch adUnit.mode {
         case "Banner":
-            let bannerVC = BannerViewController(adUnitName: adUnit.alias, bannerType: PWAdUnit.PWAdMode_Banner)
+            let bannerVC = BannerViewController(adUnitName: adUnit.alias)
             navigationController?.pushViewController(bannerVC, animated: true)
             
         case "Interstitial":
