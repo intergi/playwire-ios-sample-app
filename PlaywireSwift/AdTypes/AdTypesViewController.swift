@@ -9,15 +9,36 @@
 import UIKit
 import Playwire
 
-struct AdUnit {
-    let mode: String
+enum AdMode {
+    case banner
+    case interstitial
+    case rewarded
+    case appOpen
+    case native
+}
+
+struct AdUnitItem {
     let alias: String
+    let mode: AdMode
 }
 
 final class AdTypesViewController: UITableViewController {
     private let cellId = "BasicCell"
     
-    private var adUnits: [AdUnit] = []
+    private let adUnitItems: [AdUnitItem] = [
+        AdUnitItem(alias: "banner-320x50-gam", mode: .banner),
+        AdUnitItem(alias: "banner-320x50-max", mode: .banner),
+        AdUnitItem(alias: "banner-300x250-gam", mode: .banner),
+        AdUnitItem(alias: "banner-300x250-max", mode: .banner),
+        AdUnitItem(alias: "native-gam", mode: .native),
+        AdUnitItem(alias: "native-max", mode: .native),
+        AdUnitItem(alias: "app-open-gam", mode: .appOpen),
+        AdUnitItem(alias: "app-open-max", mode: .appOpen),
+        AdUnitItem(alias: "interstitial-gam", mode: .interstitial),
+        AdUnitItem(alias: "interstitial-max", mode: .interstitial),
+        AdUnitItem(alias: "rewarded-gam", mode: .rewarded),
+        AdUnitItem(alias: "rewarded-video-max", mode: .rewarded),
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,34 +58,16 @@ final class AdTypesViewController: UITableViewController {
             guard let self else { return }
                     
             if success {
-                self.setupAdUnits()
+                self.showAdUnits()
             } else {
                 self.showInitializationError(error)
             }
         }
     }
     
-    private func setupAdUnits() {
-        var adUnits: [AdUnit] = []
-        PlaywireSDK.shared.adUnitsDictionary.forEach { (key, values) in
-            for value in values {
-                let adUnit = AdUnit(mode: key, alias: value)
-                adUnits.append(adUnit)
-            }
-        }
-        
-        self.adUnits = adUnits
-        
-        // Sort by mode first, then by name
-        self.adUnits = adUnits.sorted { (first, second) in
-            if first.mode == second.mode {
-                return first.alias < second.alias
-            }
-            return first.mode < second.mode
-        }
-    
+    private func showAdUnits() {
         tableView.backgroundView = nil
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     private func setupTableView() {
@@ -84,53 +87,45 @@ final class AdTypesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        adUnits.count
+        adUnitItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         
-        let adUnit = adUnits[indexPath.row]
-        cell.textLabel?.text = adUnit.alias
-        cell.detailTextLabel?.text = adUnit.mode
+        let adUnitItem = adUnitItems[indexPath.row]
+        cell.textLabel?.text = adUnitItem.alias
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let adUnit = adUnits[indexPath.row]
-        presentViewController(for: adUnit)
+        let adUnitItem = adUnitItems[indexPath.row]
+        presentViewController(for: adUnitItem)
     }
     
-    private func presentViewController(for adUnit: AdUnit) {
-        switch adUnit.mode {
-        case "Banner":
-            if adUnit.alias == "floating-banner" {
-                // TODO: add floating banner example
-                print("Example not available")
-            } else {
-                let bannerVC = BannerViewController(adUnitName: adUnit.alias)
-                navigationController?.pushViewController(bannerVC, animated: true)
-            }
+    private func presentViewController(for adUnitItem: AdUnitItem) {
+        switch adUnitItem.mode {
+        case .banner:
+            let bannerVC = BannerViewController(adUnitName: adUnitItem.alias)
+            navigationController?.pushViewController(bannerVC, animated: true)
             
-        case "Interstitial":
-            let interstitialVC = InterstitialViewController(adUnitName: adUnit.alias)
+        case .interstitial:
+            let interstitialVC = InterstitialViewController(adUnitName: adUnitItem.alias)
             navigationController?.pushViewController(interstitialVC, animated: true)
             
-        case "Rewarded":
-            let rewardedVC = RewardedViewController(adUnitName: adUnit.alias)
+        case .rewarded:
+            let rewardedVC = RewardedViewController(adUnitName: adUnitItem.alias)
             navigationController?.pushViewController(rewardedVC, animated: true)
             
-        case "AppOpenAd":
-            let appOpenVC = AppOpenViewController(adUnitName: adUnit.alias)
+        case .appOpen:
+            let appOpenVC = AppOpenViewController(adUnitName: adUnitItem.alias)
             navigationController?.pushViewController(appOpenVC, animated: true)
             
-        case "Native":
-            let nativeVC = NativeViewController(adUnitName: adUnit.alias)
+        case .native:
+            let nativeVC = NativeViewController(adUnitName: adUnitItem.alias)
             navigationController?.pushViewController(nativeVC, animated: true)
-            
-        default:
-            print("Unknown ad unit mode: \(adUnit.mode)")
         }
+
     }
 }
