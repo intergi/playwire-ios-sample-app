@@ -15,18 +15,15 @@ struct AdTypesView: View {
         let title = "Playwire Demo"
         
         NavigationStack {
-            if viewModel.adUnits.isEmpty {
+            if viewModel.adUnitItems.isEmpty {
                 Text("⏳ SDK initialization..")
                     .frame(alignment: .center)
                     .navigationTitle(title)
             } else {
-                List(viewModel.adUnits) { item in
-                    let destination = destinationView(adUnitName: item.name, mode: item.mode)
+                List(viewModel.adUnitItems) { item in
+                    let destination = destinationView(for: item)
                     NavigationLink(destination: destination) {
-                        VStack(alignment: .leading) {
-                            Text(item.name).font(.body)
-                            Text(item.mode).font(.caption)
-                        }
+                        Text(item.alias).font(.body)
                     }
                 }
                 .navigationTitle(title)
@@ -41,26 +38,19 @@ struct AdTypesView: View {
     }
     
     @ViewBuilder
-    func destinationView(adUnitName: String, mode: String) -> some View {
-        switch mode {
-        case "Banner":
-            if adUnitName == "floating-banner" {
-                // TODO: add floating banner example
-                EmptyView()
-            } else {
-                BannerView(adUnitName: adUnitName)
-            }
+    func destinationView(for adUnitItem: AdUnitItem) -> some View {
+        switch adUnitItem.mode {
+        case .banner:
+            BannerView(adUnitName: adUnitItem.alias)
             
-        case "Interstitial":
-            InterstitialView(adUnitName: adUnitName)
-        case "Rewarded":
-            RewardedView(adUnitName: adUnitName)
-        case "AppOpenAd":
-            AppOpenAdView(adUnitName: adUnitName)
-        case "Native":
-            PlaywireNativeAdView(adUnitName: adUnitName)
-        default:
-            EmptyView()
+        case .interstitial:
+            InterstitialView(adUnitName: adUnitItem.alias)
+        case .rewarded:
+            RewardedView(adUnitName: adUnitItem.alias)
+        case .appOpen:
+            AppOpenAdView(adUnitName: adUnitItem.alias)
+        case .native:
+            PlaywireNativeAdView(adUnitName: adUnitItem.alias)
         }
     }
 }

@@ -14,16 +14,36 @@
 #import "../ads/fullscreen/appopenad/AppOpenAdViewController.h"
 #import "../ads/view/native/NativeAdViewController.h"
 
-@interface AdUnit: NSObject
-@property (nonatomic, copy) NSString *mode;
-@property (nonatomic, copy) NSString *alias;
+typedef NS_ENUM(NSInteger, AdMode) {
+    AdModeBanner,
+    AdModeInterstitial,
+    AdModeRewarded,
+    AdModeAppOpen,
+    AdModeNative,
+};
+
+@interface AdUnitItem: NSObject
+@property (nonatomic, copy, readonly) NSString *alias;
+@property (nonatomic, assign, readonly) AdMode mode;
+
+- (instancetype)initWithAlias:(NSString *)alias mode:(AdMode)mode;
 @end
 
-@implementation AdUnit
+@implementation AdUnitItem
+
+- (instancetype)initWithAlias:(NSString *)alias mode:(AdMode)mode {
+    self = [super init];
+    if (self) {
+        _alias = [alias copy];
+        _mode = mode;
+    }
+    return self;
+}
+
 @end
 
 @interface AdTypesViewController()
-@property (strong, nonatomic) NSArray<AdUnit *> *adUnits;
+@property (strong, nonatomic) NSArray<AdUnitItem *> *adUnitItems;
 @property (strong, nonatomic) NSString *cellId;
 @end
 
@@ -34,7 +54,20 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.cellId = @"BasicCell";
-    self.adUnits = @[];
+    self.adUnitItems = @[
+        [[AdUnitItem alloc] initWithAlias:@"banner-320x50-gam" mode:AdModeBanner],
+        [[AdUnitItem alloc] initWithAlias:@"banner-320x50-max" mode:AdModeBanner],
+        [[AdUnitItem alloc] initWithAlias:@"banner-300x250-gam" mode:AdModeBanner],
+        [[AdUnitItem alloc] initWithAlias:@"banner-300x250-max" mode:AdModeBanner],
+        [[AdUnitItem alloc] initWithAlias:@"native-gam" mode:AdModeNative],
+        [[AdUnitItem alloc] initWithAlias:@"native-max" mode:AdModeNative],
+        [[AdUnitItem alloc] initWithAlias:@"app-open-gam" mode:AdModeAppOpen],
+        [[AdUnitItem alloc] initWithAlias:@"app-open-max" mode:AdModeAppOpen],
+        [[AdUnitItem alloc] initWithAlias:@"interstitial-gam" mode:AdModeInterstitial],
+        [[AdUnitItem alloc] initWithAlias:@"interstitial-max" mode:AdModeInterstitial],
+        [[AdUnitItem alloc] initWithAlias:@"rewarded-gam" mode:AdModeRewarded],
+        [[AdUnitItem alloc] initWithAlias:@"rewarded-video-max" mode:AdModeRewarded],
+    ];
     
     self.title = @"Playwire Demo";
     self.navigationController.navigationItem.title = @"Playwire Demo";
@@ -52,35 +85,14 @@
                               viewController:self
                                   completion:^(BOOL success, NSError * _Nullable error) {
         if (success) {
-            [wself setupAdUnits];
+            [wself showAdUnits];
         } else {
             [wself showInitializationError:error];
         }
     }];
 }
 
-- (void)setupAdUnits {
-    NSMutableArray<AdUnit *> *adUnits = [[NSMutableArray alloc] init];
-    [PlaywireSDK.shared.adUnitsDictionary
-     enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key,
-                                         NSArray <NSString *> * _Nonnull values,
-                                         BOOL * _Nonnull stop) {
-        for (NSString *value in values) {
-            AdUnit *adUnit = [AdUnit new];
-            adUnit.alias = value;
-            adUnit.mode = key;
-            [adUnits addObject:adUnit];
-        }
-    }];
-    
-    // Sort by mode first, then by name
-    self.adUnits = [adUnits sortedArrayUsingComparator:^NSComparisonResult(AdUnit *first, AdUnit *second) {
-        if ([first.mode isEqualToString:second.mode]) {
-            return [first.alias compare:second.alias];
-        }
-        return [first.mode compare:second.mode];
-    }];
-    
+- (void)showAdUnits {
     self.tableView.backgroundView = nil;
     [self.tableView reloadData];
 }
@@ -104,44 +116,41 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellId forIndexPath:indexPath];
-    AdUnit *adUnit = self.adUnits[indexPath.row];
+    AdUnitItem *adUnitItem = self.adUnitItems[indexPath.row];
     
-    cell.textLabel.text = adUnit.alias;
-    cell.detailTextLabel.text = adUnit.mode;
+    cell.textLabel.text = adUnitItem.alias;
     
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.adUnits.count;
+    return self.adUnitItems.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AdUnit *adUnit = [self.adUnits objectAtIndex:indexPath.row];
-    [self presentViewControllerForAdUnit:adUnit];
+    AdUnitItem *adUnitItem = [self.adUnitItems objectAtIndex:indexPath.row];
+    [self presentViewControllerForAdUnitItem:adUnitItem];
 }
 
-- (void)presentViewControllerForAdUnit:(AdUnit *)adUnit {
+- (void)presentViewControllerForAdUnitItem:(AdUnitItem *)adUnitItem {
     UIViewController *viewController = nil;
     
-    if ([adUnit.mode isEqualToString:@"Banner"]) {
-        if ([adUnit.alias isEqualToString:@"floating-banner"]) {
-            // TODO: add floating banner example
-            NSLog(@"Example not available");
-        } else {
-            viewController = [[BannerViewController alloc] initWithAdUnitName:adUnit.alias];
-        }
-    } else if ([adUnit.mode isEqualToString:@"Interstitial"]) {
-        viewController = [[InterstitialViewController alloc] initWithAdUnitName:adUnit.alias];
-    } else if ([adUnit.mode isEqualToString:@"Rewarded"]) {
-        viewController = [[RewardedViewController alloc] initWithAdUnitName:adUnit.alias];
-    } else if ([adUnit.mode isEqualToString:@"AppOpenAd"]) {
-        viewController = [[AppOpenAdViewController alloc] initWithAdUnitName:adUnit.alias];
-    } else if ([adUnit.mode isEqualToString:@"Native"]) {
-        viewController = [[NativeAdViewController alloc] initWithAdUnitName:adUnit.alias];
-    } else {
-        NSLog(@"Unknown ad unit mode: %@", adUnit.mode);
-        return;
+    switch (adUnitItem.mode) {
+        case AdModeBanner:
+            viewController = [[BannerViewController alloc] initWithAdUnitName:adUnitItem.alias];
+            break;
+        case AdModeInterstitial:
+            viewController = [[InterstitialViewController alloc] initWithAdUnitName:adUnitItem.alias];
+            break;
+        case AdModeRewarded:
+            viewController = [[RewardedViewController alloc] initWithAdUnitName:adUnitItem.alias];
+            break;
+        case AdModeAppOpen:
+            viewController = [[AppOpenAdViewController alloc] initWithAdUnitName:adUnitItem.alias];
+            break;
+        case AdModeNative:
+            viewController = [[NativeAdViewController alloc] initWithAdUnitName:adUnitItem.alias];
+            break;
     }
     
     if (viewController) {
