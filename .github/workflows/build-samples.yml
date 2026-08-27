@@ -5,6 +5,10 @@ on:
   push:
     branches: [main]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   cocoapods:
     name: CocoaPods / ${{ matrix.scheme }}
@@ -15,11 +19,6 @@ jobs:
         scheme: [PlaywireObjC, PlaywireSwift, PlaywireSwiftUI]
     steps:
       - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: false
-      - name: Install CocoaPods
-        run: gem install cocoapods --no-document
       - name: Install dependencies
         working-directory: CocoaPods
         run: pod install
