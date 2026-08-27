@@ -113,6 +113,10 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
 # Package.pins
+!SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj/project.xcworkspace/
+!SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj/project.xcworkspace/xcshareddata/
+!SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+!SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
 
 # CocoaPods - Refactored to standalone file
 

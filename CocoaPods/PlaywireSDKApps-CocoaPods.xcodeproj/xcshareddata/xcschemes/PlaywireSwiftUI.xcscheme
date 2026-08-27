@@ -18,7 +18,7 @@
                BlueprintIdentifier = "610E54862E955C1F00FD6653"
                BuildableName = "PlaywireSwiftUI.app"
                BlueprintName = "PlaywireSwiftUI"
-               ReferencedContainer = "container:PlaywireSDKApps.xcodeproj">
+               ReferencedContainer = "container:PlaywireSDKApps-CocoaPods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "610E54862E955C1F00FD6653"
             BuildableName = "PlaywireSwiftUI.app"
             BlueprintName = "PlaywireSwiftUI"
-            ReferencedContainer = "container:PlaywireSDKApps.xcodeproj">
+            ReferencedContainer = "container:PlaywireSDKApps-CocoaPods.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "610E54862E955C1F00FD6653"
             BuildableName = "PlaywireSwiftUI.app"
             BlueprintName = "PlaywireSwiftUI"
-            ReferencedContainer = "container:PlaywireSDKApps.xcodeproj">
+            ReferencedContainer = "container:PlaywireSDKApps-CocoaPods.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
