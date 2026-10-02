@@ -20,14 +20,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		610E54432E955BEA00FD6653 /* Exceptions for "PlaywireObjC" folder in "PlaywireObjC" target */ = {
+		610E54432E955BEA00FD6653 /* Exceptions for "../Apps/PlaywireObjC" folder in "PlaywireObjC" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = 610E542C2E955BE900FD6653 /* PlaywireObjC */;
 		};
-		610E54812E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireObjC" target */ = {
+		610E54812E955C0D00FD6653 /* Exceptions for "../Apps/PlaywireSwift" folder in "PlaywireObjC" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Ads/Fullscreen/AppOpen/AppOpenViewController.swift,
@@ -44,7 +44,7 @@
 			);
 			target = 610E542C2E955BE900FD6653 /* PlaywireObjC */;
 		};
-		610E54822E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireSwift" target */ = {
+		610E54822E955C0D00FD6653 /* Exceptions for "../Apps/PlaywireSwift" folder in "PlaywireSwift" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Ads/Fullscreen/AppOpen/AppOpenViewController.swift,
@@ -60,7 +60,7 @@
 			);
 			target = 610E544A2E955C0200FD6653 /* PlaywireSwift */;
 		};
-		610E561D2E958EC400FD6653 /* Exceptions for "PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */ = {
+		610E561D2E958EC400FD6653 /* Exceptions for "../Apps/PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -70,27 +70,27 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		610E542E2E955BE900FD6653 /* PlaywireObjC */ = {
+		610E542E2E955BE900FD6653 /* ../Apps/PlaywireObjC */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				610E54432E955BEA00FD6653 /* Exceptions for "PlaywireObjC" folder in "PlaywireObjC" target */,
+				610E54432E955BEA00FD6653 /* Exceptions for "../Apps/PlaywireObjC" folder in "PlaywireObjC" target */,
 			);
 			path = ../Apps/PlaywireObjC;
 			sourceTree = "<group>";
 		};
-		610E547A2E955C0D00FD6653 /* PlaywireSwift */ = {
+		610E547A2E955C0D00FD6653 /* ../Apps/PlaywireSwift */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				610E54812E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireObjC" target */,
-				610E54822E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireSwift" target */,
+				610E54812E955C0D00FD6653 /* Exceptions for "../Apps/PlaywireSwift" folder in "PlaywireObjC" target */,
+				610E54822E955C0D00FD6653 /* Exceptions for "../Apps/PlaywireSwift" folder in "PlaywireSwift" target */,
 			);
 			path = ../Apps/PlaywireSwift;
 			sourceTree = "<group>";
 		};
-		610E54882E955C1F00FD6653 /* PlaywireSwiftUI */ = {
+		610E54882E955C1F00FD6653 /* ../Apps/PlaywireSwiftUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				610E561D2E958EC400FD6653 /* Exceptions for "PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */,
+				610E561D2E958EC400FD6653 /* Exceptions for "../Apps/PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */,
 			);
 			path = ../Apps/PlaywireSwiftUI;
 			sourceTree = "<group>";
@@ -128,9 +128,9 @@
 		212DA4302951EFF300B2FB4A = {
 			isa = PBXGroup;
 			children = (
-				610E542E2E955BE900FD6653 /* PlaywireObjC */,
-				610E547A2E955C0D00FD6653 /* PlaywireSwift */,
-				610E54882E955C1F00FD6653 /* PlaywireSwiftUI */,
+				610E542E2E955BE900FD6653 /* ../Apps/PlaywireObjC */,
+				610E547A2E955C0D00FD6653 /* ../Apps/PlaywireSwift */,
+				610E54882E955C1F00FD6653 /* ../Apps/PlaywireSwiftUI */,
 				212DA43A2951EFF400B2FB4A /* Products */,
 				4432D180024143DCE8AC98B9 /* Frameworks */,
 			);
@@ -170,8 +170,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				610E542E2E955BE900FD6653 /* PlaywireObjC */,
-				610E547A2E955C0D00FD6653 /* PlaywireSwift */,
+				610E542E2E955BE900FD6653 /* ../Apps/PlaywireObjC */,
+				610E547A2E955C0D00FD6653 /* ../Apps/PlaywireSwift */,
 			);
 			name = PlaywireObjC;
 			packageProductDependencies = (
@@ -214,7 +214,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				610E54882E955C1F00FD6653 /* PlaywireSwiftUI */,
+				610E54882E955C1F00FD6653 /* ../Apps/PlaywireSwiftUI */,
 			);
 			name = PlaywireSwiftUI;
 			packageProductDependencies = (
@@ -724,7 +724,7 @@
 			repositoryURL = "https://github.com/intergi/playwire-ios-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 13.1.0-alpha.4;
+				version = "13.1.0-beta.1";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
