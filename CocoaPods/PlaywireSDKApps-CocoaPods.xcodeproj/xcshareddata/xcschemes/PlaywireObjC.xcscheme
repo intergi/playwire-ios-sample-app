@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "610E544A2E955C0200FD6653"
-               BuildableName = "PlaywireSwift.app"
-               BlueprintName = "PlaywireSwift"
-               ReferencedContainer = "container:PlaywireSDKApps.xcodeproj">
+               BlueprintIdentifier = "610E542C2E955BE900FD6653"
+               BuildableName = "PlaywireObjC.app"
+               BlueprintName = "PlaywireObjC"
+               ReferencedContainer = "container:PlaywireSDKApps-CocoaPods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "610E544A2E955C0200FD6653"
-            BuildableName = "PlaywireSwift.app"
-            BlueprintName = "PlaywireSwift"
-            ReferencedContainer = "container:PlaywireSDKApps.xcodeproj">
+            BlueprintIdentifier = "610E542C2E955BE900FD6653"
+            BuildableName = "PlaywireObjC.app"
+            BlueprintName = "PlaywireObjC"
+            ReferencedContainer = "container:PlaywireSDKApps-CocoaPods.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "610E544A2E955C0200FD6653"
-            BuildableName = "PlaywireSwift.app"
-            BlueprintName = "PlaywireSwift"
-            ReferencedContainer = "container:PlaywireSDKApps.xcodeproj">
+            BlueprintIdentifier = "610E542C2E955BE900FD6653"
+            BuildableName = "PlaywireObjC.app"
+            BlueprintName = "PlaywireObjC"
+            ReferencedContainer = "container:PlaywireSDKApps-CocoaPods.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

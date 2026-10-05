@@ -1,20 +1,40 @@
-# playwire-ios-sample-app
+# Playwire iOS Sample Apps
 
-## PlaywireSDKApps
+These samples show how to install Playwire with CocoaPods or Swift Package Manager and use it from Objective-C, Swift, or SwiftUI. Both dependency-manager projects reference the same app sources, so only the installation changes between examples.
 
-This workspace has 3 schemes that demonstrate the usage of PlaywireSDK in three different scenarios:
-- An Objective-C iOS app
-- A Swift iOS app
-- A SwiftUI iOS app
+Playwire version: `13.0.1`. The SDK supports iOS 13 and later; these sample apps currently target iOS 26.
 
-### Install pods
+## Choose a Sample
 
-Open terminal and run next command
+| Installation | Objective-C | Swift | SwiftUI |
+| --- | --- | --- | --- |
+| CocoaPods | Open `CocoaPods/PlaywireSDKApps-CocoaPods.xcworkspace` and run `PlaywireObjC` | Open `CocoaPods/PlaywireSDKApps-CocoaPods.xcworkspace` and run `PlaywireSwift` | Open `CocoaPods/PlaywireSDKApps-CocoaPods.xcworkspace` and run `PlaywireSwiftUI` |
+| Swift Package Manager | Open `SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj` and run `PlaywireObjC` | Open `SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj` and run `PlaywireSwift` | Open `SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj` and run `PlaywireSwiftUI` |
+
+## CocoaPods
+
+Install dependencies from the repository root:
 
 ```sh
+cd CocoaPods
 pod install
+open PlaywireSDKApps-CocoaPods.xcworkspace
 ```
 
-### Run demo app  
+Select `PlaywireObjC`, `PlaywireSwift`, or `PlaywireSwiftUI`, then run the app.
 
-Open `PlaywireSDKApps.xcworkspace`, select required scheme and run.
+## Swift Package Manager
+
+Open the project:
+
+```sh
+open SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj
+```
+
+Xcode resolves `https://github.com/intergi/playwire-ios-spm.git` automatically. Select `PlaywireObjC`, `PlaywireSwift`, or `PlaywireSwiftUI`, then run the app.
+
+## Repository Layout
+
+- `Apps/` contains the shared Objective-C, Swift, and SwiftUI sample sources.
+- `CocoaPods/` contains CocoaPods installation configuration.
+- `SwiftPackageManager/` contains Swift Package Manager installation configuration.

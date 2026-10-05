@@ -1,0 +1,57 @@
+name: Build samples
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cocoapods:
+    name: CocoaPods / ${{ matrix.scheme }}
+    runs-on: macos-26
+    strategy:
+      fail-fast: false
+      matrix:
+        scheme: [PlaywireObjC, PlaywireSwift, PlaywireSwiftUI]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        working-directory: CocoaPods
+        run: pod install
+      - name: Build
+        run: >-
+          xcodebuild
+          -workspace CocoaPods/PlaywireSDKApps-CocoaPods.xcworkspace
+          -scheme ${{ matrix.scheme }}
+          -sdk iphonesimulator
+          -destination 'generic/platform=iOS Simulator'
+          CODE_SIGNING_ALLOWED=NO
+          build
+
+  swift-package-manager:
+    name: SPM / ${{ matrix.scheme }}
+    runs-on: macos-26
+    strategy:
+      fail-fast: false
+      matrix:
+        scheme: [PlaywireObjC, PlaywireSwift, PlaywireSwiftUI]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve dependencies
+        run: >-
+          xcodebuild
+          -resolvePackageDependencies
+          -project SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj
+      - name: Build
+        run: >-
+          xcodebuild
+          -project SwiftPackageManager/PlaywireSDKApps-SPM.xcodeproj
+          -scheme ${{ matrix.scheme }}
+          -sdk iphonesimulator
+          -destination 'generic/platform=iOS Simulator'
+          CODE_SIGNING_ALLOWED=NO
+          build

@@ -1,0 +1,393 @@
+{
+  "originHash" : "c3ac55ec5b56ba3a05ea30f72156be0dc8f0c22b4b24fea247ca91a96dbd40d2",
+  "pins" : [
+    {
+      "identity" : "adsglobalpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bytedance/AdsGlobalPackage.git",
+      "state" : {
+        "revision" : "e0ddb54593eee5089165667f7d34d48ce65eedfe",
+        "version" : "8.1.0-release.6"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
+      "state" : {
+        "revision" : "ab755a46ff19a9a578e709aeee49653a9239f225",
+        "version" : "13.6.3"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-chartboost",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Chartboost.git",
+      "state" : {
+        "revision" : "d7f3ccf55797254c3c90d3b6981e526347a1a3ee",
+        "version" : "9130000.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-fyber",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Fyber.git",
+      "state" : {
+        "revision" : "7af801433d108beaecb29df15d6eef1218db266e",
+        "version" : "8040700.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-google",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Google.git",
+      "state" : {
+        "revision" : "51fc0a3b92a7bd226d378c23665ee5df7d00365b",
+        "version" : "13040000.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-googleadsmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-GoogleAdsManager.git",
+      "state" : {
+        "revision" : "c9299d3d10fe33fa35e9fc2bec54153b66616340",
+        "version" : "13040000.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-inmobi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-InMobi.git",
+      "state" : {
+        "revision" : "875f50d84df2dd236412e1bd915b94602935d6b2",
+        "version" : "11040101.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-ironsource",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-IronSource.git",
+      "state" : {
+        "revision" : "5f951dfb10bf4ad682ac0d88f236a5715ebbd0de",
+        "version" : "904010000.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-liftoff",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Liftoff.git",
+      "state" : {
+        "revision" : "92940963ce558012b5c0fc16ffd0789e6bd46399",
+        "version" : "7070400.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-meta",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Meta.git",
+      "state" : {
+        "revision" : "dae578120691a5d680c780052bdf189171920203",
+        "version" : "6210100.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-moloco",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Moloco.git",
+      "state" : {
+        "revision" : "93a2617f25c8de65de0d57716257db0afd24116f",
+        "version" : "4090000.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-ogury",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Ogury.git",
+      "state" : {
+        "revision" : "051d6c9e19244077047ae3e2da64b88c08091bc0",
+        "version" : "5020300.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-pangle",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Pangle.git",
+      "state" : {
+        "revision" : "5d78bf413a8fc6e5e9f2fcb87ddccf3fcd000f86",
+        "version" : "801000600.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-pubmatic",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-PubMatic.git",
+      "state" : {
+        "revision" : "84df2b695b7c770a088c410dbab3323b8a1d9097",
+        "version" : "5010100.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-unityads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-UnityAds.git",
+      "state" : {
+        "revision" : "5defb4b991e2d9337901ef496164f2424fd95be8",
+        "version" : "4190001.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-verve",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Verve.git",
+      "state" : {
+        "revision" : "c4b06ca4150740e6ab307b94ab92aa5f762cdd0c",
+        "version" : "3080100.0.0"
+      }
+    },
+    {
+      "identity" : "atom",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pubnative/ATOM.git",
+      "state" : {
+        "revision" : "07be7b4f175035e6c6b72f564ac1a59380fdc981",
+        "version" : "3.9.0"
+      }
+    },
+    {
+      "identity" : "chartboost-monetization-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ChartBoost/chartboost-monetization-ios-sdk.git",
+      "state" : {
+        "revision" : "ebe94ac847ef9494c95e9c245b2d6525c1b048e4",
+        "version" : "9.13.0"
+      }
+    },
+    {
+      "identity" : "dtexchangesdk-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/inner-active/DTExchangeSDK-iOS-SPM.git",
+      "state" : {
+        "revision" : "b8e1d9dcbea2c8df8e342595e591ec78f235814d",
+        "version" : "8.4.7"
+      }
+    },
+    {
+      "identity" : "fbaudiencenetwork",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/FBAudienceNetwork.git",
+      "state" : {
+        "revision" : "0b7bd807fff993055838e6d6a410eddf590c09ac",
+        "version" : "6.21.1"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-applovin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-applovin.git",
+      "state" : {
+        "revision" : "beec586eda7b4abb177b3fda4ee1e9c9a0663b6e",
+        "version" : "13.6.300"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-chartboost",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-chartboost.git",
+      "state" : {
+        "revision" : "476e7695753de69f9728b5b8b1a84c6bf2da8f15",
+        "version" : "9.13.0"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-dtexchange",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-dtexchange.git",
+      "state" : {
+        "revision" : "0c7bf225bcfa5f13473f813066e890539ebd82f5",
+        "version" : "8.4.701"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-inmobi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-inmobi.git",
+      "state" : {
+        "revision" : "00be49f00bea7cd025c58719d8323ffdcb510461",
+        "version" : "11.4.100"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-ironsource",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-ironsource.git",
+      "state" : {
+        "revision" : "67471480bd1f65fba34fa77bcea562f851e40d75",
+        "version" : "9.4.10001"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-liftoffmonetize",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-liftoffmonetize.git",
+      "state" : {
+        "revision" : "5afbb7ba88034f5d39de49ec07f07a7ae7e41de1",
+        "version" : "7.7.400"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-meta",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-meta.git",
+      "state" : {
+        "revision" : "1a09c48f80071b51b6f72c3c8a00662bd07818d4",
+        "version" : "6.21.101"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-moloco",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-moloco.git",
+      "state" : {
+        "revision" : "b0ebd8b61f151f5ed36b205249606d3430332dc4",
+        "version" : "4.9.0"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-pangle",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-pangle.git",
+      "state" : {
+        "revision" : "e07eacb077b599d1043dd9fb118ce1c6473d54de",
+        "version" : "8.1.600"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-unity",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-unity.git",
+      "state" : {
+        "revision" : "ddc3e92f5831dee5496110a1a4d4337c61e1efed",
+        "version" : "4.19.1"
+      }
+    },
+    {
+      "identity" : "hybid-ios-spm-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vervegroup/hybid-ios-spm-sdk.git",
+      "state" : {
+        "revision" : "0eb2bc48c953900ae2114dcd80188e0f4d1815ee",
+        "version" : "3.8.1"
+      }
+    },
+    {
+      "identity" : "inmobisdk-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/InMobi/InMobiSDK-Swift-Package.git",
+      "state" : {
+        "revision" : "ba46fc5d865080b352d0002533e14a9298fcddbe",
+        "version" : "11.4.1"
+      }
+    },
+    {
+      "identity" : "moloco-sdk-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/moloco/moloco-sdk-ios-spm.git",
+      "state" : {
+        "revision" : "44be86a8eed3a421f79fb3a131bf980d6a203b5b",
+        "version" : "4.9.0"
+      }
+    },
+    {
+      "identity" : "ogury-sdk-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Ogury/ogury-sdk-spm.git",
+      "state" : {
+        "revision" : "13cbb47f4829b0acdedd74b5227e3c5a56d306a0",
+        "version" : "5.2.3"
+      }
+    },
+    {
+      "identity" : "openwrapsdk-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PubMatic/OpenWrapSDK-Swift-Package.git",
+      "state" : {
+        "revision" : "580ccd7d8f966a2bfd2614a88a44bc1a13419b1f",
+        "version" : "5.1.1"
+      }
+    },
+    {
+      "identity" : "playwire-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/intergi/playwire-ios-spm.git",
+      "state" : {
+        "revision" : "37b8a91410a18eb257da4501e052986725dc6b98",
+        "version" : "13.1.0-beta.1"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-interactive-media-ads-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios.git",
+      "state" : {
+        "revision" : "60c708f077d0d2aa02dfbfdeb60f2be8feb1c548",
+        "version" : "3.26.1"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      "state" : {
+        "revision" : "a81f522aa4f59c0d90ee523d703bd426d5b27a03",
+        "version" : "13.4.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "13b248eaa73b7826f0efb1bcf455e251d65ecb1b",
+        "version" : "3.1.0"
+      }
+    },
+    {
+      "identity" : "unity-ad-quality-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/Unity-Ad-Quality-Swift-Package",
+      "state" : {
+        "revision" : "222b15d9d5123f0c1de1a807293df137b4b5ceb9",
+        "version" : "9.5.1"
+      }
+    },
+    {
+      "identity" : "unity-ads-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Unity-Technologies/Unity-Ads-Swift-Package.git",
+      "state" : {
+        "revision" : "15e46d4d96b941eb0bc9ae8b9d97574b29618f4d",
+        "version" : "4.19.0"
+      }
+    },
+    {
+      "identity" : "unity-mediation-iads-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/Unity-Mediation-iAds-Swift-Package.git",
+      "state" : {
+        "revision" : "70afee750c111d98c15d72d95fb61c72f67d4b79",
+        "version" : "9.4.1"
+      }
+    },
+    {
+      "identity" : "vungleadssdk-swiftpackagemanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",
+      "state" : {
+        "revision" : "2ede5c7e5cb5407a73bfa6c74e495866080ba1ab",
+        "version" : "7.7.4"
+      }
+    }
+  ],
+  "version" : 3
+}
