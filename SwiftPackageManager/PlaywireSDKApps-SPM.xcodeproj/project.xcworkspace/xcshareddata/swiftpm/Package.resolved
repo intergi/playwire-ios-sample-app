@@ -321,8 +321,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/intergi/playwire-ios-spm.git",
       "state" : {
-        "revision" : "37b8a91410a18eb257da4501e052986725dc6b98",
-        "version" : "13.1.0-beta.1"
+        "revision" : "820f603672ec8be86a379a17b81ea8d590208e59",
+        "version" : "13.1.0"
       }
     },
     {
