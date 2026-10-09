@@ -724,7 +724,7 @@
 			repositoryURL = "https://github.com/intergi/playwire-ios-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = "13.1.0-beta.1";
+				version = 13.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

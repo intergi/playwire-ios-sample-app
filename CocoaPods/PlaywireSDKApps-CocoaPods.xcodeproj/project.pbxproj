@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0B6BAE14ABCFC9B2A5CDF46 /* Pods_Playwire_PlaywireSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72AB0BACD179611C1C2FA0C4 /* Pods_Playwire_PlaywireSwift.framework */; };
-		BBF0DF3486CD07BABF0679A1 /* Pods_Playwire_PlaywireSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DF86532C526105CC9CCF7B /* Pods_Playwire_PlaywireSwiftUI.framework */; };
-		D189A8EBBD6407A927130F91 /* Pods_Playwire_PlaywireObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4CB2741FDB94AF1152C61B /* Pods_Playwire_PlaywireObjC.framework */; };
+		0A4F304EB54F9626BE6B0A15 /* Pods_Playwire_PlaywireSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B34369E07C94F8ADB2D3690 /* Pods_Playwire_PlaywireSwiftUI.framework */; };
+		10F1D1C2E1B0A5E65F268D30 /* Pods_Playwire_PlaywireObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090DF361615BB9E643E2B673 /* Pods_Playwire_PlaywireObjC.framework */; };
+		AC1B790B9C48A63CAF085C7F /* Pods_Playwire_PlaywireSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45F68C9454A8EB4393CF56 /* Pods_Playwire_PlaywireSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B4CB2741FDB94AF1152C61B /* Pods_Playwire_PlaywireObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playwire_PlaywireObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		259A8BC33374270D6967DC8F /* Pods-Playwire-PlaywireSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
-		3D3C35D6699A040A135516B9 /* Pods-Playwire-PlaywireSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		090DF361615BB9E643E2B673 /* Pods_Playwire_PlaywireObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playwire_PlaywireObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2475CA898B1516057E2F476B /* Pods-Playwire-PlaywireObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireObjC.release.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC.release.xcconfig"; sourceTree = "<group>"; };
+		420196C6B1AB8A157F0D1FF7 /* Pods-Playwire-PlaywireSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		610E542D2E955BE900FD6653 /* PlaywireObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		610E544B2E955C0200FD6653 /* PlaywireSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		610E54872E955C1F00FD6653 /* PlaywireSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaywireSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		66ED56DB362E061B97D5C58C /* Pods-Playwire-PlaywireObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireObjC.release.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC.release.xcconfig"; sourceTree = "<group>"; };
-		72AB0BACD179611C1C2FA0C4 /* Pods_Playwire_PlaywireSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playwire_PlaywireSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B34369E07C94F8ADB2D3690 /* Pods_Playwire_PlaywireSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playwire_PlaywireSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C45F68C9454A8EB4393CF56 /* Pods_Playwire_PlaywireSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playwire_PlaywireSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		815CFB1150056B78206200AF /* Pods-Playwire-PlaywireSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		83137974CB5824D9FEC1E3FE /* Pods-Playwire-PlaywireSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwift.release.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift.release.xcconfig"; sourceTree = "<group>"; };
 		BE4A9A3D2C6BADC700AC219F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		C7DF86532C526105CC9CCF7B /* Pods_Playwire_PlaywireSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playwire_PlaywireSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0E895D7424F53375C17429C /* Pods-Playwire-PlaywireSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwift.release.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift.release.xcconfig"; sourceTree = "<group>"; };
-		E482EF6149B9DDAF36D15287 /* Pods-Playwire-PlaywireObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireObjC.debug.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC.debug.xcconfig"; sourceTree = "<group>"; };
-		E655C57C10AB992CE760F083 /* Pods-Playwire-PlaywireSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwift.debug.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		CFD99FF5923E73F36339866D /* Pods-Playwire-PlaywireSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireSwift.debug.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		EAF5E4090ABA16751D8363B2 /* Pods-Playwire-PlaywireObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playwire-PlaywireObjC.debug.xcconfig"; path = "Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		610E54432E955BEA00FD6653 /* Exceptions for "PlaywireObjC" folder in "PlaywireObjC" target */ = {
+		610E54432E955BEA00FD6653 /* Exceptions for "../Apps/PlaywireObjC" folder in "PlaywireObjC" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = 610E542C2E955BE900FD6653 /* PlaywireObjC */;
 		};
-		610E54812E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireObjC" target */ = {
+		610E54812E955C0D00FD6653 /* Exceptions for "../Apps/PlaywireSwift" folder in "PlaywireObjC" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Ads/Fullscreen/AppOpen/AppOpenViewController.swift,
@@ -53,7 +53,7 @@
 			);
 			target = 610E542C2E955BE900FD6653 /* PlaywireObjC */;
 		};
-		610E54822E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireSwift" target */ = {
+		610E54822E955C0D00FD6653 /* Exceptions for "../Apps/PlaywireSwift" folder in "PlaywireSwift" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Ads/Fullscreen/AppOpen/AppOpenViewController.swift,
@@ -69,7 +69,7 @@
 			);
 			target = 610E544A2E955C0200FD6653 /* PlaywireSwift */;
 		};
-		610E561D2E958EC400FD6653 /* Exceptions for "PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */ = {
+		610E561D2E958EC400FD6653 /* Exceptions for "../Apps/PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -79,27 +79,27 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		610E542E2E955BE900FD6653 /* PlaywireObjC */ = {
+		610E542E2E955BE900FD6653 /* ../Apps/PlaywireObjC */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				610E54432E955BEA00FD6653 /* Exceptions for "PlaywireObjC" folder in "PlaywireObjC" target */,
+				610E54432E955BEA00FD6653 /* Exceptions for "../Apps/PlaywireObjC" folder in "PlaywireObjC" target */,
 			);
 			path = ../Apps/PlaywireObjC;
 			sourceTree = "<group>";
 		};
-		610E547A2E955C0D00FD6653 /* PlaywireSwift */ = {
+		610E547A2E955C0D00FD6653 /* ../Apps/PlaywireSwift */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				610E54812E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireObjC" target */,
-				610E54822E955C0D00FD6653 /* Exceptions for "PlaywireSwift" folder in "PlaywireSwift" target */,
+				610E54812E955C0D00FD6653 /* Exceptions for "../Apps/PlaywireSwift" folder in "PlaywireObjC" target */,
+				610E54822E955C0D00FD6653 /* Exceptions for "../Apps/PlaywireSwift" folder in "PlaywireSwift" target */,
 			);
 			path = ../Apps/PlaywireSwift;
 			sourceTree = "<group>";
 		};
-		610E54882E955C1F00FD6653 /* PlaywireSwiftUI */ = {
+		610E54882E955C1F00FD6653 /* ../Apps/PlaywireSwiftUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				610E561D2E958EC400FD6653 /* Exceptions for "PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */,
+				610E561D2E958EC400FD6653 /* Exceptions for "../Apps/PlaywireSwiftUI" folder in "PlaywireSwiftUI" target */,
 			);
 			path = ../Apps/PlaywireSwiftUI;
 			sourceTree = "<group>";
@@ -111,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D189A8EBBD6407A927130F91 /* Pods_Playwire_PlaywireObjC.framework in Frameworks */,
+				10F1D1C2E1B0A5E65F268D30 /* Pods_Playwire_PlaywireObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0B6BAE14ABCFC9B2A5CDF46 /* Pods_Playwire_PlaywireSwift.framework in Frameworks */,
+				AC1B790B9C48A63CAF085C7F /* Pods_Playwire_PlaywireSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF0DF3486CD07BABF0679A1 /* Pods_Playwire_PlaywireSwiftUI.framework in Frameworks */,
+				0A4F304EB54F9626BE6B0A15 /* Pods_Playwire_PlaywireSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +137,9 @@
 		212DA4302951EFF300B2FB4A = {
 			isa = PBXGroup;
 			children = (
-				610E542E2E955BE900FD6653 /* PlaywireObjC */,
-				610E547A2E955C0D00FD6653 /* PlaywireSwift */,
-				610E54882E955C1F00FD6653 /* PlaywireSwiftUI */,
+				610E542E2E955BE900FD6653 /* ../Apps/PlaywireObjC */,
+				610E547A2E955C0D00FD6653 /* ../Apps/PlaywireSwift */,
+				610E54882E955C1F00FD6653 /* ../Apps/PlaywireSwiftUI */,
 				212DA43A2951EFF400B2FB4A /* Products */,
 				9F29743D4CB5EDF01F439121 /* Pods */,
 				4432D180024143DCE8AC98B9 /* Frameworks */,
@@ -160,9 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				BE4A9A3D2C6BADC700AC219F /* StoreKit.framework */,
-				0B4CB2741FDB94AF1152C61B /* Pods_Playwire_PlaywireObjC.framework */,
-				72AB0BACD179611C1C2FA0C4 /* Pods_Playwire_PlaywireSwift.framework */,
-				C7DF86532C526105CC9CCF7B /* Pods_Playwire_PlaywireSwiftUI.framework */,
+				090DF361615BB9E643E2B673 /* Pods_Playwire_PlaywireObjC.framework */,
+				6C45F68C9454A8EB4393CF56 /* Pods_Playwire_PlaywireSwift.framework */,
+				6B34369E07C94F8ADB2D3690 /* Pods_Playwire_PlaywireSwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,12 +170,12 @@
 		9F29743D4CB5EDF01F439121 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E482EF6149B9DDAF36D15287 /* Pods-Playwire-PlaywireObjC.debug.xcconfig */,
-				66ED56DB362E061B97D5C58C /* Pods-Playwire-PlaywireObjC.release.xcconfig */,
-				E655C57C10AB992CE760F083 /* Pods-Playwire-PlaywireSwift.debug.xcconfig */,
-				D0E895D7424F53375C17429C /* Pods-Playwire-PlaywireSwift.release.xcconfig */,
-				3D3C35D6699A040A135516B9 /* Pods-Playwire-PlaywireSwiftUI.debug.xcconfig */,
-				259A8BC33374270D6967DC8F /* Pods-Playwire-PlaywireSwiftUI.release.xcconfig */,
+				EAF5E4090ABA16751D8363B2 /* Pods-Playwire-PlaywireObjC.debug.xcconfig */,
+				2475CA898B1516057E2F476B /* Pods-Playwire-PlaywireObjC.release.xcconfig */,
+				CFD99FF5923E73F36339866D /* Pods-Playwire-PlaywireSwift.debug.xcconfig */,
+				83137974CB5824D9FEC1E3FE /* Pods-Playwire-PlaywireSwift.release.xcconfig */,
+				420196C6B1AB8A157F0D1FF7 /* Pods-Playwire-PlaywireSwiftUI.debug.xcconfig */,
+				815CFB1150056B78206200AF /* Pods-Playwire-PlaywireSwiftUI.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -187,20 +187,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 610E54442E955BEA00FD6653 /* Build configuration list for PBXNativeTarget "PlaywireObjC" */;
 			buildPhases = (
-				DB9155E911540AEAE2B172C0 /* [CP] Check Pods Manifest.lock */,
+				AD7F710F27A82865B5C06525 /* [CP] Check Pods Manifest.lock */,
 				610E54292E955BE900FD6653 /* Sources */,
 				610E542A2E955BE900FD6653 /* Frameworks */,
 				610E542B2E955BE900FD6653 /* Resources */,
-				4D18217B359321FF2A882EAA /* [CP] Embed Pods Frameworks */,
-				EA18AF2673280429597370AC /* [CP] Copy Pods Resources */,
+				0AF34454C5225FD7409B1A13 /* [CP] Embed Pods Frameworks */,
+				894EA0E408AD14C890C28522 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				610E542E2E955BE900FD6653 /* PlaywireObjC */,
-				610E547A2E955C0D00FD6653 /* PlaywireSwift */,
+				610E542E2E955BE900FD6653 /* ../Apps/PlaywireObjC */,
+				610E547A2E955C0D00FD6653 /* ../Apps/PlaywireSwift */,
 			);
 			name = PlaywireObjC;
 			productName = PlaywireObjC;
@@ -211,12 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 610E545D2E955C0300FD6653 /* Build configuration list for PBXNativeTarget "PlaywireSwift" */;
 			buildPhases = (
-				A0942F826A69FCBA071A42C9 /* [CP] Check Pods Manifest.lock */,
+				8553118CB49D0BAF8F5C7F27 /* [CP] Check Pods Manifest.lock */,
 				610E54472E955C0200FD6653 /* Sources */,
 				610E54482E955C0200FD6653 /* Frameworks */,
 				610E54492E955C0200FD6653 /* Resources */,
-				B95F6733F6D503F548DD6453 /* [CP] Embed Pods Frameworks */,
-				D3F00294D3C3780080BE9477 /* [CP] Copy Pods Resources */,
+				E2A91332EA47B3D3D0D390B2 /* [CP] Embed Pods Frameworks */,
+				476456327EA243698B197527 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,19 +231,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 610E548F2E955C2000FD6653 /* Build configuration list for PBXNativeTarget "PlaywireSwiftUI" */;
 			buildPhases = (
-				9D3CC21894E92B3A7EB3F56B /* [CP] Check Pods Manifest.lock */,
+				2475C3F09C27A77B32E76372 /* [CP] Check Pods Manifest.lock */,
 				610E54832E955C1F00FD6653 /* Sources */,
 				610E54842E955C1F00FD6653 /* Frameworks */,
 				610E54852E955C1F00FD6653 /* Resources */,
-				C2F162067FCC5CCFE8B32B5F /* [CP] Embed Pods Frameworks */,
-				0754DA75E534F9F7276533BE /* [CP] Copy Pods Resources */,
+				2A883F9DFA2C9F2D684BF9D9 /* [CP] Embed Pods Frameworks */,
+				B7F1718412DB770739EEE862 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				610E54882E955C1F00FD6653 /* PlaywireSwiftUI */,
+				610E54882E955C1F00FD6653 /* ../Apps/PlaywireSwiftUI */,
 			);
 			name = PlaywireSwiftUI;
 			productName = PlaywireSwiftUI;
@@ -272,7 +272,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 212DA4342951EFF400B2FB4A /* Build configuration list for PBXProject "PlaywireSDKApps" */;
+			buildConfigurationList = 212DA4342951EFF400B2FB4A /* Build configuration list for PBXProject "PlaywireSDKApps-CocoaPods" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -317,24 +317,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0754DA75E534F9F7276533BE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4D18217B359321FF2A882EAA /* [CP] Embed Pods Frameworks */ = {
+		0AF34454C5225FD7409B1A13 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,7 +334,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D3CC21894E92B3A7EB3F56B /* [CP] Check Pods Manifest.lock */ = {
+		2475C3F09C27A77B32E76372 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -373,7 +356,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A0942F826A69FCBA071A42C9 /* [CP] Check Pods Manifest.lock */ = {
+		2A883F9DFA2C9F2D684BF9D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		476456327EA243698B197527 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8553118CB49D0BAF8F5C7F27 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,58 +412,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B95F6733F6D503F548DD6453 /* [CP] Embed Pods Frameworks */ = {
+		894EA0E408AD14C890C28522 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C2F162067FCC5CCFE8B32B5F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3F00294D3C3780080BE9477 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB9155E911540AEAE2B172C0 /* [CP] Check Pods Manifest.lock */ = {
+		AD7F710F27A82865B5C06525 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -468,21 +451,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA18AF2673280429597370AC /* [CP] Copy Pods Resources */ = {
+		B7F1718412DB770739EEE862 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireObjC/Pods-Playwire-PlaywireObjC-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwiftUI/Pods-Playwire-PlaywireSwiftUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2A91332EA47B3D3D0D390B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Playwire-PlaywireSwift/Pods-Playwire-PlaywireSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -634,7 +634,7 @@
 		};
 		610E54452E955BEA00FD6653 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E482EF6149B9DDAF36D15287 /* Pods-Playwire-PlaywireObjC.debug.xcconfig */;
+			baseConfigurationReference = EAF5E4090ABA16751D8363B2 /* Pods-Playwire-PlaywireObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -672,7 +672,7 @@
 		};
 		610E54462E955BEA00FD6653 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66ED56DB362E061B97D5C58C /* Pods-Playwire-PlaywireObjC.release.xcconfig */;
+			baseConfigurationReference = 2475CA898B1516057E2F476B /* Pods-Playwire-PlaywireObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -709,7 +709,7 @@
 		};
 		610E545E2E955C0300FD6653 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E655C57C10AB992CE760F083 /* Pods-Playwire-PlaywireSwift.debug.xcconfig */;
+			baseConfigurationReference = CFD99FF5923E73F36339866D /* Pods-Playwire-PlaywireSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -745,7 +745,7 @@
 		};
 		610E545F2E955C0300FD6653 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0E895D7424F53375C17429C /* Pods-Playwire-PlaywireSwift.release.xcconfig */;
+			baseConfigurationReference = 83137974CB5824D9FEC1E3FE /* Pods-Playwire-PlaywireSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -780,7 +780,7 @@
 		};
 		610E54902E955C2000FD6653 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D3C35D6699A040A135516B9 /* Pods-Playwire-PlaywireSwiftUI.debug.xcconfig */;
+			baseConfigurationReference = 420196C6B1AB8A157F0D1FF7 /* Pods-Playwire-PlaywireSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -818,7 +818,7 @@
 		};
 		610E54912E955C2000FD6653 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 259A8BC33374270D6967DC8F /* Pods-Playwire-PlaywireSwiftUI.release.xcconfig */;
+			baseConfigurationReference = 815CFB1150056B78206200AF /* Pods-Playwire-PlaywireSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -856,7 +856,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		212DA4342951EFF400B2FB4A /* Build configuration list for PBXProject "PlaywireSDKApps" */ = {
+		212DA4342951EFF400B2FB4A /* Build configuration list for PBXProject "PlaywireSDKApps-CocoaPods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				212DA44B2951EFFC00B2FB4A /* Debug */,
