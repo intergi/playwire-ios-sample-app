@@ -2,7 +2,7 @@
 
 These samples show how to install Playwire with CocoaPods or Swift Package Manager and use it from Objective-C, Swift, or SwiftUI. Both dependency-manager projects reference the same app sources, so only the installation changes between examples.
 
-Playwire version: `13.0.1`. The SDK supports iOS 13 and later; these sample apps currently target iOS 26.
+Playwire version: `13.2.0-alpha.1`. The SDK supports iOS 13 and later; these sample apps currently target iOS 26.
 
 ## Choose a Sample
 

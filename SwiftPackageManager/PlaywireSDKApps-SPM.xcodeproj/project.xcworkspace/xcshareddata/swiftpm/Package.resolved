@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/bytedance/AdsGlobalPackage.git",
       "state" : {
-        "revision" : "e0ddb54593eee5089165667f7d34d48ce65eedfe",
-        "version" : "8.1.0-release.6"
+        "revision" : "d3723d1de12975ef739d47bfbf8836c8d6364976",
+        "version" : "8.2.1-release.0"
       }
     },
     {
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Google.git",
       "state" : {
-        "revision" : "51fc0a3b92a7bd226d378c23665ee5df7d00365b",
-        "version" : "13040000.0.0"
+        "revision" : "e06adbd6a1ba73195c356bf1bfbbb71ba95bbbc1",
+        "version" : "13070000.0.0"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-GoogleAdsManager.git",
       "state" : {
-        "revision" : "c9299d3d10fe33fa35e9fc2bec54153b66616340",
-        "version" : "13040000.0.0"
+        "revision" : "60bfcfa44bfb3664763a0533664f87b694312bcb",
+        "version" : "13070000.0.0"
       }
     },
     {
@@ -114,8 +114,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Pangle.git",
       "state" : {
-        "revision" : "5d78bf413a8fc6e5e9f2fcb87ddccf3fcd000f86",
-        "version" : "801000600.0.0"
+        "revision" : "3275eb8953c2ff3ac1c522d30f36b78e946a45d7",
+        "version" : "802010000.0.0"
       }
     },
     {
@@ -125,6 +125,15 @@
       "state" : {
         "revision" : "84df2b695b7c770a088c410dbab3323b8a1d9097",
         "version" : "5010100.0.0"
+      }
+    },
+    {
+      "identity" : "applovin-max-swift-package-smaato",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Smaato.git",
+      "state" : {
+        "revision" : "dc8070d6c6c7161b523765ce1190fee0347cc846",
+        "version" : "23020100.0.0"
       }
     },
     {
@@ -258,8 +267,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-pangle.git",
       "state" : {
-        "revision" : "e07eacb077b599d1043dd9fb118ce1c6473d54de",
-        "version" : "8.1.600"
+        "revision" : "cad7fcddb90ee3936577f039fa13b65d4151fa3f",
+        "version" : "8.2.10000"
       }
     },
     {
@@ -321,8 +330,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/intergi/playwire-ios-spm.git",
       "state" : {
-        "revision" : "820f603672ec8be86a379a17b81ea8d590208e59",
-        "version" : "13.1.0"
+        "revision" : "d944878376868315c6f9dec94950a1e707d2ab1a",
+        "version" : "13.2.0-alpha.1"
+      }
+    },
+    {
+      "identity" : "smaato-ios-sdk-standalone",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vervegroup/Smaato-ios-sdk-standalone.git",
+      "state" : {
+        "revision" : "de1fc0aab2bf55e4d7c90fa77f0e85b92c8e349e",
+        "version" : "23.2.1"
       }
     },
     {
@@ -339,8 +357,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
       "state" : {
-        "revision" : "a81f522aa4f59c0d90ee523d703bd426d5b27a03",
-        "version" : "13.4.0"
+        "revision" : "868149fc50d1452078e83540e636cf519bac3e6a",
+        "version" : "13.7.0"
       }
     },
     {
